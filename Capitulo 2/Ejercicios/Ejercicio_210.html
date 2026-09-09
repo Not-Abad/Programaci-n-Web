@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Ejercicio 2.16: Formulario de visita al campus -->
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Retroalimentaci&oacute;n del Campus</title>
+    </head>
+    <body>
+        <h1>Retroalimentaci&oacute;n de la visita al campus</h1>
+
+        <form method="post" action="http://www.deitel.com">
+            <p>
+                <label>Nombre:
+                    <input type="text" name="nombre" size="30">
+                </label>
+            </p>
+            <p>
+                <label>Correo electr&oacute;nico:
+                    <input type="email" name="email" size="30">
+                </label>
+            </p>
+
+            <p>
+                <strong>&iquest;Qu&eacute; fue lo que m&aacute;s le gust&oacute; sobre el campus?</strong><br>
+                <label><input type="checkbox" name="gustos" value="campus"> Campus</label>
+                <label><input type="checkbox" name="gustos" value="estudiantes"> Estudiantes</label>
+                <label><input type="checkbox" name="gustos" value="ubicacion"> Ubicaci&oacute;n</label>
+                <label><input type="checkbox" name="gustos" value="ambiente"> Ambiente</label>
+                <label><input type="checkbox" name="gustos" value="dormitorios"> Dormitorios</label>
+                <label><input type="checkbox" name="gustos" value="deportes"> Deportes</label>
+            </p>
+
+            <p>
+                <strong>&iquest;C&oacute;mo supo sobre la universidad?</strong><br>
+                <label><input type="radio" name="como_supo" value="amigos" checked> Amigos</label>
+                <label><input type="radio" name="como_supo" value="television"> Televisi&oacute;n</label>
+                <label><input type="radio" name="como_supo" value="internet"> Internet</label>
+                <label><input type="radio" name="como_supo" value="otro"> Otro</label>
+            </p>
+
+            <p>
+                <label>Comentarios adicionales:<br>
+                    <textarea name="comentarios" rows="4" cols="40"></textarea>
+                </label>
+            </p>
+
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Restablecer">
+            </p>
+        </form>
+
+        <p><a href="index.html">Regresar</a></p>
+
+        <footer>
+            <hr> <!-- Inserta una regla horizontal-->
+            <p>Hecho por Jes&uacute;s Abad Romero</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!--Fig. 2.13: table2.html-->
+<!-- Tabla de HTML5 compleja-->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tablas</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                text-align: center;
+            }
+            th, td {
+                padding: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Ejemplo de tabla: combinado de filas y columnas</h1>
+
+        <table border="1">
+            <caption>Una tabla de muestra m&aacute;s compleja</caption>
+            
+            <thead>
+                <tr>
+                    <th rowspan="2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxGwd3uTNjzV5JxXQ2M4D57Z0H2Qz13Qvdml3_Wvzt-w&s=10"
+                             width="205" height="167" alt="Imagen de un camello con una joroba">
+                    </th>
+
+                    <th colspan="4">
+                        <strong>Comparaci&oacute;n de cam&eacute;lidos</strong><br>
+                        Fecha aproximada: 10/2011
+                    </th>
+                </tr>
+                <tr>
+                    <th># jorobas</th>
+                    <th>Regi&oacute;n ind&iacute;gena</th>
+                    <th>&iquest;Escupe?</th>
+                    <th>&iquest;Produce lana?</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>Camellos (bactrianos)</th>
+                    <td>2</td>
+                    <td>&Aacute;frica/Asia</td>
+                    <td>S&iacute;</td>
+                    <td>S&iacute;</td>
+                </tr>
+                <tr>
+                    <th>Llamas</th>
+                    <td>0</td>
+                    <td>Monta&ntilde;as de los Andes</td>
+                    <td>S&iacute;</td>
+                    <td>S&iacute;</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><a href="index.html">Regresar</a></p>
+
+        <footer>
+            <hr> <!-- Inserta una regla horizontal-->
+            <p>Hecho por Jes&uacute;s Abad Romero</p>
+        </footer>
+    </body>
+</html>
