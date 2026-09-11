@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<!-- Fig. 3.20: autocomplete.html -->
+ <!-- El nuevo atrinbuto autocomplete y el elemento datalist de formulario de HTML5 --> 
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>El nuevo atributo autocomplete y el elemnto datalist de HTML5</title>
+    </head>
+
+    <body>
+        <h1>Demo de autocomplete y datalist</h1>
+        <p>Este formulario demuesrta el nuevo atributo autocomplete de HTML
+            y el elemente datalist.
+        </p>
+
+        <!-- activar autocomplete -->
+        <form method = "post" autocomplete = "on">
+            <p><label>Primer nombre:
+                <input type = "text" id = "primerNombre"
+                    placeholder = "Primer nombre " /> (Primer nombre)
+            </label></p>
+            <p><label>Apellido:
+                <input type = "text" id = "apellido"
+                    placerholder = "Apellido" /> (Apellido)
+            </label></p>
+            <p><label>Email:
+                <input type = "email" id = "email"
+                    placeholder = "nombre@dominio.com" /> (nombre@dominio.com)
+            </label></p>
+            <p><label for = "listaTexto">Mes de nacimiento: 
+                <input type = "text" id = "listaTexto"
+                    placeholder = "Seleccione un mes" list = "meses" />
+                    <datalist id = "meses">
+                        <option value = "Enero">
+                        <option value = "Febrero">
+                        <option value = "Marzo">
+                        <option value = "Abril">
+                        <option value = "Mayo">
+                        <option value = "Junio">
+                        <option value = "Julio">
+                        <option value = "Agosto">
+                        <option value = "Septiembre">
+                        <option value = "Octubre">
+                        <option value = "Noviembre">
+                        <option value = "Diciembre">
+                    </datalist>
+            </label></p>
+            <p><input type = "submit" value = "Enviar"/>
+                <input type = "reset" value = "Borrar" /></p>
+        </form>
+        
+        <ul><p><a href = "index.html">Regresar</a></p></ul>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <footer>
+            <hr> <!-- Inserta una regla horizontal-->
+            <p>Hecho por Jes&uacute;s Abad Romero </p>
+        </footer>
+    </body>
+</html></html>
