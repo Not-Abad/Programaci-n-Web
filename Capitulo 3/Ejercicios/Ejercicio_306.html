@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!-- Ejercicio 3.6 de los Ejercicios -->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 3.6 - Registro con Encuesta Opcional</title>
+    </head>
+
+    <body>
+        <h1>Ejercicios</h1>
+        <h2>3.6 Formulario de registro Web con encuesta opcional</h2>
+        <br>
+
+        <form method="post" action="#">
+            <fieldset>
+                <legend><b>Datos de registro</b></legend>
+                <br>
+                <p>
+                    <label for="nombre">Primer nombre:</label><br>
+                    <input type="text" id="nombre" name="primerNombre" required placeholder="Ingrese su nombre" autofocus>
+                </p>
+
+                <p>
+                    <label for="apellido">Apellido:</label><br>
+                    <input type="text" id="apellido" name="apellido" required placeholder="Ingrese su apellido">
+                </p>
+
+                <p>
+                    <label for="correo">Direcci&oacute;n de correo electr&oacute;nico:</label><br>
+                    <input type="email" id="correo" name="email" required placeholder="ejemplo@correo.com">
+                </p>
+            </fieldset>
+
+            <br>
+
+            <details>
+                <summary><b>Encuesta opcional para estudiantes universitarios (haga clic para expandir)</b></summary>
+                <br>
+                <p>&iquest;En qu&eacute; a&ntilde;o universitario se encuentra actualmente?</p>
+                <p>
+                    <label><input type="radio" name="anioUni" value="1"> Primer a&ntilde;o</label><br>
+                    <label><input type="radio" name="anioUni" value="2"> Segundo a&ntilde;o</label><br>
+                    <label><input type="radio" name="anioUni" value="3"> Tercer a&ntilde;o</label><br>
+                    <label><input type="radio" name="anioUni" value="4"> Cuarto a&ntilde;o</label><br>
+                    <label><input type="radio" name="anioUni" value="posgrado"> Posgrado / Otro</label>
+                </p>
+            </details>
+
+            <br>
+            <p>
+                <input type="submit" value="Registrarse">
+                <input type="reset" value="Borrar datos">
+            </p>
+        </form>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href = "index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        
+            <hr> <!-- Inserta una regla horizontal-->
+            <p>Hecho por Jes&uacute;s Abad Romero </p>
+        </footer>
+    </body>
+</html>

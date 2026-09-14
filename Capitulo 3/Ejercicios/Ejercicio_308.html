@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!-- Ejercicio 3.8 de los Ejercicios -->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 3.8 - Formulario con Datalist</title>
+    </head>
+
+    <body>
+        <h1>Ejercicios</h1>
+        <h2>3.8 Creaci&oacute;n de un formulario autocomplete con un elemento datalist</h2>
+        <br>
+
+        <form method="post" action="#">
+            <p>
+                <label for="diaSemana">Seleccione o escriba un d&iacute;a de la semana:</label><br>
+                <input type="text" id="diaSemana" name="dia" list="listaDias" placeholder="Escriba un d&iacute;a..." autocomplete="on" autofocus>
+                
+                <datalist id="listaDias">
+                    <option value="Lunes">
+                    <option value="Martes">
+                    <option value="Mi&eacute;rcoles">
+                    <option value="Jueves">
+                    <option value="Viernes">
+                    <option value="S&aacute;bado">
+                    <option value="Domingo">
+                </datalist>
+            </p>
+            <p>
+                <input type="submit" value="Enviar d&iacute;a">
+            </p>
+        </form>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href = "index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        
+            <hr> <!-- Inserta una regla horizontal-->
+            <p>Hecho por Jes&uacute;s Abad Romero </p>
+        </footer>
+    </body>
+</html>
