@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!-- Fig. 4.17: desplegable.html -->
+<!-- Menú desplegable de CSS. -->
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title>
+        Men&uacute; desplegable
+    </title>
+    <style type = "text/css">
+        body        { font-family: arial, sans-serif }
+        nav         { font-weight: bold;
+                      color: white;
+                      border: 2px solid RoyalBlue;
+                      text-align: center;
+                      width: 10em;
+                      background-color: RoyalBlue; }
+        nav ul      { display: none;
+                      list-style: none;
+                      margin: 0;
+                      padding: 0; }
+        nav:hover ul { display: block; }
+        nav ul li   { border-top: 2px solid RoyalBlue;
+                      background-color: white;
+                      width: 10em;
+                      color: black; }
+        nav ul li:hover { background-color: PowderBlue; }
+        a           { text-decoration: none; }
+    </style>
+</head>
+<body>
+    <nav>Men&uacute;
+        <ul>
+            <li><a href = "#">Inicio</a></li>
+            <li><a href = "#">Noticias</a></li>
+            <li><a href = "#">Art&iacute;culos</a></li>
+            <li><a href = "#">Blog</a></li>
+            <li><a href = "#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <footer>   
+        <br><br>  
+        <ul><p><a href = "index.html">Regresar</a></p></ul>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    
+        <hr> <!-- Inserta una regla horizontal-->
+        <p>Hecho por Jes&uacute;s Abad Romero </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!-- Fig 4.9: posicionamiento.html -->
+<!-- Posicionamiento absoluto de los elementos. -->
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title>Posicionamiento absoluto</title>
+    <style type = "text/css">
+        .imagen_fondo { position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        z-index: 1; }
+        .imagen_primerplano { position: absolute;
+                              top: 100px;
+                              left: 300px;
+                              z-index: 2; }
+        .texto        { position: absolute;
+                        top: 25px;
+                        left: 100px;
+                        z-index: 3;
+                        font-size: 20pt;
+                        font-family: tahoma, geneva, sans-serif; }
+    </style>
+</head>
+<body>
+    <p><img src = "https://picsum.photos/id/1018/250/200" class = "imagen_fondo"
+        alt = "Primera imagen posicionada" /></p>
+
+    <p><img src = "https://picsum.photos/id/1025/200/150" class = "imagen_primerplano"
+        alt = "Segunda imagen posicionada" /></p>
+
+    <p class = "texto">Texto posicionado</p>
+
+    <footer>   
+        <br><br><br><br><br><br><br><br> <br><br> <br><br> 
+        <ul><p><a href = "index.html">Regresar</a></p></ul>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    
+        <hr> <!-- Inserta una regla horizontal-->
+        <p>Hecho por Jes&uacute;s Abad Romero </p>
+    </footer>
+</body>
+</html>
