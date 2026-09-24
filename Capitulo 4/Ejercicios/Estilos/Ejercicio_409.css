@@ -1,0 +1,26 @@
+/* boton.css - Ejercicio 4.9 */
+.boton-contenedor {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: 2px solid #0056b3;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.boton-contenedor a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    display: block;
+}
+
+.boton-contenedor:hover {
+    background-color: #0056b3;
+    border-color: #002752;
+}
+
+.boton-contenedor:hover a {
+    color: #ffeb3b;
+}
