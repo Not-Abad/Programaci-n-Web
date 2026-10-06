@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5.4 - Trazo de texto</title>
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 20px 40px;
+        }
+        header {
+            border-bottom: 2px solid #2b5797;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #2b5797;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #444;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .trazo-texto {
+            font-size: 700%;
+            font-weight: bold;
+            color: LightBlue;
+            -webkit-text-stroke: 3px Navy;
+            text-stroke: 3px Navy;
+            text-align: center;
+            margin: 50px 0;
+            word-break: break-word;
+        }
+        .detalles {
+            background: #eef5fc;
+            padding: 15px;
+            border-left: 4px solid Navy;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 5.4: Trazo de texto</h1>
+            <p>Cree un trazo de texto en la frase "Nuevas funciones de WebKit". Haga el color del texto LightBlue. Use un trazo de texto 3px Navy y establezca el valor de font-size a 700%.</p>
+        </header>
+
+        <main>
+            <div class="trazo-texto">Nuevas funciones de WebKit</div>
+
+            <div class="detalles">
+                <h3>Propiedades CSS aplicadas:</h3>
+                <pre><code>color: LightBlue;
+font-size: 700%;
+-webkit-text-stroke: 3px Navy;
+text-stroke: 3px Navy;</code></pre>
+            </div>
+        </main>
+
+    <footer>   
+         <br><br>  
+         <ul><p><a href = "index.html">Regresar</a></p></ul>
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+      
+         <hr> <!-- Inserta una regla horizontal-->
+         <p>Hecho por Jes&uacute;s Abad Romero </p>
+    </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5.2 - Verdadero o Falso</title>
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 20px 40px;
+        }
+        header {
+            border-bottom: 2px solid #2b5797;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #2b5797;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #444;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .item {
+            margin-bottom: 22px;
+            padding: 12px 16px;
+            border-left: 5px solid #2b5797;
+            background-color: #f9fbfd;
+            border-radius: 0 6px 6px 0;
+        }
+        .vf {
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #fff;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .verdadero {
+            background-color: #28a745;
+        }
+        .falso {
+            background-color: #dc3545;
+        }
+        .enunciado {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .explicacion {
+            color: #495057;
+            font-size: 0.95rem;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 5.2: Enunciados Verdaderos o Falsos</h1>
+            <p>Indique si cada uno de los siguientes enunciados es verdadero o falso. Si es falso, explique por qué.</p>
+        </header>
+
+        <main>
+            <div class="item">
+                <div class="enunciado"><strong>a)</strong> La regla @font-face especifica que se utilizará una fuente incrustada cuando el documento se despliegue en una pantalla de computadora.</div>
+                <div><span class="vf falso">Falso</span></div>
+                <p class="explicacion"><strong>Explicación:</strong> La regla <code>@font-face</code> no está restringida a pantallas de computadoras; permite descargar y utilizar fuentes tipográficas personalizadas incrustadas en cualquier medio o dispositivo de salida donde se despliegue el documento (pantallas móviles, tabletas, impresión, etc.).</p>
+            </div>
+
+            <div class="item">
+                <div class="enunciado"><strong>b)</strong> Podemos usar gradientes en cualquier propiedad que acepte una imagen.</div>
+                <div><span class="vf verdadero">Verdadero</span></div>
+                <p class="explicacion"><strong>Explicación:</strong> En CSS3, los gradientes son generados sintéticamente y clasificados bajo el tipo de dato <code>&lt;image&gt;</code>, por lo que son válidos en propiedades como <code>background-image</code>, <code>border-image</code>, <code>list-style-image</code>, entre otras.</p>
+            </div>
+
+            <div class="item">
+                <div class="enunciado"><strong>c)</strong> Un gradiente horizontal cambia en forma gradual de arriba hacia abajo.</div>
+                <div><span class="vf falso">Falso</span></div>
+                <p class="explicacion"><strong>Explicación:</strong> Un gradiente horizontal cambia gradualmente de izquierda a derecha (o viceversa). El gradiente que cambia en forma gradual de arriba hacia abajo es un <strong>gradiente vertical</strong>.</p>
+            </div>
+
+            <div class="item">
+                <div class="enunciado"><strong>d)</strong> Podemos agregar líneas entre columnas mediante el uso de la propiedad column-gap.</div>
+                <div><span class="vf falso">Falso</span></div>
+                <p class="explicacion"><strong>Explicación:</strong> La propiedad <code>column-gap</code> establece el espacio o separación vacío entre las columnas. Para agregar una línea divisoria (regla) se utiliza la propiedad <code>column-rule</code> (junto con sus variantes <code>column-rule-width</code>, <code>column-rule-style</code> y <code>column-rule-color</code>).</p>
+            </div>
+
+            <div class="item">
+                <div class="enunciado"><strong>e)</strong> La regla @media determina el tipo y tamaño del dispositivo en el que se despliega la página. Cuando el navegador examina la regla, el resultado es verdadero o falso. Los estilos de la regla se aplican sólo si el resultado es falso.</div>
+                <div><span class="vf falso">Falso</span></div>
+                <p class="explicacion"><strong>Explicación:</strong> Los estilos definidos dentro de una regla <code>@media</code> se aplican única y exclusivamente si la evaluación de la consulta resulta <strong>verdadera (true)</strong>.</p>
+            </div>
+
+            <div class="item">
+                <div class="enunciado"><strong>f)</strong> Para agregar múltiples imágenes de fondo a un elemento, usamos la propiedad background-position para especificar en dónde colocar cada imagen mediante el uso del modelo de cajas.</div>
+                <div><span class="vf falso">Falso</span></div>
+                <p class="explicacion"><strong>Explicación:</strong> Para agregar múltiples imágenes de fondo se emplea la propiedad <code>background-image</code> (separando los valores de imagen con comas). Por su parte, la posición y el área relativa a la caja se gestionan con <code>background-position</code>, <code>background-origin</code> y <code>background-clip</code>.</p>
+            </div>
+        </main>
+
+    <footer>   
+         <br><br>  
+         <ul><p><a href = "index.html">Regresar</a></p></ul>
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+      
+         <hr> <!-- Inserta una regla horizontal-->
+         <p>Hecho por Jes&uacute;s Abad Romero </p>
+    </footer>
+    </div>
+</body>
+</html>

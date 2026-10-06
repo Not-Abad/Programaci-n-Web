@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.9: reflejo.html -->
+<!-- Reflejos en CSS3. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Reflejo</title>
+      <style type = "text/css">
+         img { margin-right: 30px; }
+         img.below
+         {
+            -webkit-box-reflect: below 5px
+               -webkit-gradient(
+                  linear, left top, left bottom,
+                  from(transparent), to(rgb(108, 50, 162)));
+         }
+         img.right
+         {
+            -webkit-box-reflect: right 5px
+               -webkit-gradient(
+                  linear, right top, left top,
+                  from(transparent), to(rgb(72, 58, 58)));
+         }
+      </style>
+   </head>
+   <body>
+      <img class = "below" src = "https://m.media-amazon.com/images/I/71s2XXMMExL._SL1500_.jpg" width = "138" height = "180"
+         alt = "Portada del libro Java How to Program">
+      <img class = "right" src = "https://m.media-amazon.com/images/I/71s2XXMMExL._SL1500_.jpg" width = "138" height = "180"
+         alt = "Portada del libro Java How to Program">
+
+      <footer>   
+         <br><br><br><br><br><br><br><br>
+         <ul><p><a href = "index.html">Regresar</a></p></ul>
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+      
+         <hr> <!-- Inserta una regla horizontal-->
+         <p>Hecho por Jes&uacute;s Abad Romero </p>
+      </footer>
+   </body>
+</html>

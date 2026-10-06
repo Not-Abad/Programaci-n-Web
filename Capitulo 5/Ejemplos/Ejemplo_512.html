@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.13: inclinar.html -->
+<!-- Elementos de inclinación y de transformación en CSS3. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Inclinar (skew)</title>
+      <style type = "texto/css">
+         .skew .textbox
+         {
+            margin-left: 75px;
+            background: lightgreen;
+            height: 100px;
+            width: 200px;
+            padding: 25px 0;
+            text-align: center;
+            font-size: 250%;
+            border: 3px solid DarkGreen;
+            border-radius:15px;
+            -webkit-animation: skew 3s infinite linear;
+            -moz-animation: skew 3s infinite linear;
+            animation: skew 3s infinite linear;
+         }
+         @-webkit-keyframes skew
+         {
+            from { -webkit-transform: skewX(0deg); }
+            25% { -webkit-transform: skewX(45deg); }
+            50% { -webkit-transform: skewX(0); }
+            75% { -webkit-transform: skewX(-45deg); }
+            to { -webkit-transform: skewX(0); }
+         }
+         @-moz-keyframes skew
+         {
+            from { -webkit-transform: skewX(0deg); }
+            25% { -webkit-transform: skewX(45deg); }
+            50% { -webkit-transform: skewX(0); }
+            75% { -webkit-transform: skewX(-45deg); }
+            to { -webkit-transform: skewX(0); }
+         }
+         @-keyframes skew
+         {
+            from { -webkit-transform: skewX(0deg); }
+            25% { -webkit-transform: skewX(45deg); }
+            50% { -webkit-transform: skewX(0); }
+            75% { -webkit-transform: skewX(-45deg); }
+            to { -webkit-transform: skewX(0); }
+         }
+      </style>
+   </head>
+   <body>
+      <div class = "box skew">
+         <div class = "textbox">Inclinar texto</div>
+      </div>
+
+      <footer>   
+         <br><br>  
+         <ul><p><a href = "index.html">Regresar</a></p></ul>
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+      
+         <hr> <!-- Inserta una regla horizontal-->
+         <p>Hecho por Jes&uacute;s Abad Romero </p>
+      </footer>
+   </body>
+</html>

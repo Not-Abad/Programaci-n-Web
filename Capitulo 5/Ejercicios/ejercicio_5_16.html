@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5.16 - Consultas de medios (Media Queries)</title>
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 20px 40px;
+        }
+        header {
+            border-bottom: 2px solid #2b5797;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #2b5797;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #444;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .layout-articulos {
+            column-count: 3;
+            column-gap: 30px;
+            column-rule: 2px solid #ccc;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .indicador {
+            background: #2b5797;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .tarjeta {
+            background: #fdfdfd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            break-inside: avoid;
+        }
+        
+        /* Consulta de medios para dispositivos con anchura máxima de 480px */
+        @media screen and (max-width: 480px) {
+            .layout-articulos {
+                column-count: 1; /* Pasa de 3 columnas a 1 columna */
+                column-rule: none;
+            }
+            .indicador {
+                background: #e67e22;
+            }
+            .indicador::after {
+                content: " (Vista móvil activa: 1 columna)";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 5.16: Consultas de medios (Media Queries)</h1>
+            <p>Página multicolumna adaptable: utiliza 3 columnas por defecto y se ajusta a <strong>1 columna</strong> para dispositivos de ancho máximo <strong>480px</strong>.</p>
+        </header>
+
+        <main>
+            <div class="indicador">
+                Redimensione la ventana o pruebe en un móvil (&le; 480px) para ver la adaptación
+            </div>
+
+            <div class="layout-articulos">
+                <div class="tarjeta">
+                    <h3>Columna 1: Diseño Adaptable</h3>
+                    <p>Las consultas de medios permiten adaptar dinámicamente las reglas de estilo de acuerdo con las dimensiones del viewport del dispositivo del usuario, garantizando legibilidad en cualquier pantalla.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Columna 2: Regla @media</h3>
+                    <p>Mediante <code>@media screen and (max-width: 480px)</code>, el navegador detecta cuándo la anchura es menor o igual a 480px y reconfigura <code>column-count: 1</code> de manera fluida.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Columna 3: Experiencia Móvil</h3>
+                    <p>En teléfonos móviles, las columnas múltiples comprimen demasiado el texto. Por ello, transformarlo a una sola columna vertical es una de las mejores prácticas de usabilidad web moderna.</p>
+                </div>
+            </div>
+        </main>
+
+    <footer>   
+         <br><br>  
+         <ul><p><a href = "index.html">Regresar</a></p></ul>
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+      
+         <hr> <!-- Inserta una regla horizontal-->
+         <p>Hecho por Jes&uacute;s Abad Romero </p>
+    </footer>
+    </div>
+</body>
+</html>

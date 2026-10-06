@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5.13 - Modelo de Caja Flexible Vertical</title>
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 20px 40px;
+        }
+        header {
+            border-bottom: 2px solid #2b5797;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #2b5797;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #444;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .flex-vertical-container {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: #e3edf7;
+            padding: 20px;
+            border: 2px solid #2b5797;
+            border-radius: 8px;
+            height: 380px;
+        }
+        .flex-item {
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        .item1 {
+            background-color: #34495e;
+            flex: 1;
+        }
+        .item2 {
+            background-color: #e67e22;
+            flex: 2;
+        }
+        .item3 {
+            background-color: #27ae60;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 5.13: Modelo de Caja Flexible Vertical (MDCF)</h1>
+            <p>Caja flexible orientada verticalmente usando <code>flex-direction: column;</code> (y <code>-webkit-box-orient: vertical;</code>).</p>
+        </header>
+
+        <main>
+            <div class="flex-vertical-container">
+                <div class="flex-item item1">Elemento Superior (flex: 1)</div>
+                <div class="flex-item item2">Elemento Central Principal (flex: 2)</div>
+                <div class="flex-item item3">Elemento Inferior (flex: 1)</div>
+            </div>
+        </main>
+
+    <footer>   
+         <br><br>  
+         <ul><p><a href = "index.html">Regresar</a></p></ul>
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+      
+         <hr> <!-- Inserta una regla horizontal-->
+         <p>Hecho por Jes&uacute;s Abad Romero </p>
+    </footer>
+    </div>
+</body>
+</html>

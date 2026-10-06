@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.16: mdcf.html -->
+<!-- Módulo de diseño de caja flexible. -->
+<html>
+   <head>
+        <meta charset = "utf-8">
+        <title>Modelo de dise&ntilde;o de caja flexible</title>
+        <link href = 'http://fonts.googleapis.com/css?family=Rosario'
+            rel = 'stylesheet' type = 'text/css'>
+        <style type = "text/css">
+             .flexbox
+             {
+                width: 600px;
+                height: 420px;
+                display: -webkit-box;
+                display: box;
+                -webkit-box-orient: horizontal;
+                box-orient: horizontal;
+             }   
+            .flexbox > div
+            {
+                -webkit-transition: is ease-out;
+                transition: is ease-out;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                border: 2px solid black;
+                width: 120px;
+                margin: 10px 10px 10px 0px;
+                padding: 20px 20px 20px 20px;
+                box-shadow: 10px 10px 10px dimgrey;
+            }
+            .flexbox > div:nth-child(1) { background-color: lightgrey; }
+            .flexbox > div:nth-child(2) { background-color: lightgrey; }
+            .flexbox > div:nth-child(3) { background-color: lightgrey; }
+            .flexbox > div:nth-child(4){ background-color: lightgrey; }
+        
+            .flexbox > div:hover {
+                width: 200px; color: white; font-weight: bold; }
+            .flexbox > div:nth-child(1):hover { background-color: royalblue; }
+            .flexbox > div:nth-child(2):hover { background-color: crimson; }
+            .flexbox > div:nth-child(3):hover { background-color: crimson; }
+            .flexbox > div:nth-child(4):hover { background-color: darkgreen; }
+            p { height: 250px; overflow: hidden; font-family: "Rosario" }
+        </style>
+    </head>
+
+    <body>
+     <p>Las buenas pr&aacute;cticas de programaci&oacute;n indican las t&eacute; cnicas que
+        <div class="flexbox">
+    <div><img src= "https://th.bing.com/th/id/OIP.1SC4C3_m4Q7-AiznU6S32wHaHa?w=202&h=202&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"  width="50" height="50" alt = "Icono de buena pr&aacute;ctica de programaci&oacute;n">
+        le ayudar&aacute;n a producir programas m&aacute;s claros,
+        comprensibles y f&aacute; ciles de mantener.</p></div> <div><img src= "https://cdn-icons-png.flaticon.com/512/8452/8452627.png" width="50" height="50" alt= "Icono de tip para prevenir errores">
+     <p>Los tips para prevenir errores contienen sugerencias para exponer errores
+        y eliminarlos de sus programas; muchos describen aspectos de
+        programaci&oacute;n que evitan que los errores entren siquiera
+        a los programas.</p></div>
+    <div><img src = "https://th.bing.com/th/id/OIP.mLCHWRQQTs97kVDQyuXpygHaHa?w=164&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"  width="50" height="50" alt= "Icono de error com&uacute;n de programaci&oacute;n">
+    <p>Los errores comunes de programaci&oacute;n se&ntilde; alan los errores que cometen
+        los estudiantes con frecuencia. Estos errores comunes de programaci&oacute;n reducen la probabilidad de que usted cometa los mismos errores.</p></div>
+    <div><img src= "data:image/webp;base64,UklGRrIVAABXRUJQVlA4IKYVAACwbACdASovAS8BPp1In0qlpCMhphJreLATiWlu3u/OX/Jlfs00+VP7v2s/3f+1fjn7f9Vv2t5kET74v99f5n+C9wP8l3i/lfiBfin8i/x/5pcDwAD85/q3/E/xPs/TRPuX3A9wD/D8I3QA/PPq0/0n7Teb785/0v/x/2HwGfzv+4f+D1kP//7bf24///ue/sR//zNsucv1MAEB6kAd4cZm50SYrg/pf8LtMdagF/GwJ4XSjE/66+Zcz+MkLfWL6ag900vFo8BoRS7F0Pg5H1IGwwTlLJKoRkls6fzeTUPvpqn6njRkoDi35mwX+9st2U3ex0FaHX5ng5p+EDgveNxf+rVUETsxsJkQBDyYFF6VsMzUAk04gB3HEnKVX3S81i4dI7a1JI39J0V8JXpOjYw/S+5oShjeaVdb4yYs1rWZcK7ZIVnUtzS4AclUQ6JWj7lAan0Gz300mAjoVF4+9H/kI9JCCVS+Ll0nLIjkNvQssQUUg4pQcxsa5kpzgpzGUZ6czQDmu72sQmJAg3cqtVhUaXNM1JohzycwGvaf8Ccd7AKHPXv24QjexEjUF02kwvqEpgpb+HIXJe9qJRQ+PtvY3l8Zn/HZ7ZHzMHT9Q2WGnhYMgK54ok6H9pVTI1HM9pJFm9YjNLjC2xcdr9c83/H+AT/idAkkfPonk57otXeLlL3NeEI5a1LRmZq2RbQJvyLTMuhn13eECx9dA+jtSK+yFIPopKqL+fHVKLc93Z8rZ5M8GlsB4cxSO9sLBhs5sqM9SVn7cP2DDYyIBf1w5M4SjeGvOuYA2gVqNzqX/Vtz/oz4oLZRpoQDKQnvwQ/sY6L3wANWIMbI3Rp4UAK/RsqqhdpbgSUSCr+HlK9GvvLHcvuI8jWDlHxe4w3JCs+WJ+3C+iTJqy2b38jWevpBdD8HBy6T5rszNAtV9Za9BcPcA4t+/+jL9vZfeXBG5NmO91vD7mm2vBAD4RlEPgJst/WMbU4mifhaSS4EBP4IR7Q/o6rTiTwfePmGFPCa81blu17B+nVvLtR1zLa+NA02yFYw85ESaSvnc0fXn7xkQTOqmkA4pcqBRfLfk+T9uC3CArLgZV93tzVk34BLvXVbNddJgb7EfcUuxfbZ5CYLif1ndCAQHJy8SsOKnb22exVvrF9aAIHLjDfjP9Ppp9rKAAD++gKSAP8e7TTUMtfbdYWzWW4fPn8sa5lIaPX3Xmb597+53pbKe6ESKMbSFoPYXzZVxh+83SsNAWoXfNxnv59QQ5Gfam40P0Yta5Wt0v4PPMKJZe4f6GmK2L6hSKQZVNRrDC38317N3/MQuPj+a32IO8aZnd97Zq4qGq/XHNHPIc0DTOUNM1PZ1Jrl0+E+2MJDF2A+VHMnuC8FJmYSEk90N3iJMw5zAPjnKQmx7BnDUDeywURWT1vVwdbbhUt8u3i3mBZdHVf4qTvO3Mc0x6vzItt++0E92OUkc/UYrjsdcByBkldufk+RyqgXl4YxHipp6R7pyNqYaTKjqYR90fynUNsOstbkBojd9OO0Iih8LRYZwpHd4cp44xA4Fr3PSbuIF47a/enLjmby+1/AZDSi/fz5BHlr267lptsp69TMO6ZE+4ymU9BELbUKF9LyUSVrTfvjdLv7IkDuWk+yaIqDhH3It2l07E9UkhC2ctBmpin4aU37f+DHaY6xwzN6Ara4/Upv3bL1X8cNlEVV0EdwkCAmCzo6O0BPdGMLJPV1o5R9r229AAbOj6FH3IVzAKkN3rjFHjz7vcTPjRrlA82HEIZUcpEodzqr64Ya7LDvLlS/1ZwL78nwnkiDPnnzALVwZLsQLXGdxM2f4ord4Itd1yNexlzvQv9ya0Ia/hzOkmgzMGKI15isDqiifwP94dPa0XMxdDqbFRuvSeJTnhb9c2f2pcYfvqjaRCpmNj2t9gJxHiPjOhX7A7ugDieBrAOZORdfgdhZ0qu8dr0nlaJMBpSfoQK6hdZxslSBiT0/2Pad63CsIByph3+9X20BjPNo5UYEgieunG+qDwyEruoDpBIYKc8DFydFjgdFQ3hMTyOQIxs5edD3bZDwkL4sQuIdvU0AraT2P+M2HvScQdrRG4oEax0Q+8Nap2FXO7mC5/r00H8YVXGydFOqnLXB2QyOrVSMzFN3y+K5ou/3gBth1h7/cWtr1iYw5lENrl69KVqXtMsGtG/FkizhQqgP+chwTPUQHa9Is/yy3zoblJ0N0EZsBCXUWcHNYeKMPhE8BxL8ofZM1IvD1RwhGhTvk9fxkX5u+Z1U0KLNojF+HkX0rB8zImkw7pZ1HVx+v7MYvgCqGTN00sEsBeesU5CRs4mDU2u5VrhhHy4/Df81jALH67cB4lA/p79RNJsESWrGWZR4czJ6rJBu7vXCTGYaGT1IfofMMyFPvSnfVeeu4Hfi6wkt6hRpntzFL/iL6z1VfEQm+uP+B+ppMlU5YFqk6YRD64LeQ5fgcAJt4sd8f6e55qQxgwtXuH4ly+qEwAucozg4L7C5pgRAuyrRevmcjS0ZWxg+c5/mIAzHLMwDZWUI3dS7eDPDsb4L9aCqojpGVKs8p1C+45rM7qmU8YKEG+9MzWXDOYrGMfEBzXqo7RVqlgAkazXM3xGXqTvX8q4O+TKH2L/JqOwPVOxOkZ2ZHbvpDIS2hlzNsxkOo1YvAULtvcnu+0i+CX+ex4w8obM/FruoS/GQOWpSGlvJSW8+EehyW/edxXTWUNvPE0nxes0FY8YqxNpXOaB1ZDkJbm3WHLmuFj8mwyA1Yc0c/mKAwiLHnDOKH55TFKy/A8YX8ZmNzKOFwvqeZElX0GZdmcRKB6sRNWsEm52dL/q7Dm+RFfj4KIgF0HxAyEqU+861Qpek9xq+JFjrslmj29v8kIFeVux0510NwtXhC4fh+OFmOr1uMjlqXH6Nqo1qzQPvPBxXy/GeHQaYpPYGag30DmXsuk+85XhIFqVuzOSmtzwf4oN9fmxVWAcCfgaksBDWJU9xlxRfd3NVzSbylxj8P93bV7UbbDaA6Q4mQkDDCIRgKB2iAuEoCd6Dc6YQisA8daBvGpPkwSBOlZz7HYs8RCBvoAdpTac37P0cBksTnFFIkDrtDdIcgn72liey7oGXyjkBxPiI+VX9ND7BJJfHBRbB5uT6aabFD/1aaHkPByNvfuArBuCbYpiMQdTKI889n71ScnnfjlcuseqU4pE8UP8w0mxn62NdD8LWqjzzebpDsMcc3MjEoRx+S6Ns7AvBYOkaRnpzx72mhYRP8fCCcp4awD9MUYBg67QsihqzrlRdqVim07hJSwN/Nk/aNlr0xZlqtbwS/ul7la62YJmUukVzYWOiGdMhkvdPOU7TYqkMxzvh1/1EJ+05/AVCFAZEfFCF63+wP/p6avEL34QCQgQSUqhnq0+Xa5cMiJ+OqyJhLY41Fsw9B6A7KLW7VaCH0Wyvmh1BIQHpL0RMKAAVS+eWgnXbJgntnqBaEnOG6K4iR1gm0qWVPvwiRnWZrWLiM9iRcvtvEYt4doNTP3sPtEjGVZ/odCrYHf/R7VOmDeUakJHHMHW8K11CyuF7w6cHJvQx3Q62CVztVDJh78YSWd8k856iauLUU15Uqx5z/4lCIKt0bn6BtgckApdDc2wz428wbvqTZLKKSxsm8bh68DjooSXyh3B3gGWJqGjBA0rrFwT/rNyvSOPdmQ1XfWu4mov4xIZ5ZfJzigLwPnq4vc7pHDCc4tXPQAGAYAVd+WPxgnKUQde4Oycwvxv8G78ONlG3l2YEfErbycKmMvYsI8qxn5GqmR8CTv2byQIybjaEIWC/mwsJJNzwu9cBGlcr5t1WicOQE/2cX6QCSsZw+XSgkBKjRrtD3u5x9fJbQtX5TvcTOqUWNa3MjIxYKPHwkGvImK3F8dVGnjxbCxNHrnmSk/Af/JOZr+815JSm59EOBe6HWf+N180xWxOj5peLUgmdmB4mKId0x9A/qoXPDJr8cN+bCiKKotY62EByM5akjIO9igRyOgzqxHRZzpTI0odJ8dN5VhCR5rpqHcdWcyy4DGh04UC3tH8wfLAYDhrnY2b2Qg3zMhQWMKM5G0nLXy4Opj5XWc8gJrubh9nc7jWYFNGt85P9WvLd97300kFjuT1q9DLkXd746z6qi4/c1d6K2MA8VJk9RiT38qViKFe0PHI/XqB5tIyndpZEY7IUOzTl/e30CCnKjIQon+Jxdb0h5JVxQG5o5uPnE9CCQyJGJwqMXRDaZYdE68VGLvXXK25FiYFvx+IQySSWZZXymaeFkb11fEAaTG3kyc1X2uXZ01e02RyEkkaJXiirZwwm6qMlEDnoVIe/RDuRHQhcJX6yMMTfIoryl7WbjUHCieg4Yf4V6vm5KCggal1ZAyNWa6xOvw+gf6TJYJpJCARq1Iy90gfZjwaXQ9/+7FlMe0rlL5CDdkf/VYF5bGA2LCyzqGoUFJ7yoJ9ISGYtN0kHfV+gNvVCtd1QgmYPVaImyF5WFwRkYHJeDgSFTL2DGd4uThMvvlojgkrsGaRtnWOLZV+K3L4ky+QRYgUZ+CRFga2XW2OTYOOB3U4NsBOoUzUtCdfFz6bDx7mmgnckDowQlgEW8HLYYOnpwZd5Cdmt4v6YjdMREvD+VM+O0Ixx3un3Gx8OfQyxdIzlPHqaAxORtdk2uouNy03Zc26/yF2wl1tMUsnaNxQ+tKUvLe/Rsds2YELUPSZ1BVbfHkqLSK6CsnWEi3F9t87kJIIEfCWbS7ZImdhO0mhhdUOZ16yGdUQ/PEvdE7Ngdl4j4P/OqUU8bvOpiJnzPL2V8rUZh290yVCBXyTEOpJlDWZXPL76JdFsFo67q1UPRCRgkrIJ/rnFzoB3u6lF+to0ioxARKHGFVZOtVHtiBpnYpHI0diopP/9tIo/PPPMoSQ/MPtCxHQ0wtXqQKtDombfD8fpTvE8K0hGfWmCQAmSJ5o9nWKGZ48mPFHGIubrNB3MLi7LlbAPiGNZjWOzsrTy8+u0D4yPo91iCysdAEKJi3wKHcu2YVIetcFwj0Dl3FTH9RhUyucI0lg8FNTasEDzuVeC73mDMLEGr8U14lwFKdsMOM/qhVhPzGBlaA0o+ixQLXDUJpmXDONcdhJkfjKudMzOidJlkV6HOha9VB3tXxBMAoBBOzoHBMn+3FaB+/23zkLDYY0YWpy3/vXDodx7b78yMS2ax0u6GG0UD6nqwRc0lrBD/x1WZfb4klwnH2fWAcbx4jhHty9875JAKnY3WqXGBwxXz8hE1na0/GswGnaDWKvz76OngR8B2f13FBZ5+6BSIj6/Wv/tCibdFwghS1iyc+zZPePGKA/g03U8MLV51nHRJMPI/dRw5Cd8N4HwhVAI9fgLplmqHvisH/t4bSc5hDM94AJ2a3P8WLCZyGxC+YgaCKbNX8Ot0gOASXCXyTuerwC5nn6L5U7Oq/dR9qj9xOkMMm2IKi4e2A8Id6PHuIJ8McwJmKRGJUY9N7YtHPVh1YZjaASFNzHNVvDmi1KNS7fTJIbe2fTRD63XtAOJBSRR1V/piY161oFf40rVdHR8rOy9KM/EWFETH0b4Pb4VdeyWj789M2YyRWPQQOtczxUmnQI/Wzs3kM03cFX2SentOmIgPFlKuyVXXHBKDmT0JWW/YUQAt9/ImX0sUamsbSZ2glTKEKpnhwalPTELY8MzkhmpxAEGhi2s7KnOb+jq4Zawhd/L0+AMhCZkhTrRQVpxY0OVOqLLkgBACk7vimwaF8Gzpg6Ij/3Rlcc0w/voGoV7M2i/pa3ISjhBkHfmze5gzs9r1BDvNIVQ5nB6SKygBnzok1/VYOgcfvOB4K4Ljx+gPwE02qoJj97Nl+G5fk5GRWdrYmIfts8Fk7qWtgwYMytpLr3XgwR40A0yMKiJQek+ZWpSqJH4Pr5uCEl6VzjebbBXnXTkLJRoda73A4dpPCDuv3hsyP3dftqQal2sr5+WfFOyilN2Pon3ctV2xBh3c3URVSE2BL62W1Ib6h0/xXJ7l9q1L7rdDFvt1uzslHOgOAfZN872i1msgY7rXMxY3w43L+LfQCILQaCgbcCQeT5tvIBxSn/hPCGUlUNpIwlRAdaPTKSA6Ewocc2IhwTf5KxWG+gbIDBiMgqB3r6TCPL/ALfL1+xN72I4+TST6LC9Hj/zeSipijCGdpBy+btKlClg8AmXTR9rJKrCO2oad8jApgkG6GOZlIOwW11xB0fc8FSREkyxvaqmgsCypXVbZR8oXKB7TJXLkRfNvSuxyto7kuirwkm239DErg5tAIjDCmV1VvO0b/OdKqQYC48ndqHfDGsc/NpCyKFWu/zq3cYbGC0X5kokZJTNpyYPw3xQ56F/jydCWDpU68dIIpODZUQfb5S3DBoJuVKqPkZx0wJV5135kalBfQCmGcW1EklJl78aF1NEeQFy06+JpYAGAZre3jywNE5IQQceIXof1X6NwYIuydsydt8jv0Br3p981jI9JlPRCZZz1TcdWCBTgsZDG0L6QRrpEPj2/dMZJz6S74Lydq+5q9fktihaATB6zURuMx+1+mQCDUXUXY8gi9kWyP2Us54H2ifNcdiNfjAAUauU3nEjtpk5w5N+D20n23ld12ngRd3gIDgVPNGt6m8jIfCUBEgVEGgs0BSbCuF754yKubLE+AE4tUG7psCUo1Ubt5B0pvCgVpRblRgoWVBEB/1ecjbxMbrza0UkQ4PSEh9Qb2pS2XIXYgFVYrDJrfZUXaCMUntU0C3ekiZ7+nxSzOy6KZXM7dg8kYMlWiiwqPP7xlsHr7HM9gh15Ab6U0Ogy/uzgzcrFSIs9YPCaG6xGjCgBVAbJHDcxD5lGae39GwU7FE+5Nyf1AKRksQuwoIAintZATqmylHLwafbtlAz6FdwGhoReYiq6wnEi4DuevwnQoVwvmxO18n36NhY4OJ1V34/W5o9eQQb4tySV487dIByp0DQnkUsKAmCMBdW9bai8M+GG8HlTplvp2eHYnSgMKB9CbnFXGUnZjdnwDkBUyh4KMaaquJXigdUqWEWYtdEf23mbxIQzNUFG+w8Q/u2TWj6XA0VoBp2l8nSMoxhYYbfMO3pOMW27JIAhP46sXy3kOKblRA0q5vNOd0h8BQMNXZYeI+INTUIMnnuamVY3vYAhksqIVjeIPIJs5dMsLJgWKXlr3pJDFwQGe4+nvmsRl9nAqmdiMdSZV2Lu1aHVZesiHe5bk3rkpJDge1vCIQHzlhFNvz9wgJF0iVnVka6P5CJCYO7YNkfz1gwmzDO9CBJGb+1m5sj+e8Uxv6q9/ZokiQHW3F3k8l+2emh2ndTxq/agTNi+s4w6AAC3WhsFWDCa9bjMLE/gDriiY4ojI+6QTiIjlkxQJ8JCdpHd8rnzwo1Q1miv1eQDiMXTqWiqLm41ojIwAAA"  width="50" height="50" alt "Icono de observaci&oacute;n de ingenier&iacute; a
+        de software"><p>Las observaciones
+        de ingenier&iacute;a de software resaltan los asuntos de arquitectura y dise&ntilde;o que afectan en la construcci&oacute;n de sistemas de software,
+        en especial los sistemas de gran escala.</p></div>
+    </div>
+
+    <footer>   
+         <br><br>  
+         <ul><p><a href = "index.html">Regresar</a></p></ul>
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+      
+         <hr> <!-- Inserta una regla horizontal-->
+         <p>Hecho por Jes&uacute;s Abad Romero </p>
+      </footer>
+    </body>
+</html>

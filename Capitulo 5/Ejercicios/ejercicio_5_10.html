@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5.10 - Inclinación alternada</title>
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 20px 40px;
+        }
+        header {
+            border-bottom: 2px solid #2b5797;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #2b5797;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #444;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .anim-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            margin: 20px 0;
+        }
+        .caja-skew {
+            width: 220px;
+            height: 140px;
+            background: linear-gradient(45deg, #11998e, #38ef7d);
+            border: 2px solid #0c736a;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+            animation: animacionInclinacion 4s infinite ease-in-out;
+        }
+
+        @keyframes animacionInclinacion {
+            0% {
+                transform: skew(0deg, 0deg);
+            }
+            25% {
+                transform: skew(0deg, 30deg); /* Inclinación de arriba hacia abajo (eje Y) */
+            }
+            50% {
+                transform: skew(0deg, 0deg);
+            }
+            75% {
+                transform: skew(30deg, 0deg); /* Inclinación de izquierda a derecha (eje X) */
+            }
+            100% {
+                transform: skew(0deg, 0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 5.10: Inclinación alternada (skew)</h1>
+            <p>Inclinar el elemento de arriba hacia abajo 30deg, después de izquierda a derecha 30deg, alternando de manera indefinida.</p>
+        </header>
+
+        <main>
+            <div class="anim-area">
+                <div class="caja-skew">
+                    Inclinación 30°<br>(Alternando Ejes Y y X)
+                </div>
+            </div>
+        </main>
+
+    <footer>   
+         <br><br>  
+         <ul><p><a href = "index.html">Regresar</a></p></ul>
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+      
+         <hr> <!-- Inserta una regla horizontal-->
+         <p>Hecho por Jes&uacute;s Abad Romero </p>
+    </footer>
+    </div>
+</body>
+</html>

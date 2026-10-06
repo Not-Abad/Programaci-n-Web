@@ -1,26 +1,31 @@
-/* boton.css - Ejercicio 4.9 */
-.boton-contenedor {
+
+.boton {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff;
     border: 2px solid #0056b3;
     border-radius: 4px;
-    cursor: pointer;
-}
-
-.boton-contenedor a {
     color: #ffffff;
     text-decoration: none;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    display: block;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-.boton-contenedor:hover {
+.boton:hover {
     background-color: #0056b3;
     border-color: #002752;
+    color: #ffeb3b;
 }
 
-.boton-contenedor:hover a {
-    color: #ffeb3b;
+.lista-ejercicios {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 60px;
+}
+
+.lista-ejercicios li {
+    margin-bottom: 12px;
 }

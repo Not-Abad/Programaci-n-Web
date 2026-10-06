@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5.6 - Sombra de caja (box-shadow)</title>
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 20px 40px;
+        }
+        header {
+            border-bottom: 2px solid #2b5797;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #2b5797;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #444;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cajas-flex {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin: 50px 0;
+        }
+        .caja {
+            width: 200px;
+            height: 200px;
+            padding: 15px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        .caja1 {
+            background-color: #ffeaa7;
+            box-shadow: 15px 15px 20px dimgrey;
+        }
+        .caja2 {
+            background-color: #a29bfe;
+            color: #fff;
+            box-shadow: -15px -15px 30px dimgrey;
+        }
+        .caja3 {
+            background-color: #81ecec;
+            box-shadow: 15px 15px 10px dimgrey;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 5.6: Sombra de caja (box-shadow)</h1>
+            <p>Cree tres elementos div de diversos colores, cada uno con un valor de width y height de 200px. Agregue las sombras con dimgrey según las especificaciones indicadas.</p>
+        </header>
+
+        <main>
+            <div class="cajas-flex">
+                <div class="caja caja1">
+                    <h3>Caja 1</h3>
+                    <p><strong>box-shadow:</strong><br>15px 15px 20px dimgrey</p>
+                </div>
+                <div class="caja caja2">
+                    <h3>Caja 2</h3>
+                    <p><strong>box-shadow:</strong><br>-15px -15px 30px dimgrey</p>
+                </div>
+                <div class="caja caja3">
+                    <h3>Caja 3</h3>
+                    <p><strong>box-shadow:</strong><br>15px 15px 10px dimgrey</p>
+                </div>
+            </div>
+        </main>
+
+    <footer>   
+         <br><br>  
+         <ul><p><a href = "index.html">Regresar</a></p></ul>
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+      
+         <hr> <!-- Inserta una regla horizontal-->
+         <p>Hecho por Jes&uacute;s Abad Romero </p>
+    </footer>
+    </div>
+</body>
+</html>

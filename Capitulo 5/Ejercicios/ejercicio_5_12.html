@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5.12 - Texto multicolumna</title>
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 20px 40px;
+        }
+        header {
+            border-bottom: 2px solid #2b5797;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #2b5797;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #444;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .autor {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .texto-columnas {
+            column-count: 2;
+            column-gap: 40px;
+            column-rule: 5px solid #1a365d;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .img-flotante {
+            float: left;
+            margin: 0 15px 15px 0;
+            width: 140px;
+            height: 140px;
+            background: #2b5797;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 5.12: Texto multicolumna</h1>
+            <h2>La Evolución del Diseño Web Moderno con CSS3</h2>
+            <p class="autor">Por: Jesús Abad Romero</p>
+        </header>
+
+        <main>
+            <div class="texto-columnas">
+                <div class="img-flotante">
+                    Ilustración Flotante
+                </div>
+                El diseño web con hojas de estilo en cascada ha revolucionado completamente la experiencia visual en Internet. Con la introducción del módulo de columnas múltiples en CSS3, los desarrolladores y diseñadores cuentan con herramientas avanzadas para estructurar contenidos semejantes a los formatos impresos de periódicos y revistas. 
+                
+                Esto permite una lectura mucho más cómoda y ergonómica en pantallas anchas, evitando líneas de texto excesivamente largas que fatigan la visión del usuario. Además, la posibilidad de integrar reglas divisorias decorativas mediante propiedades como column-rule permite separar los bloques de texto con un aspecto profesional y limpio.
+                
+                Asimismo, la flotación de elementos dentro del flujo del texto multicolumna permite intercalar gráficos, citas o figuras destacadas de forma natural, adaptándose al ritmo de lectura del visitante y optimizando el espacio visual de la página.
+            </div>
+        </main>
+
+    <footer>   
+         <br><br>  
+         <ul><p><a href = "index.html">Regresar</a></p></ul>
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+      
+         <hr> <!-- Inserta una regla horizontal-->
+         <p>Hecho por Jes&uacute;s Abad Romero </p>
+    </footer>
+    </div>
+</body>
+</html>
