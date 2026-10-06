@@ -4,66 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividades CSS3 - Menú Principal</title>
-    <style>
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f7f9fc;
-            color: #333;
-            margin: 0;
-            padding: 20px 40px;
-        }
-        header {
-            border-bottom: 2px solid #2b5797;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-        }
-        h1 {
-            color: #2b5797;
-            margin-bottom: 5px;
-        }
-        h2 {
-            color: #444;
-        }
-        .container {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .grid-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 15px;
-            margin: 30px 0;
-        }
-        .card-link {
-            background: #f8fafc;
-            border: 1px solid #dbe2ea;
-            border-radius: 8px;
-            padding: 15px 20px;
-            text-decoration: none;
-            color: #2b5797;
-            font-weight: 600;
-            transition: all 0.2s ease-in-out;
-            display: flex;
-            align-items: center;
-        }
-        .card-link:hover {
-            background: #2b5797;
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.12);
-        }
-        .num {
-            font-size: 1.2rem;
-            margin-right: 12px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel = "stylesheet" type = "text/css"
+          href = "../../Estilos_Globales/Menu.css">
 </head>
 <body>
     <div style="text-align: center;">
@@ -79,23 +21,23 @@
 
         <main>
             <div class="grid-links">
-                <a class="card-link" href="../index.html"> <- Regresar</a>
-                <a class="card-link" href="ejercicio_5_1.html"><span class="num">5.1</span> Completar oraciones</a>
-                <a class="card-link" href="ejercicio_5_2.html"><span class="num">5.2</span> Verdadero o falso</a>
-                <a class="card-link" href="ejercicio_5_3.html"><span class="num">5.3</span> Sombra de texto</a>
-                <a class="card-link" href="ejercicio_5_4.html"><span class="num">5.4</span> Trazo de texto</a>
-                <a class="card-link" href="ejercicio_5_5.html"><span class="num">5.5</span> Esquinas redondeadas</a>
-                <a class="card-link" href="ejercicio_5_6.html"><span class="num">5.6</span> Sombra de caja</a>
-                <a class="card-link" href="ejercicio_5_7.html"><span class="num">5.7</span> Gradiente lineal</a>
-                <a class="card-link" href="ejercicio_5_8.html"><span class="num">5.8</span> Gradiente radial</a>
-                <a class="card-link" href="ejercicio_5_9.html"><span class="num">5.9</span> Animación en cuadrado</a>
-                <a class="card-link" href="ejercicio_5_10.html"><span class="num">5.10</span> Inclinación alternada</a>
-                <a class="card-link" href="ejercicio_5_11.html"><span class="num">5.11</span> Fusionar imágenes</a>
-                <a class="card-link" href="ejercicio_5_12.html"><span class="num">5.12</span> Texto multicolumna</a>
-                <a class="card-link" href="ejercicio_5_13.html"><span class="num">5.13</span> Caja flexible vertical</a>
-                <a class="card-link" href="ejercicio_5_14.html"><span class="num">5.14</span> Transformación :hover</a>
-                <a class="card-link" href="ejercicio_5_15.html"><span class="num">5.15</span> Reflejo de imagen</a>
-                <a class="card-link" href="ejercicio_5_16.html"><span class="num">5.16</span> Consultas de medios</a>
+                <a class="card-link card-regresar" href="../index.html"><span class="num">&larr;</span> Volver</a>
+                <a class="card-link" href="Ejercicio_501.html"><span class="num">5.1</span> Completar oraciones</a>
+                <a class="card-link" href="Ejercicio_502.html"><span class="num">5.2</span> Verdadero o falso</a>
+                <a class="card-link" href="Ejercicio_503.html"><span class="num">5.3</span> Sombra de texto</a>
+                <a class="card-link" href="Ejercicio_504.html"><span class="num">5.4</span> Trazo de texto</a>
+                <a class="card-link" href="Ejercicio_505.html"><span class="num">5.5</span> Esquinas redondeadas</a>
+                <a class="card-link" href="Ejercicio_506.html"><span class="num">5.6</span> Sombra de caja</a>
+                <a class="card-link" href="Ejercicio_507.html"><span class="num">5.7</span> Gradiente lineal</a>
+                <a class="card-link" href="Ejercicio_508.html"><span class="num">5.8</span> Gradiente radial</a>
+                <a class="card-link" href="Ejercicio_509.html"><span class="num">5.9</span> Animación en cuadrado</a>
+                <a class="card-link" href="Ejercicio_510.html"><span class="num">5.10</span> Inclinación alternada</a>
+                <a class="card-link" href="Ejercicio_511.html"><span class="num">5.11</span> Fusionar imágenes</a>
+                <a class="card-link" href="Ejercicio_512.html"><span class="num">5.12</span> Texto multicolumna</a>
+                <a class="card-link" href="Ejercicio_513.html"><span class="num">5.13</span> Caja flexible vertical</a>
+                <a class="card-link" href="Ejercicio_514.html"><span class="num">5.14</span> Transformación :hover</a>
+                <a class="card-link" href="Ejercicio_515.html"><span class="num">5.15</span> Reflejo de imagen</a>
+                <a class="card-link" href="Ejercicio_516.html"><span class="num">5.16</span> Consultas de medios</a>
             </div>
         </main>
 
