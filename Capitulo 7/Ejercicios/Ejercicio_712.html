@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.12 - Límite de crédito</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.12: Calculadora de Límite de Crédito</h1>
+            <p>Evalúa si un cliente de tienda departamental ha excedido su límite de crédito.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                var numCuenta = window.prompt( "Escriba el número de cuenta:", "12345" );
+                var saldoInicial = parseFloat( window.prompt( "Escriba el saldo inicial del mes:", "0" ) );
+                var cargos = parseFloat( window.prompt( "Escriba el total de cargos del mes:", "0" ) );
+                var creditos = parseFloat( window.prompt( "Escriba el total de créditos aplicados:", "0" ) );
+                var limiteCredito = parseFloat( window.prompt( "Escriba el límite de crédito permitido:", "0" ) );
+
+                var nuevoSaldo = saldoInicial + cargos - creditos;
+
+                document.writeln( "<p><strong>Número de cuenta:</strong> " + numCuenta + "</p>" );
+                document.writeln( "<p><strong>Nuevo saldo:</strong> $" + nuevoSaldo.toFixed(2) + "</p>" );
+
+                if ( nuevoSaldo > limiteCredito ) {
+                    document.writeln( "<h2 style='color: red;'>Se excedió el límite de su crédito</h2>" );
+                } else {
+                    document.writeln( "<h2 style='color: green;'>Crédito dentro del límite permitido</h2>" );
+                }
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

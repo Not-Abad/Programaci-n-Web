@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.7 - Promedio de una clase (Contador)</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.7: Promedio de una clase</h1>
+            <p>Cálculo del promedio de 10 calificaciones mediante repetición controlada por contador.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                var total = 0;                  // Suma acumulada de calificaciones
+                var contadorCalificaciones = 1; // Contador de iteraciones
+                var calificacion;               // Entrada del usuario como cadena
+                var valorCalificacion;          // Calificación convertida a número entero
+                var promedio;                   // Promedio final
+
+                // Fase de procesamiento: solicita 10 calificaciones
+                while ( contadorCalificaciones <= 10 ) {
+                    calificacion = window.prompt( "Escriba la calificación entera:", "0" );
+                    valorCalificacion = parseInt( calificacion );
+                    
+                    // Suma el valor y pasa a la siguiente calificación
+                    total = total + valorCalificacion;
+                    contadorCalificaciones = contadorCalificaciones + 1;
+                }
+
+                // Fase de terminación y cálculo del promedio
+                promedio = total / 10;
+
+                // Muestra el resultado en pantalla
+                document.writeln( "<h2>El promedio de la clase es " + promedio + "</h2>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

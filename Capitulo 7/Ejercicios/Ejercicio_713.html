@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.13 - Comisión de ventas</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.13: Calculadora de Comisión de Ventas</h1>
+            <p>Calcula las ganancias totales ($200 fijos + 9% de comisión sobre las ventas brutas acumuladas).</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                var ventasBrutas = 0;
+                var opcion = parseInt( window.prompt( "Seleccione artículo vendido (1: $239.99, 2: $129.75, 3: $99.95, 4: $350.89, -1: finalizar):", "1" ) );
+
+                while ( opcion !== -1 ) {
+                    if ( opcion === 1 ) ventasBrutas += 239.99;
+                    else if ( opcion === 2 ) ventasBrutas += 129.75;
+                    else if ( opcion === 3 ) ventasBrutas += 99.95;
+                    else if ( opcion === 4 ) ventasBrutas += 350.89;
+
+                    opcion = parseInt( window.prompt( "Seleccione siguiente artículo (1 a 4, -1 para terminar):", "-1" ) );
+                }
+
+                var ingresosTotales = 200 + ( 0.09 * ventasBrutas );
+
+                document.writeln( "<p><strong>Total de ventas brutas:</strong> $" + ventasBrutas.toFixed(2) + "</p>" );
+                document.writeln( "<h2>Ingresos totales del vendedor: $" + ingresosTotales.toFixed(2) + "</h2>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

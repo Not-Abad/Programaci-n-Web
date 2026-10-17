@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.20 - Menor y Mayor de 5 enteros</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <script type="text/JavaScript">
+        var a1 = parseInt( window.prompt( "Escriba el 1er entero:", "0" ) );
+        var a2 = parseInt( window.prompt( "Escriba el 2do entero:", "0" ) );
+        var a3 = parseInt( window.prompt( "Escriba el 3er entero:", "0" ) );
+        var a4 = parseInt( window.prompt( "Escriba el 4to entero:", "0" ) );
+        var a5 = parseInt( window.prompt( "Escriba el 5to entero:", "0" ) );
+
+        var menor = Math.min( a1, a2, a3, a4, a5 );
+        var mayor = Math.max( a1, a2, a3, a4, a5 );
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 6.20: Menor y Mayor de Cinco Enteros</h1>
+            <p>Identificación de los valores extremos de un grupo de cinco números.</p>
+        </header>
+        
+        <main>
+            <div class="detalles">
+                <script type="text/JavaScript">
+                    document.writeln( "<p><strong>Números ingresados:</strong> " + a1 + ", " + a2 + ", " + a3 + ", " + a4 + ", " + a5 + "</p>" );
+                    document.writeln( "<p><strong>El número menor es:</strong> " + menor + "</p>" );
+                    document.writeln( "<p><strong>El número mayor es:</strong> " + mayor + "</p>" );
+                </script>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

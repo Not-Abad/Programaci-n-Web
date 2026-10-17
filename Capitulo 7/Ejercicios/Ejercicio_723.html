@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.23 - Descifrado de datos</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.23: Descifrado de Datos de 4 Dígitos</h1>
+            <p>Proceso inverso al ejercicio 7.22 para recuperar el número original a partir del código cifrado.</p>
+        </header>
+       
+        <main>
+            <script type="text/JavaScript">
+                var cifradoStr = window.prompt( "Escriba el número cifrado de 4 dígitos:", "0189" );
+
+                var c1 = parseInt( cifradoStr.charAt( 0 ) );
+                var c2 = parseInt( cifradoStr.charAt( 1 ) );
+                var c3 = parseInt( cifradoStr.charAt( 2 ) );
+                var c4 = parseInt( cifradoStr.charAt( 3 ) );
+
+                // Invertir el intercambio de posiciones (1° con 3°, 2° con 4°)
+                var e1 = c3;
+                var e2 = c4;
+                var e3 = c1;
+                var e4 = c2;
+
+                // Invertir la operación modular: (d + 3) % 10 equivale a deshacer (d + 7) % 10
+                var d1 = ( e1 + 3 ) % 10;
+                var d2 = ( e2 + 3 ) % 10;
+                var d3 = ( e3 + 3 ) % 10;
+                var d4 = ( e4 + 3 ) % 10;
+
+                var resultadoOriginal = "" + d1 + d2 + d3 + d4;
+
+                document.writeln( "<div class='detalles'>" );
+                document.writeln( "<p><strong>Número cifrado ingresado:</strong> " + cifradoStr + "</p>" );
+                document.writeln( "<h2>Número descifrado (original): " + resultadoOriginal + "</h2>" );
+                document.writeln( "</div>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.9 - Corregir fragmentos de código</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.9: Identificar y corregir errores en fragmentos de código</h1>
+            <p>Corrección de cuatro errores comunes en bucles e instrucciones condicionales.</p>
+        </header>
+        
+        <main>
+            <ol type="a">
+                <li class="item">
+                    <div class="enunciado">a) <code>if ( edad &gt;= 65 );</code></div>
+                    <span class="respuesta">Error: El punto y coma después de la condición corta la instrucción if. Debe eliminarse el punto y coma.</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">b) <code>var x = 1, total;</code></div>
+                    <span class="respuesta">Error: La variable total no está inicializada (es undefined), por lo que total += x genera NaN. Debe inicializarse total = 0;.</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">c) <code>while ( x &lt;= 100 ) total += x; ++x;</code></div>
+                    <span class="respuesta">Error: Faltan llaves en el cuerpo del while. Al no tener llaves, sólo ejecuta total += x;, creando un ciclo infinito porque ++x está fuera.</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">d) <code>while ( y &gt; 0 ) &#123; document.writeln( y ); ++y; &#125;</code></div>
+                    <span class="respuesta">Error: Se incrementa ++y en lugar de decrementar --y. Esto hace que y siempre sea mayor que 0, produciendo un ciclo infinito.</span>
+                </li>
+            </ol>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

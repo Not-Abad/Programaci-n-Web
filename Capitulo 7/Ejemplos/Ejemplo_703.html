@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.11 - Análisis de resultados de examen</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.11: Análisis de Resultados de Examen</h1>
+            <p>Análisis del rendimiento de 10 estudiantes en un examen (1 = aprobado, 2 = reprobado).</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                var aprobados = 0;  // Contador de estudiantes aprobados
+                var reprobados = 0; // Contador de estudiantes reprobados
+                var estudiante = 1; // Contador de iteraciones
+                var resultado;      // Resultado ingresado por el usuario
+
+                // Procesamiento de los datos de 10 estudiantes
+                while ( estudiante <= 10 ) {
+                    resultado = window.prompt( "Escriba el resultado (1=aprobado, 2=reprobado)", "0" );
+
+                    if ( resultado == "1" ) {
+                        aprobados = aprobados + 1;
+                    } else {
+                        reprobados = reprobados + 1;
+                    }
+
+                    estudiante = estudiante + 1;
+                }
+
+                // Despliegue de los resultados acumulados
+                document.writeln( "<h2>Resultados del examen</h2>" );
+                document.writeln( "<p>Aprobados: " + aprobados + "</p>" );
+                document.writeln( "<p>Reprobados: " + reprobados + "</p>" );
+
+                // Condición especial para bono del instructor
+                if ( aprobados > 8 ) {
+                    document.writeln( "<h3>Bono para el instructor</h3>" );
+                }
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

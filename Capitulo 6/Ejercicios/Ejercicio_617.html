@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.17 - Comparación de enteros</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <script type="text/JavaScript">
+        var v1 = window.prompt( "Escriba el primer entero:", "0" );
+        var v2 = window.prompt( "Escriba el segundo entero:", "0" );
+
+        var num1 = parseInt( v1 );
+        var num2 = parseInt( v2 );
+
+        if ( num1 > num2 ) {
+            window.alert( num1 + " es mayor que " + num2 );
+        } else if ( num2 > num1 ) {
+            window.alert( num2 + " es mayor que " + num1 );
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 6.17: Comparación de Enteros</h1>
+            <p>Muestra el número mayor en un diálogo de alerta o indica si son iguales.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                if ( num1 === num2 ) {
+                    document.writeln( "<h2>Estos números son iguales</h2>" );
+                } else {
+                    document.writeln( "<p>Los números ingresados fueron " + num1 + " y " + num2 + ".</p>" );
+                }
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

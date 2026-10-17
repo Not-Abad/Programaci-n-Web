@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.19 - El problema del else suelto</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.19: El Problema del "Else Suelto"</h1>
+            <p>Análisis de asociación entre instrucciones condicionales e instrucciones else sin delimitación de llaves.</p>
+        </header>
+       
+        <main>
+            <ol type="a">
+                <li class="item">
+                    <div class="enunciado">a) Para la estructura sin llaves:</div>
+                    <code>if ( x &lt; 10 )<br>&nbsp;&nbsp;if ( y &gt; 10 )<br>&nbsp;&nbsp;&nbsp;&nbsp;document.writeln( "&lt;p&gt;*****&lt;/p&gt;" );<br>&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;document.writeln( "&lt;p&gt;#####&lt;/p&gt;" );<br>document.writeln( "&lt;p&gt;$$$$$&lt;/p&gt;" );</code>
+                    <br><br>
+                    <p><strong>Cuando x = 9 y y = 11:</strong> <span class="respuesta">Imprime ***** y $$$$$</span></p>
+                    <p><strong>Cuando x = 11 y y = 9:</strong> <span class="respuesta">Imprime $$$$$ (El else está asociado al segundo if, el cual no se evalúa al fallar el primero)</span></p>
+                </li>
+                <li class="item">
+                    <div class="enunciado">b) Para la estructura con llaves:</div>
+                    <code>if ( x &lt; 10 ) {<br>&nbsp;&nbsp;if ( y &gt; 10 )<br>&nbsp;&nbsp;&nbsp;&nbsp;document.writeln( "&lt;p&gt;*****&lt;/p&gt;" );<br>}<br>else {<br>&nbsp;&nbsp;document.writeln( "&lt;p&gt;#####&lt;/p&gt;" );<br>&nbsp;&nbsp;document.writeln( "&lt;p&gt;$$$$$&lt;/p&gt;" );<br>}</code>
+                    <br><br>
+                    <p><strong>Cuando x = 9 y y = 11:</strong> <span class="respuesta">Imprime *****</span></p>
+                    <p><strong>Cuando x = 11 y y = 9:</strong> <span class="respuesta">Imprime ##### y $$$$$ (El else está asociado explícitamente al primer if)</span></p>
+                </li>
+            </ol>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

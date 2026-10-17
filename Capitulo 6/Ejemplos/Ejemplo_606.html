@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- Fig. 6.14: bienvenido5.html -->
+<!-- Uso de operadores de igualdad y relacionales con lógica de saludo corregida. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uso de operadores relacionales</title>
+        <link rel="stylesheet" type="text/css" href="../../Estilos_Globales/Menu.css">
+    </head>
+    
+    <body>
+        <main>
+            <script type="text/JavaScript">
+                var nombre;
+                var ahora = new Date();     // Fecha y hora actuales
+                var hora = ahora.getHours(); // Hora actual (0-23)
+                var saludo = "";
+
+                // Lee el nombre del usuario
+                nombre = window.prompt( "Escriba su nombre" );
+
+                // Manejo en caso de que el usuario cancele o deje el nombre vacío
+                if ( !nombre ) {
+                    nombre = "Usuario";
+                }
+
+                // Lógica de horario clara sin alterar la variable original
+                if ( hora >= 6 && hora < 12 ) {
+                    saludo = "Buenos d&iacute;as, ";
+                } else if ( hora >= 12 && hora < 18 ) {
+                    saludo = "Buenas tardes, ";
+                } else {
+                    saludo = "Buenas noches, ";
+                }
+
+                // Generación limpia del contenido HTML en una sola instrucción
+                document.writeln( "<h1>" + saludo + nombre + 
+                   ", bienvenido a la programaci&oacute;n en JavaScript</h1>" );
+            </script>
+
+            <div class="grid-links">
+                <a class="card-link card-regresar" href="index.html"><span class="num">&larr;</span> Volver</a>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </body>
+</html>

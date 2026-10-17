@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.17 - Los dos valores más grandes</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.17: Encontrar los Dos Valores Más Grandes</h1>
+            <p>Algoritmo que recibe 10 números e identifica los dos valores más altos introducidos.</p>
+        </header>
+       
+        <main>
+            <script type="text/JavaScript">
+                var contador = 1;
+                var numero;
+                var mayor1 = -Infinity;
+                var mayor2 = -Infinity;
+
+                while ( contador <= 10 ) {
+                    numero = parseFloat( window.prompt( "Escriba el número " + contador + " de 10:", "0" ) );
+
+                    if ( numero > mayor1 ) {
+                        mayor2 = mayor1;
+                        mayor1 = numero;
+                    } else if ( numero > mayor2 ) {
+                        mayor2 = numero;
+                    }
+
+                    contador++;
+                }
+
+                document.writeln( "<div class='detalles'>" );
+                document.writeln( "<h2>Resultados:</h2>" );
+                document.writeln( "<p><strong>El número más grande (#1):</strong> " + mayor1 + "</p>" );
+                document.writeln( "<p><strong>El segundo número más grande (#2):</strong> " + mayor2 + "</p>" );
+                document.writeln( "</div>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

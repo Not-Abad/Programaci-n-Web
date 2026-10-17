@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.23 - Conteo de números</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <script type="text/JavaScript">
+        var k1 = parseFloat( window.prompt( "Escriba el primer número:", "0" ) );
+        var k2 = parseFloat( window.prompt( "Escriba el segundo número:", "0" ) );
+        var k3 = parseFloat( window.prompt( "Escriba el tercer número:", "0" ) );
+
+        var pos = 0, neg = 0, ceros = 0;
+
+        [k1, k2, k3].forEach( function( n ) {
+            if ( n > 0 ) pos++;
+            else if ( n < 0 ) neg++;
+            else ceros++;
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 6.23: Conteo de Números</h1>
+            <p>Clasificación de números positivos, negativos y ceros.</p>
+        </header>
+        
+        <main>
+            <div class="detalles">
+                <script type="text/JavaScript">
+                    document.writeln( "<p><strong>Números introducidos:</strong> " + k1 + ", " + k2 + ", " + k3 + "</p>" );
+                    document.writeln( "<p><strong>Cantidad de números positivos:</strong> " + pos + "</p>" );
+                    document.writeln( "<p><strong>Cantidad de números negativos:</strong> " + neg + "</p>" );
+                    document.writeln( "<p><strong>Cantidad de ceros:</strong> " + ceros + "</p>" );
+                </script>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

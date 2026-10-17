@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Ejercicio 7.18: ej08_18.html -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.18 - Secuencia misteriosa</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.18: Secuencia de Comandos Misteriosa</h1>
+            <p>Determinación del patrón impreso por ciclos anidados mediante operadores ternarios.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <div class="enunciado">Salida generada por la secuencia:</div>
+                <script type="text/JavaScript">
+                    var fila = 10;
+                    var columna;
+
+                    while ( fila >= 1 ) {
+                        columna = 1;
+                        document.writeln( "<p style='font-family: monospace; letter-spacing: 4px; margin: 2px 0;'>" );
+
+                        while ( columna <= 10 ) {
+                            document.write( fila % 2 == 1 ? "<" : ">" );
+                            ++columna;
+                        }
+
+                        --fila;
+                        document.writeln( "</p>" );
+                    }
+                </script>
+            </div>
+
+            <div class="detalles">
+                <p><strong>Explicación:</strong> El script genera 10 filas de 10 caracteres cada una. Cuando la variable <code>fila</code> es par (10, 8, 6, 4, 2), imprime 10 caracteres <code>&gt;</code>. Cuando es impar (9, 7, 5, 3, 1), imprime 10 caracteres <code>&lt;</code>.</p>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

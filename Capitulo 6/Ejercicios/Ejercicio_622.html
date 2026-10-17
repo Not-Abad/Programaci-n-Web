@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.22 - Múltiplos</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <script type="text/JavaScript">
+        var e1 = parseInt( window.prompt( "Escriba el primer entero:", "0" ) );
+        var e2 = parseInt( window.prompt( "Escriba el segundo entero:", "0" ) );
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 6.22: Verificación de Múltiplo</h1>
+            <p>Determina si el primer entero es múltiplo del segundo.</p>
+        </header>
+        
+        <main>
+            <div class="detalles">
+                <script type="text/JavaScript">
+                    if ( e2 !== 0 && e1 % e2 === 0 ) {
+                        document.writeln( "<h2>" + e1 + " es múltiplo de " + e2 + ".</h2>" );
+                    } else {
+                        document.writeln( "<h2>" + e1 + " NO es múltiplo de " + e2 + ".</h2>" );
+                    }
+                </script>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

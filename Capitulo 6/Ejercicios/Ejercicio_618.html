@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.18 - Estadísticas de tres enteros</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <script type="text/JavaScript">
+        var e1 = parseInt( window.prompt( "Escriba el primer entero:", "0" ) );
+        var e2 = parseInt( window.prompt( "Escriba el segundo entero:", "0" ) );
+        var e3 = parseInt( window.prompt( "Escriba el tercer entero:", "0" ) );
+
+        var suma = e1 + e2 + e3;
+        var promedio = suma / 3;
+        var producto = e1 * e2 * e3;
+        var menor = Math.min( e1, e2, e3 );
+        var mayor = Math.max( e1, e2, e3 );
+
+        window.alert( 
+            "Suma: " + suma + 
+            "\nPromedio: " + promedio + 
+            "\nProducto: " + producto + 
+            "\nMenor: " + menor + 
+            "\nMayor: " + mayor 
+        );
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 6.18: Estadísticas de Tres Enteros</h1>
+            <p>Suma, promedio, producto, menor y mayor desglosados en diálogo alert.</p>
+        </header>
+        
+        <main>
+            <div class="detalles">
+                <p>Los resultados fueron desplegados exitosamente en el cuadro de alerta.</p>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

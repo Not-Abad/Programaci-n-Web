@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!-- Fig. 6.7: suma.html -->
+<!-- Secuencia de comandos de suma con validación de datos. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Un programa de suma</title>
+        <link rel="stylesheet" type="text/css" href="../../Estilos_Globales/Menu.css">
+    </head>
+    
+    <body>
+        <main>
+            <script type="text/JavaScript">
+                var primerNumero;  // primera cadena introducida por el usuario
+                var segundoNumero; // segunda cadena introducida por el usuario
+                var numero1;       // primer número a sumar
+                var numero2;       // segundo número a sumar
+                var suma;          // suma de numero1 y numero2
+
+                // Lee las cadenas desde los cuadros prompt
+                primerNumero = window.prompt( "Escriba el primer entero" );
+                segundoNumero = window.prompt( "Escriba el segundo entero" );
+
+                // Convierte los valores a números enteros
+                numero1 = parseInt( primerNumero );
+                numero2 = parseInt( segundoNumero );
+
+                // Validación de entrada para evitar NaN o cancelar
+                if ( isNaN( numero1 ) || isNaN( numero2 ) ) {
+                    document.writeln( "<h1>No se ingresaron números enteros válidos.</h1>" );
+                } else {
+                    suma = numero1 + numero2; // Suma los números
+                    document.writeln( "<h1>La suma es " + suma + "</h1>" );
+                }
+            </script>
+
+            <div class="grid-links">
+                <a class="card-link card-regresar" href="index.html"><span class="num">&larr;</span> Volver</a>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </body>
+</html>

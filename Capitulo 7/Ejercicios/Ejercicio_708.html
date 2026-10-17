@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.8 - Análisis del ciclo while</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.8: Error en instrucción de repetición while</h1>
+            <p>Análisis de la instrucción while ( z >= 0 ) suma += z;.</p>
+        </header>
+        
+        <main>
+            <div class="item">
+                <div class="enunciado">Instrucción analizada:</div>
+                <code>while ( z &gt;= 0 )<br>&nbsp;&nbsp;&nbsp;&nbsp;suma += z;</code>
+            </div>
+
+            <div class="detalles">
+                <p><strong>Error:</strong> El valor de la variable <code>z</code> nunca se modifica dentro del cuerpo de la instrucción <code>while</code>. Por lo tanto, si la condición <code>( z &gt;= 0 )</code> es verdadera, se produce un <strong>ciclo infinito</strong>.</p>
+                <p><strong>Solución:</strong> La variable <code>z</code> debe decrementarse dentro del ciclo (por ejemplo, con <code>--z;</code>) para que en algún momento tome un valor menor a 0 y la repetición termine.</p>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

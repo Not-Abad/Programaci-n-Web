@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.21 - Múltiplos de 2</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.21: Múltiplos del Entero 2</h1>
+            <p>Generación de potencias de 2 mediante ciclo continuo y evaluación del comportamiento del sistema.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <div class="enunciado">Ejecución del ciclo de múltiplos de 2:</div>
+                <script type="text/JavaScript">
+                    var multiplo = 2;
+                    var limite = 0;
+
+                    // Se previene la congelación completa del navegador limitando la iteración a Infinity o 1024 pasos
+                    while ( true ) {
+                        document.writeln( multiplo + " " );
+                        multiplo *= 2;
+                        limite++;
+
+                        if ( multiplo === Infinity || limite >= 1024 ) {
+                            document.writeln( "<p><strong>... " + multiplo + "</strong></p>" );
+                            break;
+                        }
+                    }
+                </script>
+            </div>
+
+            <div class="detalles">
+                <p><strong>¿Qué ocurre cuando ejecuta este programa?</strong></p>
+                <p><span class="respuesta">El número se multiplica por 2 en cada iteración. En JavaScript, al sobrepasar el valor máximo representable (<code>Number.MAX_VALUE</code> ≈ 1.79e+308), la variable se convierte en <code>Infinity</code>. Si el ciclo no tuviese un límite de salida, consumiría memoria y recursos del procesador hasta congelar la pestaña del navegador o provocar que aparezca una alerta de script sin responder.</span></p>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

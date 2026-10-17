@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.14 - Sueldo bruto</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.14: Calculadora de Sueldo Bruto</h1>
+            <p>Calcula el pago de 3 empleados considerando cuota normal hasta 40 hrs y cuota y media para horas extras.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                var contador = 1;
+                var horas;
+                var tarifa;
+                var sueldoBruto;
+
+                while ( contador <= 3 ) {
+                    horas = parseFloat( window.prompt( "Empleado " + contador + " - Escriba las horas trabajadas:", "40" ) );
+                    tarifa = parseFloat( window.prompt( "Empleado " + contador + " - Escriba la tarifa por hora:", "10" ) );
+
+                    if ( horas <= 40 ) {
+                        sueldoBruto = horas * tarifa;
+                    } else {
+                        sueldoBruto = ( 40 * tarifa ) + ( ( horas - 40 ) * tarifa * 1.5 );
+                    }
+
+                    document.writeln( "<p><strong>Empleado " + contador + ":</strong> " + horas + " hrs a $" + tarifa + "/hr &rarr; <strong>Sueldo bruto: $" + sueldoBruto.toFixed(2) + "</strong></p>" );
+
+                    contador++;
+                }
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

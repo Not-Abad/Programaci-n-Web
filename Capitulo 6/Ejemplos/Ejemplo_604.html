@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!-- Fig. 6.5: bienvenido4.html -->
+<!-- Cuadro indicador utilizado en una pantalla de bienvenida -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uso de cuadros prompt y alert</title>
+        <link rel="stylesheet" type="text/css" href="../../Estilos_Globales/Menu.css">
+        <script type="text/JavaScript">
+            var nombre; // cadena introducida por el usuario
+
+            // lee el nombre del cuadro prompt como una cadena
+            nombre = window.prompt( "Escriba su nombre" );
+
+            document.writeln( "<h1>Hola " + nombre +
+               ", bienvenido a la programaci&oacute;n en JavaScript</h1>" );
+        </script>
+    </head>
+    
+    <body>
+        <main>
+            <div class="grid-links">
+                <a class="card-link card-regresar" href="index.html"><span class="num">&larr;</span> Volver</a>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </body>
+</html>

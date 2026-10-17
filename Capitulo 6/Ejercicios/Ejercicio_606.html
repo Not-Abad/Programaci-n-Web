@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Ejercicio 6.6: producto.html -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.6 - Cálculo del Producto</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <script type="text/JavaScript">
+        // Calcula el producto de tres enteros
+        var x, y, z, resultado;
+        var xVal, yVal, zVal;
+
+        xVal = window.prompt( "Escriba el primer entero:", "0" );
+        yVal = window.prompt( "Escriba el segundo entero:", "0" );
+        zVal = window.prompt( "Escriba el tercer entero:", "0" );
+
+        x = parseInt( xVal );
+        y = parseInt( yVal );
+        z = parseInt( zVal );
+
+        resultado = x * y * z;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 6.6: Cálculo del Producto de Tres Enteros</h1>
+            <p>Secuencia de comandos completa ejecutable en JavaScript.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                document.writeln( "<h2>El producto es " + resultado + "</h2>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

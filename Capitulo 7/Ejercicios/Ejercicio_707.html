@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.7 - Identificar y corregir errores</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.7: Identificar y corregir errores</h1>
+            <p>Análisis de código para detectar y solucionar errores en estructuras de control.</p>
+        </header>
+        
+        <main>
+            <ol type="a">
+                <li class="item">
+                    <div class="enunciado">a) Código con error:</div>
+                    <code>while ( c &lt;= 5 ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;producto *= c;<br>&nbsp;&nbsp;&nbsp;&nbsp;++c;</code><br><br>
+                    <span class="respuesta">Error: Falta la llave derecha de cierre (&#125;) del cuerpo de la instrucción while.<br>Corrección: Agregar la llave de cierre &#125; después de ++c;.</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">b) Código con error:</div>
+                    <code>if ( genero == 1 )<br>&nbsp;&nbsp;&nbsp;&nbsp;document.writeln( "Mujer" );<br>else;<br>&nbsp;&nbsp;&nbsp;&nbsp;document.writeln( "Hombre" );</code><br><br>
+                    <span class="respuesta">Error: El punto y coma (;) después de else produce un error lógico, haciendo que la segunda instrucción siempre se ejecutará.<br>Corrección: Eliminar el punto y coma después de else.</span>
+                </li>
+            </ol>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

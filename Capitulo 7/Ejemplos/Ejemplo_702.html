@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.9 - Promedio de una clase (Centinela)</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.9: Promedio de una clase (Centinela)</h1>
+            <p>Cálculo del promedio introduciendo calificaciones hasta ingresar el valor centinela -1.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                var total = 0;                  // Suma de calificaciones
+                var contadorCalificaciones = 0; // Cantidad de entradas ingresadas
+                var calificacion;               // Entrada del usuario
+                var valorCalificacion;          // Valor entero
+                var promedio;                   // Promedio calculado
+
+                // Solicita la primera calificación antes de entrar al ciclo
+                calificacion = window.prompt( "Escriba la calificación entera, -1 para salir:", "0" );
+                valorCalificacion = parseInt( calificacion );
+
+                // Ciclo controlado por valor centinela (-1)
+                while ( valorCalificacion != -1 ) {
+                    total = total + valorCalificacion;
+                    contadorCalificaciones = contadorCalificaciones + 1;
+
+                    // Solicita la siguiente calificación
+                    calificacion = window.prompt( "Escriba la calificación entera, -1 para salir:", "0" );
+                    valorCalificacion = parseInt( calificacion );
+                }
+
+                // Fase de terminación
+                if ( contadorCalificaciones != 0 ) {
+                    promedio = total / contadorCalificaciones;
+                    document.writeln( "<h2>El promedio de la clase es " + promedio.toFixed(2) + "</h2>" );
+                } else {
+                    document.writeln( "<p>No se introdujeron calificaciones.</p>" );
+                }
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

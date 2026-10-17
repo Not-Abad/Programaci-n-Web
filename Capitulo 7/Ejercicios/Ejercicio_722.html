@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.22 - Cifrado de datos</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.22: Cifrado de Datos de 4 Dígitos</h1>
+            <p>Cifrado mediante la fórmula (dígito + 7) % 10 e intercambio de posiciones (1° por 3°, 2° por 4°).</p>
+        </header>
+       
+        <main>
+            <script type="text/JavaScript">
+                var entrada = window.prompt( "Escriba un número entero de 4 dígitos para cifrar:", "1234" );
+                var num = parseInt( entrada );
+
+                // Extracción de dígitos
+                var d1 = Math.floor( num / 1000 );
+                var d2 = Math.floor( ( num % 1000 ) / 100 );
+                var d3 = Math.floor( ( num % 100 ) / 10 );
+                var d4 = num % 10;
+
+                // Aplicación de fórmula (d + 7) % 10
+                var c1 = ( d1 + 7 ) % 10;
+                var c2 = ( d2 + 7 ) % 10;
+                var c3 = ( d3 + 7 ) % 10;
+                var c4 = ( d4 + 7 ) % 10;
+
+                // Intercambio de posiciones: 1° por 3°, 2° por 4°
+                var resultadoCifrado = "" + c3 + c4 + c1 + c2;
+
+                document.writeln( "<div class='detalles'>" );
+                document.writeln( "<p><strong>Número original:</strong> " + entrada + "</p>" );
+                document.writeln( "<h2>Número cifrado: " + resultadoCifrado + "</h2>" );
+                document.writeln( "</div>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

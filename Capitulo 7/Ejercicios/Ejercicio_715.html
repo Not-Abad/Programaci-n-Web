@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.15 - Encontrar el número más grande</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.15: Encontrar el Número Más Grande</h1>
+            <p>Algoritmo que procesa una serie de 10 números e identifica el valor máximo introducido.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                var contador = 1;
+                var numero;
+                var mayor;
+
+                var entrada = window.prompt( "Escriba el número 1 de 10:", "0" );
+                numero = parseInt( entrada );
+                mayor = numero;
+
+                while ( contador < 10 ) {
+                    contador++;
+                    entrada = window.prompt( "Escriba el número " + contador + " de 10:", "0" );
+                    numero = parseInt( entrada );
+
+                    if ( numero > mayor ) {
+                        mayor = numero;
+                    }
+                }
+
+                document.writeln( "<h2>El número más grande introducido es: " + mayor + "</h2>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

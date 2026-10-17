@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.19 - Geometría de un Círculo</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <script type="text/JavaScript">
+        var rVal = window.prompt( "Escriba el radio del círculo:", "0" );
+        var radio = parseFloat( rVal );
+        var PI = 3.14159;
+
+        var diametro = 2 * radio;
+        var circunferencia = 2 * PI * radio;
+        var area = PI * radio * radio;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 6.19: Geometría del Círculo</h1>
+            <p>Cálculo de diámetro, circunferencia y área del círculo.</p>
+        </header>
+        
+        <main>
+            <div class="detalles">
+                <script type="text/JavaScript">
+                    document.writeln( "<p><strong>Radio introducido:</strong> " + radio + "</p>" );
+                    document.writeln( "<p><strong>Diámetro:</strong> " + diametro + "</p>" );
+                    document.writeln( "<p><strong>Circunferencia:</strong> " + circunferencia.toFixed(4) + "</p>" );
+                    document.writeln( "<p><strong>Área:</strong> " + area.toFixed(4) + "</p>" );
+                </script>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

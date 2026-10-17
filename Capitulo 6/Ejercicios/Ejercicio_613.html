@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.13 - Representación de ecuaciones</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 6.13: Evaluación de la Ecuación y = ax³ + 7</h1>
+            <p>Determinar cuáles instrucciones representan correctamente la ecuación.</p>
+        </header>
+        
+        <main>
+            <ol type="a">
+                <li class="item">
+                    <div class="enunciado">a) <code>y = a * x * x * x + 7;</code></div>
+                    <span class="vf verdadero">Correcta</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">b) <code>y = a * x * x * ( x + 7 );</code></div>
+                    <span class="vf falso">Incorrecta</span>
+                    <span class="explicacion">Equivale a ax³ + 7ax².</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">c) <code>y = ( a * x ) * x * ( x + 7 );</code></div>
+                    <span class="vf falso">Incorrecta</span>
+                    <span class="explicacion">Equivale a ax³ + 7ax².</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">d) <code>y = ( a * x ) * x * x + 7;</code></div>
+                    <span class="vf verdadero">Correcta</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">e) <code>y = a * ( x * x * x ) + 7;</code></div>
+                    <span class="vf verdadero">Correcta</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">f) <code>y = a * x * ( x * x + 7 );</code></div>
+                    <span class="vf falso">Incorrecta</span>
+                    <span class="explicacion">Equivale a ax³ + 7ax.</span>
+                </li>
+            </ol>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

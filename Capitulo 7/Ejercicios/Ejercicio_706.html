@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.6 - Valor de variables</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.6: Valor de variables después del cálculo</h1>
+            <p>Determinar el valor de cada variable considerando que inicialmente todas tienen el valor entero 5.</p>
+        </header>
+        
+        <main>
+            <ol type="a">
+                <li class="item">
+                    <div class="enunciado">a) <code>producto *= x++;</code></div>
+                    <span class="respuesta">producto = 25, x = 6</span>
+                    <p class="explicacion">Como es postincremento (x++), se usa el valor actual de x (5) para multiplicar producto (5 * 5 = 25) y luego x se incrementa a 6.</p>
+                </li>
+                <li class="item">
+                    <div class="enunciado">b) <code>cociente /= ++x;</code></div>
+                    <span class="respuesta">cociente = 0.833333..., x = 6</span>
+                    <p class="explicacion">Como es preincremento (++x), x se incrementa primero a 6, y luego se divide cociente (5 / 6 = 0.833333...).</p>
+                </li>
+            </ol>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

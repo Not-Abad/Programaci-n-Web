@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.14 - Orden de evaluación</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 6.14: Orden de Evaluación de Operadores</h1>
+            <p>Determinar el orden de evaluación y el valor resultante de x.</p>
+        </header>
+        
+        <main>
+            <ol type="a">
+                <li class="item">
+                    <div class="enunciado">a) <code>x = 7 + 3 * 6 / 2 - 1;</code></div>
+                    <span class="respuesta">Orden de evaluación: 3*6=18, 18/2=9, 7+9=16, 16-1=15.<br><strong>Valor final de x = 15</strong></span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">b) <code>x = 2 % 2 + 2 * 2 - 2 / 2;</code></div>
+                    <span class="respuesta">Orden de evaluación: 2%2=0, 2*2=4, 2/2=1, 0+4=4, 4-1=3.<br><strong>Valor final de x = 3</strong></span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">c) <code>x = ( 3 * 9 * ( 3 + ( 9 * 3 / ( 3 ) ) ) );</code></div>
+                    <span class="respuesta">Orden de evaluación: (9*3/3)=9, (3+9)=12, (3*9*12)=324.<br><strong>Valor final de x = 324</strong></span>
+                </li>
+            </ol>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.21 - Par o Impar</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <script type="text/JavaScript">
+        var val = window.prompt( "Escriba un entero:", "0" );
+        var num = parseInt( val );
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 6.21: Determinación de Par o Impar</h1>
+            <p>Uso del operador residuo (%) para verificar la paridad.</p>
+        </header>
+        
+        <main>
+            <div class="detalles">
+                <script type="text/JavaScript">
+                    if ( num % 2 === 0 ) {
+                        document.writeln( "<h2>El número " + num + " es PAR.</h2>" );
+                    } else {
+                        document.writeln( "<h2>El número " + num + " es IMPAR.</h2>" );
+                    }
+                </script>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

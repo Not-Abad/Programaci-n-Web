@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.16 - Tabla de valores</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <style>
+        table.tabla-ejercicio {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+            text-align: center;
+        }
+        table.tabla-ejercicio th, table.tabla-ejercicio td {
+            border: 2px solid #2b5797;
+            padding: 8px 12px;
+        }
+        table.tabla-ejercicio th {
+            background-color: #2b5797;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.16: Tabla de Valores</h1>
+            <p>Generación de una tabla con los múltiplos N, 10*N, 100*N y 1000*N para N del 1 al 6 mediante ciclos.</p>
+        </header>
+       
+        <main>
+            <script type="text/JavaScript">
+                document.writeln( "<table class='tabla-ejercicio'>" );
+                document.writeln( "<thead><tr><th>N</th><th>10*N</th><th>100*N</th><th>1000*N</th></tr></thead><tbody>" );
+                
+                var n = 1;
+                while ( n <= 6 ) {
+                    document.writeln( "<tr><td>" + n + "</td><td>" + ( 10 * n ) + "</td><td>" + ( 100 * n ) + "</td><td>" + ( 1000 * n ) + "</td></tr>" );
+                    n++;
+                }
+                
+                document.writeln( "</tbody></table>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

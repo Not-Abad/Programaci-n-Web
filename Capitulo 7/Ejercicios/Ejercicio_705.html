@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Ejercicio 7.5: ej07_05.html -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.5 - Sumar los enteros del 1 al 10</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <script type="text/JavaScript">
+        var suma; // Almacena el total
+        var x;    // Variable contador de control
+
+        x = 1;
+        suma = 0;
+
+        while ( x <= 10 ) {
+            suma += x;
+            ++x;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.5: Sumar los enteros del 1 al 10</h1>
+            <p>Secuencia de comandos que calcula e imprima la suma de los enteros del 1 al 10 mediante un ciclo while.</p>
+        </header>
+        
+        <main>
+            <div class="detalles">
+                <script type="text/JavaScript">
+                    document.writeln( "<h2>La suma es: " + suma + "</h2>" );
+                </script>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

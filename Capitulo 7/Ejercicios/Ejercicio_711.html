@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.11 - Rendimiento de combustible</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.11: Rendimiento de Combustible (km/l)</h1>
+            <p>Programa para registrar viajes, calcular el rendimiento individual y el promedio acumulado.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                var kilometros;
+                var litros;
+                var totalKilometros = 0;
+                var totalLitros = 0;
+                var kmlViaje;
+                var contadorViajes = 0;
+
+                var entradaKm = window.prompt( "Escriba los kilómetros conducidos (-1 para terminar):", "0" );
+                kilometros = parseFloat( entradaKm );
+
+                while ( kilometros != -1 ) {
+                    var entradaLitros = window.prompt( "Escriba los litros usados en este viaje:", "0" );
+                    litros = parseFloat( entradaLitros );
+
+                    kmlViaje = kilometros / litros;
+                    contadorViajes++;
+
+                    totalKilometros += kilometros;
+                    totalLitros += litros;
+
+                    document.writeln( "<p>Viaje " + contadorViajes + ": " + kmlViaje.toFixed(2) + " km/l</p>" );
+
+                    entradaKm = window.prompt( "Escriba los kilómetros conducidos (-1 para terminar):", "0" );
+                    kilometros = parseFloat( entradaKm );
+                }
+
+                if ( totalLitros > 0 ) {
+                    var promedioTotal = totalKilometros / totalLitros;
+                    document.writeln( "<h2>Promedio total de rendimiento: " + promedioTotal.toFixed(2) + " km/l</h2>" );
+                } else {
+                    document.writeln( "<p>No se ingresaron datos de viajes válidos.</p>" );
+                }
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

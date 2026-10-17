@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7.20 - Números Palíndromos</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 7.20: Verificación de Números Palíndromos</h1>
+            <p>Programa que valida un entero de 5 dígitos y determina si se lee igual de izquierda a derecha y viceversa.</p>
+        </header>
+       
+        <main>
+            <script type="text/JavaScript">
+                var entrada;
+                var numero;
+                var esValido = false;
+
+                while ( !esValido ) {
+                    entrada = window.prompt( "Escriba un número entero de 5 dígitos:", "12321" );
+                    numero = parseInt( entrada );
+
+                    if ( numero >= 10000 && numero <= 99999 ) {
+                        esValido = true;
+                    } else {
+                        window.alert( "Error: Debe introducir un número entero de exactamente 5 dígitos." );
+                    }
+                }
+
+                // Descomposición en dígitos individuales mediante operaciones matemáticas
+                var d1 = Math.floor( numero / 10000 );
+                var d2 = Math.floor( ( numero % 10000 ) / 1000 );
+                var d3 = Math.floor( ( numero % 1000 ) / 100 );
+                var d4 = Math.floor( ( numero % 100 ) / 10 );
+                var d5 = numero % 10;
+
+                document.writeln( "<div class='detalles'>" );
+                document.writeln( "<p><strong>Número ingresado:</strong> " + numero + "</p>" );
+
+                if ( d1 === d5 && d2 === d4 ) {
+                    document.writeln( "<h2 style='color: green;'>El número ES un palíndromo</h2>" );
+                } else {
+                    document.writeln( "<h2 style='color: red;'>El número NO es un palíndromo</h2>" );
+                }
+                document.writeln( "</div>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>
