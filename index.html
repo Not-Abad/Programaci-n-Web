@@ -1,42 +1,73 @@
 <!DOCTYPE html>
 
-<!-- Index General de todos los capitulos-->
 <html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menu Principal</title>
-        <link rel = "stylesheet" type = "text/css" href = "Estilos_Globales/Menu.css">
+        <title>Menú Principal - Deitel 5ta Edición</title>
+    
+        <!-- Fuentes Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- Hojas de Estilos Globales y Menú Flotante -->
+        <link rel="stylesheet" href="Estilos_Globales/menu_flotante.css">
+        <link rel="stylesheet" href="Estilos_Globales/fontello.css">
+    
+        <!-- Hoja de Estilos Exclusiva de la Página Principal -->
+        <link rel="stylesheet" href="Estilos_Globales/index_principal.css">
+    
+        <!-- Inyección automática del banner + menú flotante -->
+        <script src="Js/load-menu.js" defer></script>
     </head>
     
     <body>
-        <div style="text-align: center;">
-            <h1>Pagina Principal </h1>
-            <p>Instituto Tecnologico Superior de Xalapa</p>
-            <hr> <!-- Inserta una regla horizontal-->
-            <br>
-            <p>Ejercicios y Ejemplos completos del libro Internet & World Wide Web 
-                Como Programar, 5ta Edición - Deitel</p>
-        </div>
-
-        <main>
-            <div class="grid-links">
-                <a class="card-link" href="Capitulo 2/index.html"><span class="num">&#8226;</span> Capitulo 2</a>
-                <a class="card-link" href="Capitulo 3/index.html"><span class="num">&#8226;</span> Capitulo 3</a>
-                <a class="card-link" href="Capitulo 4/index.html"><span class="num">&#8226;</span> Capitulo 4</a>
-                <a class="card-link" href="Capitulo 5/index.html"><span class="num">&#8226;</span> Capitulo 5</a>
-                <a class="card-link" href="Capitulo 6/index.html"><span class="num">&#8226;</span> Capitulo 6</a>
-                <a class="card-link" href="Capitulo 7/index.html"><span class="num">&#8226;</span> Capitulo 7</a>
-                <a class="card-link" href="Capitulo 8/index.html"><span class="num">&#8226;</span> Capitulo 8</a>
-                <a class="card-link" href="Capitulo 9/index.html"><span class="num">&#8226;</span> Capitulo 9</a>
-
+        <!-- Hero Section (Presentación Principal) -->
+        <header class="hero-section">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <span class="badge-tag">Instituto Tecnológico Superior de Xalapa</span>
+                    <h1>Programación Web</h1>
+                    <h2>Jes&uacute;s Abad Romero</h2>
+                    <p>Repositorio digital que recopila la resolución completa de ejemplos 
+                        y ejercicios prácticos enfocados en el desarrollo web frontend moderno con HTML5, CSS3 y JavaScript. </p>
+                </div>
             </div>
-        </main>
+        </header>
 
+        <!-- Sección de Características / Módulos -->
+        <section class="features-section">
+            <h2 class="section-title">Tecnologías y Estructura del Curso</h2>
+            <div class="cards-grid">
+                <div class="feature-card">
+                    <h3>HTML5 Estructurado</h3>
+                    <p>
+                        Uso de etiquetas semánticas, tablas, listas y formularios avanzados desarrollados a lo largo de los Capítulos 2 y 3.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>CSS3 & Maquetación</h3>
+                    <p>
+                        Modelos de caja, reglas de estilo, fuentes web, selectores CSS y diseño responsivo aplicados en los Capítulos 4 y 5.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>JavaScript & Lógica</h3>
+                    <p>
+                        Introducción a algoritmos, estructuras de control, funciones y manipulación básica del DOM implementados en los Capítulos 6 al 9.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pie de Página -->
         <footer>
-            <hr> <!-- Inserta una regla horizontal-->
-            <p>Hecho por Jes&uacute;s Abad Romero </p>
+            <p><strong>Internet & World Wide Web</strong> Cómo Programar (5ta Edición)</p>
+            <p> Paul & Harvey Deitel</p>
+            <p>Ingeniería en Sistemas Computacionales | Instituto Tecnológico Superior de Xalapa</p>
         </footer>
-
     </body>
 </html>

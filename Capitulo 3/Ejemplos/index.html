@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 
-<!-- Index General del capitulo 3-->
+<!-- Index General del capitulo 3 Ejemplos-->
 <html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>index</title>
+        <title>Ejemplos C3 - Menú Principal</title>
+
+        <!-- Fuentes e Íconos -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../Estilos_Globales/fontello.css">
+
+        <!-- Estilos del Menú -->
+        <link rel="stylesheet" href="../../Estilos_Globales/menu_flotante.css">
+        <link rel = "stylesheet" type = "text/css" href = "../../Estilos_Globales/Menu.css">
+
+        <!-- Script del Menú -->
+        <script src="../../Js/load-menu.js" defer></script>
     </head>
     
     <body>
-        <div style="text-align: center;">
-            <h1>Ejemplos completos del Capitlo 3</h1>
-            <p>Instituto Tecnologico Superior de Xalapa</p>
-            <hr> <!-- Inserta una regla horizontal-->
-        </div>
+        <div class="container">
+            <header>
+                <h3>Ejemplos del Capitulo 3</h3>
+            </header>
 
-        <br>
-        <p>Lista de ejercicios</p>
-        <ul>
-                <ul><p><a href = "Ejemplo_301.html">Ejemplo 301</a></p></ul>
-                <ul><p><a href = "Ejemplo_302.html">Ejemplo 302</a></p></ul>
-                <ul><p><a href = "Ejemplo_303.html">Ejemplo 303</a></p></ul>
-                <ul><p><a href = "../index.html">Regresar</a></p></ul>
-        </ul>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-        
+            <main>
+                <div class="grid-links">
+                    <a class="card-link" href="Ejemplo_301.html"><span class="num">3.1</span> Ejemplo 301</a>
+                    <a class="card-link" href="Ejemplo_302.html"><span class="num">3.2</span> Ejemplo 302</a>
+                    <a class="card-link" href="Ejemplo_303.html"><span class="num">3.3</span> Ejemplo 303</a>
+                </div>
+            </main>
+        </div>        
+
+        <br><br><br>
         <footer>
-        <hr> <!-- Inserta una regla horizontal-->
-        <p>Hecho por Jes&uacute;s Abad Romero </p>
+            <hr> <!-- Inserta una regla horizontal-->
+            <p>Hecho por Jes&uacute;s Abad Romero </p>
         </footer>
     </body>
 </html>
