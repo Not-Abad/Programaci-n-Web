@@ -85,13 +85,14 @@ body {
 
 .navegacion nav > ul {
   list-style: none;
-  position: relative;
+  /*position: relative;*/
   display: flex;
   padding-left: 20px;
 }
 
 .navegacion nav > ul > li {
   display: inline-block;
+  position: relative;
 }
 
 .navegacion nav > ul > li > a {
@@ -168,4 +169,23 @@ body {
 .sub-menu .sub-menu-items ul li a:hover {
   color: #007acc;
   font-weight: 600;
+}
+
+/* --- Estilos para el Mega Menú de Capítulos --- */
+.navegacion .sub-menu.mega-menu {
+  display: none; /* Se mantiene oculto por defecto */
+  grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas de igual ancho */
+  gap: 15px 25px; /* Espaciado entre elementos: 15px vertical, 25px horizontal */
+  width: max-content; /* Se ajusta al ancho del contenido */
+  min-width: 560px; /* Asegura espacio suficiente para los 4 bloques */
+}
+
+/* Al hacer hover, se despliega como Grid en lugar de Flex */
+.navegacion nav > ul > li:hover .sub-menu.mega-menu {
+  display: grid;
+}
+
+/* Asegura que los títulos de los capítulos aprovechen bien el espacio */
+.sub-menu.mega-menu .sub-menu-items p {
+  width: 100%;
 }

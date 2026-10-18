@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.25 - Adivine el Número</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.25: Juego Adivine el Número (1 a 1000)</h1>
+            <p>Búsqueda interactiva con pistas de demasiado alto / bajo.</p>
+        </header>
+       
+        <main>
+            <p>Adivine un número entre 1 y 1000:</p>
+            <form action="#">
+                <p>
+                    Intento: <input id="intento" type="number" min="1" max="1000">
+                    <input id="btnProbar" type="button" value="Enviar Intento">
+                    <input id="btnReiniciar" type="button" value="Juego Nuevo">
+                </p>
+            </form>
+            <p id="mensaje"></p>
+
+            <script type="text/javascript">
+                var numeroSecreto;
+
+                function nuevoJuego() {
+                    numeroSecreto = Math.floor(Math.random() * 1000) + 1;
+                    document.getElementById("mensaje").innerHTML = "¡Número nuevo generado!";
+                    document.getElementById("intento").value = "";
+                    document.getElementById("btnProbar").disabled = false;
+                }
+
+                function probar() {
+                    var val = parseInt(document.getElementById("intento").value);
+                    if (isNaN(val)) return;
+
+                    if (val === numeroSecreto) {
+                        document.getElementById("mensaje").innerHTML = "<strong style='color:green;'>Felicidades. ¡Adivinó el número!</strong>";
+                        document.getElementById("intento").value = "";
+                        document.getElementById("btnProbar").disabled = true;
+                    } else if (val > numeroSecreto) {
+                        document.getElementById("mensaje").innerHTML = "Demasiado alto. Intente de nuevo.";
+                        document.getElementById("intento").value = "";
+                    } else {
+                        document.getElementById("mensaje").innerHTML = "Demasiado bajo. Intente de nuevo.";
+                        document.getElementById("intento").value = "";
+                    }
+                }
+
+                function iniciar() {
+                    nuevoJuego();
+                    document.getElementById("btnProbar").addEventListener("click", probar, false);
+                    document.getElementById("btnReiniciar").addEventListener("click", nuevoJuego, false);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.6 - Menor de varios enteros</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.6: Encontrar el Menor de Varios Enteros</h1>
+            <p>El primer valor especifica la cantidad de enteros que el usuario va a ingresar.</p>
+        </header>
+       
+        <main>
+            <script type="text/JavaScript">
+                var cantidadStr = window.prompt( "Escriba la cantidad de enteros a comparar:", "5" );
+                var cantidad = parseInt( cantidadStr );
+                var menor = Infinity;
+
+                for ( var i = 1; i <= cantidad; i++ ) {
+                    var numStr = window.prompt( "Escriba el entero no negativo #" + i + " de " + cantidad + ":", "0" );
+                    var num = parseInt( numStr );
+
+                    if ( num < menor ) {
+                        menor = num;
+                    }
+                }
+
+                document.writeln( "<div class='detalles'>" );
+                document.writeln( "<h2>El menor entero introducido es: " + menor + "</h2>" );
+                document.writeln( "</div>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

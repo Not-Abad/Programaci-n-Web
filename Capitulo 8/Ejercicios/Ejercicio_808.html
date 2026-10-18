@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.8 - Tablas de interés compuesto</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <style>
+        .tabla-interes {
+            width: 300px;
+            border-collapse: collapse;
+            margin: 15px auto 30px auto;
+        }
+        .tabla-interes th {
+            background-color: #2b5797;
+            color: white;
+            padding: 6px;
+            border: 1px solid #000;
+        }
+        .tabla-interes td {
+            padding: 6px;
+            border: 1px solid #000;
+        }
+        .tabla-interes tr.impar {
+            background-color: #eef5fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.8: Tablas de Interés Compuesto para Múltiples Tasas</h1>
+            <p>Cálculo de depósito ($1000 base) a 10 años variando la tasa de interés del 5% al 10%.</p>
+        </header>
+       
+        <main>
+            <script type="text/JavaScript">
+                var principal = 1000.00;
+
+                for ( var tasaInt = 5; tasaInt <= 10; tasaInt++ ) {
+                    var tasa = tasaInt / 100;
+                    document.writeln( "<h3 style='text-align: center; color: #2b5797;'>Tasa de Interés del " + tasaInt + "%</h3>" );
+                    document.writeln( "<table class='tabla-interes'>" );
+                    document.writeln( "<thead><tr><th>Año</th><th>Monto en depósito</th></tr></thead><tbody>" );
+
+                    for ( var anio = 1; anio <= 10; ++anio ) {
+                        var monto = principal * Math.pow( 1.0 + tasa, anio );
+                        var claseFila = ( anio % 2 != 0 ) ? "class='impar'" : "";
+                        document.writeln( "<tr " + claseFila + "><td style='text-align: center;'>" + anio + "</td><td style='text-align: right;'>$" + monto.toFixed(2) + "</td></tr>" );
+                    }
+
+                    document.writeln( "</tbody></table>" );
+                }
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

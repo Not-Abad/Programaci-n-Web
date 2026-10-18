@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.4 - Errores en segmentos de código</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.4: Errores en Segmentos de Código</h1>
+            <p>Análisis de código para detectar múltiples fallos sintácticos y lógicos en ciclos y selecciones.</p>
+        </header>
+       
+        <main>
+            <ol type="a">
+                <li class="item">
+                    <div class="enunciado">a) <code>For ( x = 100, x &gt;= 1, ++x ) document.writeln( x );</code></div>
+                    <span class="respuesta">Errores: 'For' debe ser en minúsculas 'for'; los argumentos dentro del for se separan con punto y coma (;) y no con comas (,); y se debe decrementar (--x) para ir de 100 a 1.</span>
+                </li>
+
+                <li class="item">
+                    <div class="enunciado">b) <code>switch ( valor % 2 ) &#123; case 0: document.writeln( "Entero par" ); case 1: ... &#125;</code></div>
+                    <span class="respuesta">Error: Falta la instrucción break al final de case 0. Sin break, un número par imprimirá "Entero par" y continuará ejecutando case 1 imprimiendo "Entero impar".</span>
+                </li>
+
+                <li class="item">
+                    <div class="enunciado">c) <code>for ( x = 19; x &gt;= 1; x += 2 ) document.writeln( x );</code></div>
+                    <span class="respuesta">Error: Se incrementa x (x += 2) cuando la condición es x &gt;= 1 partiendo de 19, generando un ciclo infinito. Debe decrementarse (x -= 2).</span>
+                </li>
+
+                <li class="item">
+                    <div class="enunciado">d) <code>contador = 2; do &#123; ... contador += 2; &#125; While ( contador &lt; 100 );</code></div>
+                    <span class="respuesta">Errores: 'While' debe ser en minúsculas 'while'; para incluir el 100, la condición debe ser ( contador &lt;= 100 ).</span>
+                </li>
+            </ol>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

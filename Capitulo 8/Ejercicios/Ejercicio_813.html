@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.13 - Asignación de valores en switch</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.13: Valores Asignados a x en una Instrucción Switch</h1>
+            <p>Rastreo de ejecución de la variable x para valores de k = 1, 2, 3, 4 y 10.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <div class="enunciado">Código analizado:</div>
+                <code>switch ( k ) &#123;<br>
+                &nbsp;&nbsp;case 1: break;<br>
+                &nbsp;&nbsp;case 2:<br>
+                &nbsp;&nbsp;case 3: ++k; break;<br>
+                &nbsp;&nbsp;case 4: --k; break;<br>
+                &nbsp;&nbsp;default: k *= 3;<br>
+                &#125;<br>
+                x = k;</code>
+            </div>
+
+            <div class="detalles">
+                <h2>Resultados del rastreo:</h2>
+                <ul>
+                    <li><strong>Para k = 1:</strong> Se ejecuta <code>case 1: break;</code>. El valor de k no cambia. <span class="respuesta">x = 1</span></li>
+                    <li><strong>Para k = 2:</strong> Cae en <code>case 3:</code>, ejecuta <code>++k; break;</code>. k se vuelve 3. <span class="respuesta">x = 3</span></li>
+                    <li><strong>Para k = 3:</strong> Ejecuta <code>case 3: ++k; break;</code>. k se vuelve 4. <span class="respuesta">x = 4</span></li>
+                    <li><strong>Para k = 4:</strong> Ejecuta <code>case 4: --k; break;</code>. k se vuelve 3. <span class="respuesta">x = 3</span></li>
+                    <li><strong>Para k = 10:</strong> Cae en <code>default: k *= 3;</code>. k se vuelve 30. <span class="respuesta">x = 30</span></li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.30 - Función Misterio</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.30: Análisis de la Función misterio(a, b)</h1>
+            <p>Explicación y demostración de la multiplicación mediante sumas sucesivas recursivas.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <p class="enunciado">¿Qué hace la función misterio(a, b)?</p>
+                <p class="explicacion">
+                    La función <code>misterio(a, b)</code> calcula el **producto de dos enteros positivos (a * b)** mediante la suma recursiva del número <code>a</code> un total de <code>b</code> veces.
+                </p>
+            </div>
+
+            <form action="#">
+                <p>
+                    a: <input id="valA" type="number" value="4">
+                    b: <input id="valB" type="number" min="1" value="3">
+                    <input id="btnMisterio" type="button" value="Ejecutar misterio(a, b)">
+                </p>
+            </form>
+            <p id="resultado"></p>
+
+            <script type="text/javascript">
+                function misterio(a, b) {
+                    if (b === 1)
+                        return a;
+                    else
+                        return a + misterio(a, b - 1);
+                }
+
+                function iniciar() {
+                    document.getElementById("btnMisterio").addEventListener("click", function() {
+                        var a = parseInt(document.getElementById("valA").value);
+                        var b = parseInt(document.getElementById("valB").value);
+                        if (!isNaN(a) && !isNaN(b) && b >= 1) {
+                            document.getElementById("resultado").innerHTML = "misterio(" + a + ", " + b + ") = <strong>" + misterio(a, b) + "</strong> (Equivalente a " + a + " × " + b + ")";
+                        } else {
+                            document.getElementById("resultado").innerHTML = "Ingrese enteros válidos con b >= 1.";
+                        }
+                    }, false);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

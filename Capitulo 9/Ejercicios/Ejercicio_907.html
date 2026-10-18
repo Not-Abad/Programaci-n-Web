@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.7 - Área de un Círculo</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.7: Área de un Círculo</h1>
+            <p>Función interactiva para calcular el área de un círculo a partir de su radio.</p>
+        </header>
+       
+        <main>
+            <form action="#">
+                <p>
+                    <label>Radio del círculo:
+                        <input id="campoRadio" type="number" step="any">
+                    </label>
+                    <input id="botonCalcular" type="button" value="Calcular Área">
+                </p>
+            </form>
+            <p id="resultado"></p>
+
+            <script type="text/javascript">
+                function iniciar() {
+                    var boton = document.getElementById("botonCalcular");
+                    boton.addEventListener("click", mostrarArea, false);
+                }
+
+                function mostrarArea() {
+                    var campoEntrada = document.getElementById("campoRadio");
+                    var radio = parseFloat(campoEntrada.value);
+                    var resultado = document.getElementById("resultado");
+
+                    if (!isNaN(radio) && radio >= 0) {
+                        resultado.innerHTML = "El área del círculo es: " + areaCirculo(radio).toFixed(4);
+                    } else {
+                        resultado.innerHTML = "Por favor, introduzca un número válido.";
+                    }
+                }
+
+                function areaCirculo(radio) {
+                    return Math.PI * Math.pow(radio, 2);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

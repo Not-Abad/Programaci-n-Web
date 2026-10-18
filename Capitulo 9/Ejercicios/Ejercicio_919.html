@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.19 - Números Primos</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.19: Generación de Números Primos (1 a 10,000)</h1>
+            <p>Análisis de optimización usando la raíz cuadrada como límite superior (Math.sqrt).</p>
+        </header>
+       
+        <main>
+            <button onclick="calcularPrimos()">Generar Primos</button>
+            <br><br>
+            <textarea id="areaPrimos" rows="12" cols="60" readonly placeholder="Los números primos aparecerán aquí..."></textarea>
+            <p id="infoRendimiento"></p>
+
+            <script type="text/javascript">
+                function esPrimoSqrt(n) {
+                    if (n <= 1) return false;
+                    var limite = Math.floor(Math.sqrt(n));
+                    for (var i = 2; i <= limite; i++) {
+                        if (n % i === 0) return false;
+                    }
+                    return true;
+                }
+
+                function calcularPrimos() {
+                    var inicio = performance.now();
+                    var primos = [];
+                    for (var i = 1; i <= 10000; i++) {
+                        if (esPrimoSqrt(i)) {
+                            primos.push(i);
+                        }
+                    }
+                    var fin = performance.now();
+                    
+                    document.getElementById("areaPrimos").value = primos.join(", ");
+                    document.getElementById("infoRendimiento").innerHTML = 
+                        "Total de primos encontrados: <strong>" + primos.length + "</strong><br>" +
+                        "Tiempo de ejecución: <strong>" + (fin - inicio).toFixed(2) + " ms</strong>.<br><br>" +
+                        "<em>Nota teórica: Se usa la raíz cuadrada de n porque si n = a * b, al menos uno de los factores debe ser menor o igual a sqrt(n). Probar más allá de sqrt(n) resulta redundante.</em>";
+                }
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.20 - Puntos de Calidad</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.20: Escala de Puntos de Calidad</h1>
+            <p>Conversión de promedio numérico de estudiante a puntos de calidad de 0 a 4.</p>
+        </header>
+       
+        <main>
+            <form action="#">
+                <p>
+                    <label>Promedio del estudiante (0 - 100): <input id="promedio" type="number" min="0" max="100"></label>
+                    <input id="btnEvaluar" type="button" value="Evaluar Puntos">
+                </p>
+            </form>
+            <p id="resultado"></p>
+
+            <script type="text/javascript">
+                function puntosCalidad(prom) {
+                    if (prom >= 90 && prom <= 100) return 4;
+                    if (prom >= 80 && prom <= 89) return 3;
+                    if (prom >= 70 && prom <= 79) return 2;
+                    if (prom >= 60 && prom <= 69) return 1;
+                    return 0;
+                }
+
+                function iniciar() {
+                    document.getElementById("btnEvaluar").addEventListener("click", function() {
+                        var p = parseFloat(document.getElementById("promedio").value);
+                        if (!isNaN(p) && p >= 0 && p <= 100) {
+                            document.getElementById("resultado").innerHTML = "Puntos de Calidad: <strong>" + puntosCalidad(p) + "</strong>";
+                        } else {
+                            document.getElementById("resultado").innerHTML = "Ingrese un promedio válido entre 0 y 100.";
+                        }
+                    }, false);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

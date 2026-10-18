@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.17 - Conversión de Temperaturas</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.17: Conversión Fahrenheit / Celsius</h1>
+            <p>Calculadora bidireccional de grados de temperatura.</p>
+        </header>
+       
+        <main>
+            <form action="#">
+                <p>
+                    <label>Temperatura: <input id="tempInput" type="number" step="any"></label>
+                </p>
+                <p>
+                    <input id="btnToCelsius" type="button" value="Convertir a Celsius">
+                    <input id="btnToFahrenheit" type="button" value="Convertir a Fahrenheit">
+                </p>
+            </form>
+            <p id="resultado"></p>
+
+            <script type="text/javascript">
+                function celsius(f) {
+                    return 5.0 / 9.0 * (f - 32);
+                }
+
+                function fahrenheit(c) {
+                    return 9.0 / 5.0 * c + 32;
+                }
+
+                function iniciar() {
+                    document.getElementById("btnToCelsius").addEventListener("click", function() {
+                        var val = parseFloat(document.getElementById("tempInput").value);
+                        if (!isNaN(val)) {
+                            document.getElementById("resultado").innerHTML = val + " °F = " + celsius(val).toFixed(2) + " °C";
+                        }
+                    }, false);
+
+                    document.getElementById("btnToFahrenheit").addEventListener("click", function() {
+                        var val = parseFloat(document.getElementById("tempInput").value);
+                        if (!isNaN(val)) {
+                            document.getElementById("resultado").innerHTML = val + " °C = " + fahrenheit(val).toFixed(2) + " °F";
+                        }
+                    }, false);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

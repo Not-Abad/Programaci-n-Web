@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.12 - Evaluación de expresiones</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.12: Evaluación de Expresiones Relacionales</h1>
+            <p>Evaluación de expresiones considerando <code>i = 1</code>, <code>j = 2</code>, <code>k = 3</code> y <code>m = 2</code>.</p>
+        </header>
+       
+        <main>
+            <ol type="a">
+                <li class="item">
+                    <div class="enunciado">a) <code>document.writeln( i == 1 );</code></div>
+                    <span class="respuesta">true</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">b) <code>document.writeln( j == 3 );</code></div>
+                    <span class="respuesta">false</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">c) <code>document.writeln( i &gt;= 1 &amp;&amp; j &lt; 4 );</code></div>
+                    <span class="respuesta">true</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">d) <code>document.writeln( m &lt;= 99 &amp;&amp; k &lt; m );</code></div>
+                    <span class="respuesta">false</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">e) <code>document.writeln( j &gt;= i || k == m );</code></div>
+                    <span class="respuesta">true</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">f) <code>document.writeln( k + m &lt; j || 3 - j &gt;= k );</code></div>
+                    <span class="respuesta">false</span>
+                </li>
+                <li class="item">
+                    <div class="enunciado">g) <code>document.writeln( !( k &gt; m ) );</code></div>
+                    <span class="respuesta">false</span>
+                </li>
+            </ol>
+
+            <div class="detalles">
+                <p><strong>¿Son necesarios los paréntesis en cada caso?</strong></p>
+                <p><span class="respuesta">No son estrictamente necesarios porque los operadores aritméticos tienen mayor precedencia que los operadores relacionales, e igual precedencia mayor sobre los lógicos. Sin embargo, se recomiendan para mejorar la claridad y evitar errores de lectura.</span></p>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.2 - Alcance de identificadores</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.2: Alcance de identificadores en cubo.html</h1>
+            <p>Análisis del alcance (global o de función) para los elementos del programa.</p>
+        </header>
+       
+        <main>
+            <ol type="a">
+                <li>La variable <code>x</code>: <span class="respuesta">alcance global</span>.</li>
+                <li>La variable <code>y</code>: <span class="respuesta">alcance de función</span> (local a la función <code>cubo</code>).</li>
+                <li>La función <code>cubo</code>: <span class="respuesta">alcance global</span>.</li>
+                <li>La función <code>salida</code>: <span class="respuesta">alcance global</span>.</li>
+            </ol>
+
+            <hr>
+            <h2>Demostración interactiva (cubo.html):</h2>
+            <div id="resultadosCubo"></div>
+
+            <script type="text/javascript">
+                var x; // Alcance global
+
+                function salida() {
+                    var contenido = "";
+                    for (x = 1; x <= 10; x++) {
+                        contenido += "<p>El cubo de " + x + " es " + cubo(x) + "</p>";
+                    }
+                    document.getElementById("resultadosCubo").innerHTML = contenido;
+                }
+
+                function cubo(y) { // y tiene alcance de función
+                    return y * y * y;
+                }
+
+                window.addEventListener("load", salida, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

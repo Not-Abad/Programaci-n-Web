@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 9.3 - Desplazar y escalar enteros aleatorios</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <style>
+        ol.lista-horizontal {
+            padding: 0;
+            list-style-type: none;
+        }
+        ol.lista-horizontal li {
+            display: inline-block;
+            margin-right: 12px;
+            font-weight: bold;
+            color: #2b5797;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 9.4: EntAleatorio.html</h1>
+            <p>Generación de 30 números enteros aleatorios en el rango de 1 a 6 usando Math.random y Math.floor.</p>
+        </header>
+        
+        <main>
+            <h2>Números aleatorios generados:</h2>
+            <script type="text/javascript">
+                var valor;
+                document.writeln("<ol class='lista-horizontal'>");
+
+                for (var i = 1; i <= 30; ++i) {
+                    valor = Math.floor(1 + Math.random() * 6);
+                    document.writeln("<li>" + valor + "</li>");
+                }
+
+                document.writeln("</ol>");
+            </script>
+        </main>
+
+        <footer> 
+            <br><br> 
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

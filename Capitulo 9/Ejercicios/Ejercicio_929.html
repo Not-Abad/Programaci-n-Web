@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.29 - Potencia Recursiva</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.29: Función Potencia Recursiva</h1>
+            <p>Evaluación de relación base<sup>exp</sup> = base × base<sup>exp-1</sup> con caso base exp = 1.</p>
+        </header>
+       
+        <main>
+            <form action="#">
+                <p>
+                    Base: <input id="base" type="number">
+                    Exponente: <input id="exponente" type="number" min="1">
+                    <input id="btnCalcular" type="button" value="Calcular Recursivo">
+                </p>
+            </form>
+            <p id="resultado"></p>
+
+            <script type="text/javascript">
+                function potencia(base, exponente) {
+                    if (exponente <= 1) {
+                        return base;
+                    } else {
+                        return base * potencia(base, exponente - 1);
+                    }
+                }
+
+                function iniciar() {
+                    document.getElementById("btnCalcular").addEventListener("click", function() {
+                        var b = parseInt(document.getElementById("base").value);
+                        var exp = parseInt(document.getElementById("exponente").value);
+
+                        if (!isNaN(b) && !isNaN(exp) && exp >= 1) {
+                            document.getElementById("resultado").innerHTML = b + "<sup>" + exp + "</sup> = " + potencia(b, exp);
+                        } else {
+                            document.getElementById("resultado").innerHTML = "Ingrese enteros válidos (exponente >= 1).";
+                        }
+                    }, false);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

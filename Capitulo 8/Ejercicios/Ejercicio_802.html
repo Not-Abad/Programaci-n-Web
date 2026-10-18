@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.2 - Instrucciones en JavaScript</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.2: Instrucciones en JavaScript</h1>
+            <p>Construcción de instrucciones para realizar tareas específicas de repetición y cálculo.</p>
+        </header>
+       
+        <main>
+            <ol type="a">
+                <li class="item">
+                    <div class="enunciado">a) Sumar los enteros impares entre 1 y 99 mediante una instrucción for.</div>
+                    <span class="respuesta">suma = 0;<br>for ( cuenta = 1; cuenta &lt;= 99; cuenta += 2 )<br>&nbsp;&nbsp;&nbsp;&nbsp;suma += cuenta;</span>
+                </li>
+
+                <li class="item">
+                    <div class="enunciado">b) Calcular el valor de 2.5 elevado a la potencia de 3 usando el método pow.</div>
+                    <span class="respuesta">Math.pow( 2.5, 3 );</span>
+                </li>
+
+                <li class="item">
+                    <div class="enunciado">c) Imprimir los enteros del 1 al 20 mediante ciclo while (5 enteros por línea).</div>
+                    <span class="respuesta">x = 1;<br>document.writeln( "&lt;p&gt;" );<br>while ( x &lt;= 20 ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;document.write( x + " " );<br>&nbsp;&nbsp;&nbsp;&nbsp;if ( x % 5 == 0 )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write( "&lt;/p&gt;&lt;p&gt;" );<br>&nbsp;&nbsp;&nbsp;&nbsp;++x;<br>}</span>
+                </li>
+
+                <li class="item">
+                    <div class="enunciado">d) Repetir el inciso c) utilizando una instrucción for.</div>
+                    <span class="respuesta">document.writeln( "&lt;p&gt;" );<br>for ( x = 1; x &lt;= 20; x++ ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;document.write( x + " " );<br>&nbsp;&nbsp;&nbsp;&nbsp;if ( x % 5 == 0 )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write( "&lt;/p&gt;&lt;p&gt;" );<br>}<br>document.writeln( "&lt;/p&gt;" );</span>
+                </li>
+            </ol>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

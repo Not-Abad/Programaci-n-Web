@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 9.4 - Imágenes aleatorias de dados</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <style>
+        .dados-container {
+            display: flex;
+            gap: 15px;
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .dados-container img {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .boton-tirar {
+            background-color: #2b5797;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .boton-tirar:hover {
+            background-color: #1d3c6a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 9.5: TirarDados.html</h1>
+            <p>Simulación del tiro de cuatro dados interactivos mediante eventos del DOM e imágenes aleatorias.</p>
+        </header>
+        
+        <main>
+            <form action="#">
+                <input id="botonTirar" class="boton-tirar" type="button" value="Tirar dados">
+            </form>
+
+            <ol class="dados-container">
+                <li><img id="dado1" src="Assets/blanco.png" alt="Imagen en blanco"></li>
+                <li><img id="dado2" src="Assets/blanco.png" alt="Imagen en blanco"></li>
+                <li><img id="dado3" src="Assets/blanco.png" alt="Imagen en blanco"></li>
+                <li><img id="dado4" src="Assets/blanco.png" alt="Imagen en blanco"></li>
+            </ol>
+
+            <script type="text/javascript">
+                var imagenDado1, imagenDado2, imagenDado3, imagenDado4;
+
+                // Registrar el escucha de eventos e inicializar elementos
+                function iniciar() {
+                    var boton = document.getElementById("botonTirar");
+                    boton.addEventListener("click", tirarDados, false);
+
+                    imagenDado1 = document.getElementById("dado1");
+                    imagenDado2 = document.getElementById("dado2");
+                    imagenDado3 = document.getElementById("dado3");
+                    imagenDado4 = document.getElementById("dado4");
+                }
+
+                // Función ejecutada al hacer clic en el botón
+                function tirarDados() {
+                    establecerImagen(imagenDado1);
+                    establecerImagen(imagenDado2);
+                    establecerImagen(imagenDado3);
+                    establecerImagen(imagenDado4);
+                }
+
+                // Establecer la imagen aleatoria para cada dado
+                function establecerImagen(imgDado) {
+                    var valorDado = Math.floor(1 + Math.random() * 6);
+                    imgDado.setAttribute("src", "Assets/dado" + valorDado + ".png");
+                    imgDado.setAttribute("alt", "Imagen de un dado con " + valorDado + " punto(s)");
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer> 
+            <br><br> 
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

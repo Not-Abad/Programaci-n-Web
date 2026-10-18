@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.13 - Potencia Entera</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.13: Potencia Entera</h1>
+            <p>Cálculo del valor de base elevado a un exponente mediante un ciclo iterativo.</p>
+        </header>
+       
+        <main>
+            <form action="#">
+                <p>
+                    <label>Base: <input id="base" type="number" step="1"></label>
+                    <label>Exponente: <input id="exponente" type="number" step="1" min="0"></label>
+                    <input id="botonCalcular" type="button" value="Calcular Potencia">
+                </p>
+            </form>
+            <p id="resultado"></p>
+
+            <script type="text/javascript">
+                function iniciar() {
+                    document.getElementById("botonCalcular").addEventListener("click", calcular, false);
+                }
+
+                function calcular() {
+                    var b = parseInt(document.getElementById("base").value);
+                    var exp = parseInt(document.getElementById("exponente").value);
+                    
+                    if (!isNaN(b) && !isNaN(exp) && exp >= 0) {
+                        var res = potenciaEntera(b, exp);
+                        document.getElementById("resultado").innerHTML = b + "<sup>" + exp + "</sup> = " + res;
+                    } else {
+                        document.getElementById("resultado").innerHTML = "Ingrese enteros válidos (exponente >= 0).";
+                    }
+                }
+
+                function potenciaEntera(base, exponente) {
+                    var resultado = 1;
+                    for (var i = 1; i <= exponente; ++i) {
+                        resultado *= base;
+                    }
+                    return resultado;
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.9 - Distancia entre dos puntos</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.9: Distancia entre dos puntos</h1>
+            <p>Cálculo de la distancia euclidiana entre dos coordenadas (x1, y1) y (x2, y2).</p>
+        </header>
+       
+        <main>
+            <form action="#">
+                <p><strong>Punto 1:</strong> 
+                    X1: <input id="x1" type="number" step="any" size="5"> 
+                    Y1: <input id="y1" type="number" step="any" size="5">
+                </p>
+                <p><strong>Punto 2:</strong> 
+                    X2: <input id="x2" type="number" step="any" size="5"> 
+                    Y2: <input id="y2" type="number" step="any" size="5">
+                </p>
+                <p><input id="botonCalcular" type="button" value="Calcular Distancia"></p>
+            </form>
+
+            <p id="resultado"></p>
+
+            <script type="text/javascript">
+                function iniciar() {
+                    var boton = document.getElementById("botonCalcular");
+                    boton.addEventListener("click", calcularYMostrar, false);
+                }
+
+                function calcularYMostrar() {
+                    var x1 = parseFloat(document.getElementById("x1").value);
+                    var y1 = parseFloat(document.getElementById("y1").value);
+                    var x2 = parseFloat(document.getElementById("x2").value);
+                    var y2 = parseFloat(document.getElementById("y2").value);
+
+                    if (!isNaN(x1) && !isNaN(y1) && !isNaN(x2) && !isNaN(y2)) {
+                        var d = distancia(x1, y1, x2, y2);
+                        document.getElementById("resultado").innerHTML = "La distancia entre los dos puntos es: " + d.toFixed(4);
+                    } else {
+                        document.getElementById("resultado").innerHTML = "Por favor, ingrese valores numéricos en todos los campos.";
+                    }
+                }
+
+                function distancia(x1, y1, x2, y2) {
+                    return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

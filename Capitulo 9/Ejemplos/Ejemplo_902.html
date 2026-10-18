@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 9.2 - Máximo de tres valores</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 9.3: maximo.html</h1>
+            <p>Determinar el valor máximo entre tres números flotantes mediante la función Math.max en una función personalizada.</p>
+        </header>
+        
+        <main>
+            <script type="text/javascript">
+                // Definición de la función maximo
+                function maximo(x, y, z) {
+                    return Math.max(x, Math.max(y, z));
+                }
+
+                // Captura de datos ingresados por el usuario
+                var entrada1 = window.prompt("Escriba el primer número", "0");
+                var entrada2 = window.prompt("Escriba el segundo número", "0");
+                var entrada3 = window.prompt("Escriba el tercer número", "0");
+
+                var valor1 = parseFloat(entrada1);
+                var valor2 = parseFloat(entrada2);
+                var valor3 = parseFloat(entrada3);
+
+                var valorMax = maximo(valor1, valor2, valor3);
+
+                // Despliegue de resultados en pantalla
+                document.writeln("<div class='detalles'>");
+                document.writeln("<p>Primer número: " + valor1 + "</p>");
+                document.writeln("<p>Segundo número: " + valor2 + "</p>");
+                document.writeln("<p>Tercer número: " + valor3 + "</p>");
+                document.writeln("<h2>El valor máximo es: " + valorMax + "</h2>");
+                document.writeln("</div>");
+            </script>
+        </main>
+
+        <footer> 
+            <br><br> 
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.21 - Lanzamiento de Monedas</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.21: Simulación de Lanzamiento de Moneda</h1>
+            <p>Conteo de frecuencias para Cara y Cruz empleando función aleatoria.</p>
+        </header>
+       
+        <main>
+            <button id="btnLanzar">Lanzar Moneda</button>
+            <div class="detalles" style="margin-top:20px;">
+                <p>Resultado del último tiro: <strong id="ultimoTiro">-</strong></p>
+                <p>Total de Caras (true): <strong id="countCara">0</strong></p>
+                <p>Total de Cruces (false): <strong id="countCruz">0</strong></p>
+            </div>
+
+            <script type="text/javascript">
+                var caras = 0;
+                var cruces = 0;
+
+                function arrojar() {
+                    return Math.random() >= 0.5;
+                }
+
+                function iniciar() {
+                    document.getElementById("btnLanzar").addEventListener("click", function() {
+                        var res = arrojar();
+                        if (res) {
+                            caras++;
+                            document.getElementById("ultimoTiro").innerHTML = "CARA";
+                        } else {
+                            cruces++;
+                            document.getElementById("ultimoTiro").innerHTML = "CRUZ";
+                        }
+                        document.getElementById("countCara").innerHTML = caras;
+                        document.getElementById("countCruz").innerHTML = cruces;
+                    }, false);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

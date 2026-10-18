@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.8 - Cargos de Estacionamiento</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.8: Cargos de Estacionamiento</h1>
+            <p>Cálculo de tarifas de estacionamiento con cuota mínima y total acumulado del día.</p>
+        </header>
+       
+        <main>
+            <form action="#">
+                <p>
+                    <label>Horas estacionadas:
+                        <input id="campoHoras" type="number" step="0.1" min="0" max="24">
+                    </label>
+                    <input id="botonCalcular" type="button" value="Calcular Cargo">
+                </p>
+            </form>
+
+            <div class="detalles">
+                <p id="resultadoCliente">Cargo cliente actual: $0.00</p>
+                <p id="resultadoTotal">Total acumulado de ayer: $0.00</p>
+            </div>
+
+            <script type="text/javascript">
+                var totalRecibos = 0.0;
+
+                function iniciar() {
+                    var boton = document.getElementById("botonCalcular");
+                    boton.addEventListener("click", procesarCliente, false);
+                }
+
+                function procesarCliente() {
+                    var campoHoras = document.getElementById("campoHoras");
+                    var horas = parseFloat(campoHoras.value);
+
+                    if (!isNaN(horas) && horas > 0 && horas <= 24) {
+                        var cargo = calcularCargos(horas);
+                        totalRecibos += cargo;
+
+                        document.getElementById("resultadoCliente").innerHTML = "Cargo cliente actual: $" + cargo.toFixed(2);
+                        document.getElementById("resultadoTotal").innerHTML = "Total acumulado de ayer: $" + totalRecibos.toFixed(2);
+                    } else {
+                        alert("Por favor, ingrese un número de horas entre 0.1 y 24.");
+                    }
+                }
+
+                function calcularCargos(horas) {
+                    var cargo = 2.00; // Tarifa mínima hasta 3 horas
+                    if (horas > 3.0) {
+                        cargo += Math.ceil(horas - 3.0) * 0.50;
+                    }
+                    if (cargo > 10.00) {
+                        cargo = 10.00; // Cargo máximo por 24 horas
+                    }
+                    return cargo;
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

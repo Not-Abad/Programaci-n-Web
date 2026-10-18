@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.24 - Monitoreo de Rendimiento</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.24: CAI con Monitoreo de Porcentaje (10 Preguntas)</h1>
+            <p>Cálculo de aprovechamiento académico con umbral mínimo del 75%.</p>
+        </header>
+       
+        <main>
+            <p>Pregunta <span id="numPregunta">1</span> de 10</p>
+            <h2 id="pregunta"></h2>
+            <form action="#">
+                <p>
+                    Respuesta: <input id="respuesta" type="number">
+                    <input id="btnVerificar" type="button" value="Enviar">
+                </p>
+            </form>
+            <p id="feedback"></p>
+
+            <script type="text/javascript">
+                var n1, n2, resultadoCorrecto;
+                var totalPreguntas = 0;
+                var respuestasCorrectas = 0;
+
+                function generarPregunta() {
+                    if (totalPreguntas >= 10) {
+                        evaluarEstudiante();
+                        return;
+                    }
+                    totalPreguntas++;
+                    document.getElementById("numPregunta").innerHTML = totalPreguntas;
+                    n1 = Math.floor(Math.random() * 9) + 1;
+                    n2 = Math.floor(Math.random() * 9) + 1;
+                    resultadoCorrecto = n1 * n2;
+                    document.getElementById("pregunta").innerHTML = "¿Cuánto es " + n1 + " por " + n2 + "?";
+                    document.getElementById("respuesta").value = "";
+                }
+
+                function evaluarEstudiante() {
+                    var porcentaje = (respuestasCorrectas / 10) * 100;
+                    var msg = "Finalizado. Tu porcentaje fue: " + porcentaje + "%. ";
+                    if (porcentaje < 75) {
+                        msg += "<br><strong>Pida ayuda adicional a su instructor.</strong>";
+                    } else {
+                        msg += "<br><strong>¡Felicidades! Estás listo para pasar al siguiente nivel.</strong>";
+                    }
+                    document.getElementById("feedback").innerHTML = msg;
+                    document.getElementById("btnVerificar").disabled = true;
+                }
+
+                function verificar() {
+                    var resp = parseInt(document.getElementById("respuesta").value);
+                    if (resp === resultadoCorrecto) {
+                        respuestasCorrectas++;
+                        document.getElementById("feedback").innerHTML = "<span style='color:green;'>¡Correcto!</span>";
+                    } else {
+                        document.getElementById("feedback").innerHTML = "<span style='color:red;'>Incorrecto.</span>";
+                    }
+                    generarPregunta();
+                }
+
+                function iniciar() {
+                    generarPregunta();
+                    document.getElementById("btnVerificar").addEventListener("click", verificar, false);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

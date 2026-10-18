@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.14 - Verificación de Múltiplos</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.14: Verificación de Múltiplos</h1>
+            <p>Determinar si el segundo entero ingresado es múltiplo del primero.</p>
+        </header>
+       
+        <main>
+            <form action="#">
+                <p>
+                    <label>Primer Entero: <input id="num1" type="number" step="1"></label>
+                    <label>Segundo Entero: <input id="num2" type="number" step="1"></label>
+                    <input id="botonEvaluar" type="button" value="Evaluar">
+                </p>
+            </form>
+            <p id="resultado"></p>
+
+            <script type="text/javascript">
+                function iniciar() {
+                    document.getElementById("botonEvaluar").addEventListener("click", evaluar, false);
+                }
+
+                function evaluar() {
+                    var n1 = parseInt(document.getElementById("num1").value);
+                    var n2 = parseInt(document.getElementById("num2").value);
+
+                    if (!isNaN(n1) && !isNaN(n2)) {
+                        if (multiplo(n1, n2)) {
+                            document.getElementById("resultado").innerHTML = n2 + " <strong>es múltiplo</strong> de " + n1 + ".";
+                        } else {
+                            document.getElementById("resultado").innerHTML = n2 + " <strong>NO es múltiplo</strong> de " + n1 + ".";
+                        }
+                    } else {
+                        document.getElementById("resultado").innerHTML = "Ingrese valores enteros válidos.";
+                    }
+                }
+
+                function multiplo(a, b) {
+                    if (a === 0) return false;
+                    return b % a === 0;
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

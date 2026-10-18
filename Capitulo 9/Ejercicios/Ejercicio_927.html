@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.27 - Sistema CAI Configurable</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.27: Proyecto CAI Avanzado</h1>
+            <p>Selección de nivel de dígitos y tipo de problemas aritméticos.</p>
+        </header>
+       
+        <main>
+            <form action="#">
+                <p>
+                    <label>Nivel de Grado (Dígitos): 
+                        <select id="nivelGrado">
+                            <option value="1">Grado 1 (1 Dízito)</option>
+                            <option value="2">Grado 2 (2 Dízitos)</option>
+                            <option value="3">Grado 3 (3 Dízitos)</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>Tipo de Operación: 
+                        <select id="tipoOperacion">
+                            <option value="1">1: Suma</option>
+                            <option value="2">2: Resta</option>
+                            <option value="3">3: Multiplicación</option>
+                            <option value="4">4: División</option>
+                            <option value="5">5: Mezcla Aleatoria</option>
+                        </select>
+                    </label>
+                </p>
+                <p><input id="btnGenerar" type="button" value="Generar Problema"></p>
+            </form>
+
+            <h2 id="pregunta"></h2>
+            <form action="#">
+                <p>
+                    Respuesta: <input id="respuesta" type="number" step="any">
+                    <input id="btnVerificar" type="button" value="Enviar Respuesta">
+                </p>
+            </form>
+            <p id="feedback"></p>
+
+            <script type="text/javascript">
+                var n1, n2, resultadoCorrecto;
+
+                function generar() {
+                    var grado = parseInt(document.getElementById("nivelGrado").value);
+                    var op = parseInt(document.getElementById("tipoOperacion").value);
+
+                    var min = Math.pow(10, grado - 1);
+                    var max = Math.pow(10, grado) - 1;
+
+                    n1 = Math.floor(Math.random() * (max - min + 1)) + min;
+                    n2 = Math.floor(Math.random() * (max - min + 1)) + min;
+
+                    if (op === 5) {
+                        op = Math.floor(Math.random() * 4) + 1;
+                    }
+
+                    var simbolo = "";
+                    switch (op) {
+                        case 1:
+                            simbolo = "+";
+                            resultadoCorrecto = n1 + n2;
+                            break;
+                        case 2:
+                            simbolo = "-";
+                            resultadoCorrecto = n1 - n2;
+                            break;
+                        case 3:
+                            simbolo = "×";
+                            resultadoCorrecto = n1 * n2;
+                            break;
+                        case 4:
+                            simbolo = "÷";
+                            resultadoCorrecto = parseFloat((n1 / n2).toFixed(2));
+                            break;
+                    }
+
+                    document.getElementById("pregunta").innerHTML = "¿Cuánto es " + n1 + " " + simbolo + " " + n2 + "?" + (op === 4 ? " (Redondee a 2 decimales)" : "");
+                    document.getElementById("respuesta").value = "";
+                    document.getElementById("feedback").innerHTML = "";
+                }
+
+                function verificar() {
+                    var resp = parseFloat(document.getElementById("respuesta").value);
+                    if (Math.abs(resp - resultadoCorrecto) < 0.01) {
+                        document.getElementById("feedback").innerHTML = "<span style='color:green;'>¡Excelente trabajo!</span>";
+                        generar();
+                    } else {
+                        document.getElementById("feedback").innerHTML = "<span style='color:red;'>Incorrecto. Intente de nuevo.</span>";
+                    }
+                }
+
+                function iniciar() {
+                    document.getElementById("btnGenerar").addEventListener("click", generar, false);
+                    document.getElementById("btnVerificar").addEventListener("click", verificar, false);
+                    generar();
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

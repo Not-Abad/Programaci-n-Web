@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.6 - Cálculo del interés compuesto</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <style type="text/css">
+        table { width: 300px;
+                border-collapse: collapse;
+                background-color: lightblue;
+                margin: 20px auto; }
+        table, td, th { border: 1px solid black;
+                        padding: 6px; }
+        th { text-align: left;
+             color: white;
+             background-color: darkblue; }
+        tr.filaimpar { background-color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 8.6: Interes.html</h1>
+            <p>Cálculo del interés compuesto con un ciclo for.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                var monto; // monto actual de dinero
+                var principal = 1000.00; // monto principal
+                var tasa = 0.05; // tasa de interés
+
+                document.writeln( "<table>" ); // comenzar la tabla
+                document.writeln(
+                    "<caption>Cálculo del interés compuesto</caption>" );
+                document.writeln(
+                    "<thead><tr><th>Año</th>" ); // encabezado de la columna del año
+                document.writeln(
+                    "<th>Monto en depósito</th>" ); // encabezado de la columna del monto
+                document.writeln( "</tr></thead><tbody>" );
+
+                // imprimir una fila de la tabla para cada año
+                for ( var anio = 1; anio <= 10; ++anio )
+                {
+                    monto = principal * Math.pow( 1.0 + tasa, anio );
+
+                    if ( anio % 2 != 0 )
+                        document.writeln( "<tr class='filaimpar'><td>" + anio +
+                            "</td><td>" + monto.toFixed(2) + "</td></tr>" );
+                    else
+                        document.writeln( "<tr><td>" + anio +
+                            "</td><td>" + monto.toFixed(2) + "</td></tr>" );
+                } // fin de for
+
+                document.writeln( "</tbody></table>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

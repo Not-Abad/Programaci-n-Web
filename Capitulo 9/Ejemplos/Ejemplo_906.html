@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 9.6 - Simulación del juego de Craps</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <style type="text/css">
+        p.rojo { color: red; font-weight: bold; }
+        .craps-dado { width: 54px; height: 54px; }
+        .craps-box { 
+            border: 5px ridge royalblue;
+            padding: 10px; 
+            width: 140px;
+            margin-bottom: 10px; 
+            border-radius: 6px;
+        }
+        .punto { margin: 0px; font-weight: bold; }
+        .boton-juego {
+            background-color: #2b5797;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-right: 8px;
+        }
+        .boton-juego:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 9.7: Craps.html</h1>
+            <p>Simulación interactiva del juego de dados Craps con audio, manejo de estado del juego y eventos del DOM.</p>
+        </header>
+       
+        <main>
+            <audio id="tirodados" preload="auto">
+                <source src="http://test.deitel.com/dicerolling.mp3" type="audio/mpeg">
+                <source src="http://test.deitel.com/dicerolling.ogg" type="audio/ogg">
+                El navegador no soporta la etiqueta audio.
+            </audio>
+
+            <p><a href="Ejemplo_907.html">Haga clic aquí para un video corto que explica las reglas básicas de Craps</a></p>
+
+            <div id="puntoDiv" class="craps-box">
+                <p class="punto">El punto es:</p>
+                <img id="puntoDado1" class="craps-dado" src="Assets/blanco.png" alt="Dado 1 de valor de punto">
+                <img id="puntoDado2" class="craps-dado" src="Assets/blanco.png" alt="Dado 2 de valor de punto">
+            </div>
+
+            <div class="tiroDiv craps-box">
+                <img id="tiroDado1" class="craps-dado" src="Assets/blanco.png" alt="Dado 1 de valor de tiro">
+                <img id="tiroDado2" class="craps-dado" src="Assets/blanco.png" alt="Dado 2 de valor de tiro">
+            </div>
+
+            <form action="#">
+                <input id="jugar" class="boton-juego" type="button" value="Jugar">
+                <input id="tirar" class="boton-juego" type="button" value="Tirar">
+            </form>
+
+            <p id="mensajes" class="rojo">Haga clic en Jugar para iniciar el juego</p>
+
+            <script type="text/javascript">
+                // Variables utilizadas para referirse a los elementos de página
+                var puntoDado1Img;
+                var puntoDado2Img;
+                var tiroDado1Img;
+                var tiroDado2Img;
+                var mensajes;
+                var botonJugar;
+                var botonTirar;
+                var tirodados;
+
+                // Otras variables utilizadas en el programa
+                var miPunto;
+                var valorDado1;
+                var valorDado2;
+
+                // Inicia un nuevo juego
+                function iniciarJuego() {
+                    tirodados = document.getElementById("tirodados");
+                    puntoDado1Img = document.getElementById("puntoDado1");
+                    puntoDado2Img = document.getElementById("puntoDado2");
+                    tiroDado1Img = document.getElementById("tiroDado1");
+                    tiroDado2Img = document.getElementById("tiroDado2");
+                    mensajes = document.getElementById("mensajes");
+                    botonJugar = document.getElementById("jugar");
+                    botonTirar = document.getElementById("tirar");
+
+                    // Prepara la GUI
+                    botonTirar.disabled = true;
+                    establecerImagen(puntoDado1Img);
+                    establecerImagen(puntoDado2Img);
+                    establecerImagen(tiroDado1Img);
+                    establecerImagen(tiroDado2Img);
+
+                    miPunto = 0;
+                    primerTiro();
+                }
+
+                // Realizar el primer tiro del juego
+                function primerTiro() {
+                    var sumaDeDados = tirarDados();
+
+                    switch (sumaDeDados) {
+                        case 7: case 11:
+                            mensajes.innerHTML = "Ha ganado. Haga clic en Jugar para jugar de nuevo.";
+                            break;
+                        case 2: case 3: case 12:
+                            mensajes.innerHTML = "Lo siento. Usted pierde. Haga clic en Jugar para jugar de nuevo.";
+                            break;
+                        default:
+                            miPunto = sumaDeDados;
+                            establecerImagen(puntoDado1Img, valorDado1);
+                            establecerImagen(puntoDado2Img, valorDado2);
+                            mensajes.innerHTML = "Tire de nuevo";
+                            botonTirar.disabled = false;
+                            botonJugar.disabled = true;
+                            break;
+                    }
+                }
+
+                // Se llama para los tiros subsiguientes de los dados
+                function tirarDeNuevo() {
+                    var sumaDeDados = tirarDados();
+
+                    if (sumaDeDados == miPunto) {
+                        mensajes.innerHTML = "¡Ha ganado! Haga clic en Jugar para jugar de nuevo.";
+                        botonTirar.disabled = true;
+                        botonJugar.disabled = false;
+                    } else if (sumaDeDados == 7) {
+                        mensajes.innerHTML = "Lo siento. Usted pierde. Haga clic en Jugar para jugar de nuevo.";
+                        botonTirar.disabled = true;
+                        botonJugar.disabled = false;
+                    }
+                }
+
+                // Tirar los dados
+                function tirarDados() {
+                    tirodados.play();
+
+                    valorDado1 = NaN;
+                    valorDado2 = NaN;
+                    mostrarDados();
+
+                    valorDado1 = Math.floor(1 + Math.random() * 6);
+                    valorDado2 = Math.floor(1 + Math.random() * 6);
+                    return valorDado1 + valorDado2;
+                }
+
+                // Mostrar dados que se tiraron
+                function mostrarDados() {
+                    establecerImagen(tiroDado1Img, valorDado1);
+                    establecerImagen(tiroDado2Img, valorDado2);
+                }
+
+                // Establece origen de imagen para un dado
+                function establecerImagen(imgDado, valorDado) {
+                    if (isFinite(valorDado))
+                        imgDado.src = "Assets/dado" + valorDado + ".png";
+                    else
+                        imgDado.src = "Assets/blanco.png";
+                }
+
+                // Registrar componentes de escucha de eventos
+                function iniciar() {
+                    var botonJugar = document.getElementById("jugar");
+                    botonJugar.addEventListener("click", iniciarJuego, false);
+                    var botonTirar = document.getElementById("tirar");
+                    botonTirar.addEventListener("click", tirarDeNuevo, false);
+                    var sonidoDados = document.getElementById("tirodados");
+                    sonidoDados.addEventListener("ended", mostrarDados, false);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

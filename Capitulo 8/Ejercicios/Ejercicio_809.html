@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.9 - Gráficos de barra</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.9: Impresión de Histogramas de Asteriscos</h1>
+            <p>Lee 5 números entre 1 y 30 e imprime líneas compuestas por el número equivalente de asteriscos.</p>
+        </header>
+       
+        <main>
+            <script type="text/JavaScript">
+                for ( var i = 1; i <= 5; i++ ) {
+                    var numStr = window.prompt( "Escriba el número #" + i + " (entre 1 y 30):", "5" );
+                    var num = parseInt( numStr );
+
+                    var asteriscos = "";
+                    for ( var j = 0; j < num; j++ ) {
+                        asteriscos += "*";
+                    }
+
+                    document.writeln( "<p style='font-family: monospace; font-size: 1.2rem; font-weight: bold; color: #2b5797; margin: 8px 0;'>" + num + ": " + asteriscos + "</p>" );
+                }
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

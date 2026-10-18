@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 9.8 - Ejemplo de alcance</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <style type="text/css">
+        p { margin: 0px; }
+        p.espacio { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 9.9: alcance.html</h1>
+            <p>Demostración del alcance local y global de las variables en JavaScript.</p>
+        </header>
+       
+        <main>
+            <div id="resultados"></div>
+
+            <script type="text/javascript">
+                var salida; // almacena la cadena a mostrar
+                var x = 1; // variable global
+
+                function iniciar() {
+                    var x = 5; // variable local para la función iniciar
+
+                    salida = "<p>la x local en iniciar es " + x + "</p>";
+
+                    funcionA(); // funcionA tiene la x local
+                    funcionB(); // funcionB usa la variable global x
+                    funcionA(); // funcionA reinicializa la x local
+                    funcionB(); // la variable global x retiene su valor
+
+                    salida += "<p class='espacio'>la x local en iniciar es " + x + "</p>";
+                    document.getElementById("resultados").innerHTML = salida;
+                } // fin de la función iniciar
+
+                function funcionA() {
+                    var x = 25; // se inicializa cada vez que se llama a la funcionA
+
+                    salida += "<p class='espacio'>la x local en la funcionA es " + x +
+                        " después de entrar a funcionA</p>";
+                    ++x;
+                    salida += "<p>la x local en funcionA es " + x +
+                        " antes de salir de funcionA</p>";
+                } // fin de funcionA
+
+                function funcionB() {
+                    salida += "<p class='espacio'>la variable global x es " + x +
+                        " al entrar a la funcionB</p>";
+                    x *= 10;
+                    salida += "<p>la variable global x es " + x +
+                        " al salir de la funcionB</p>";
+                } // fin de la funcionB
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

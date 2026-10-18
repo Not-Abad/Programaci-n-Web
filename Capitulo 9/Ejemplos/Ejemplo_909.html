@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 9.9 - Función factorial recursiva</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <style type="text/css">
+        p { margin: 0px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 9.12: PruebaFactorial.html</h1>
+            <p>Cálculo del factorial de números del 0 al 10 utilizando una función recursiva.</p>
+        </header>
+       
+        <main>
+            <h2>Factoriales de 0 a 10</h2>
+            <div id="resultados"></div>
+
+            <script type="text/javascript">
+                var salida = ""; // almacena la salida
+
+                // calcula los factoriales de 0 a 10
+                function calcularFactoriales() {
+                    for (var i = 0; i <= 10; ++i) {
+                        salida += "<p>" + i + "! = " + factorial(i) + "</p>";
+                    }
+
+                    document.getElementById("resultados").innerHTML = salida;
+                } // fin de la función calcularFactoriales
+
+                // Definición recursiva de la función factorial
+                function factorial(numero) {
+                    if (numero <= 1) // caso base
+                        return 1;
+                    else
+                        return numero * factorial(numero - 1);
+                } // fin de la función factorial
+
+                window.addEventListener("load", calcularFactoriales, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

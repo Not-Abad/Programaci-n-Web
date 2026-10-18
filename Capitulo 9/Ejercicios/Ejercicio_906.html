@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.6 - Volumen de una Esfera</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.6: Volumen de una Esfera</h1>
+            <p>Cálculo del volumen de una esfera utilizando el objeto Math de JavaScript.</p>
+        </header>
+       
+        <main>
+            <form action="#">
+                <p>
+                    <label>Radio:
+                        <input id="campoRadio" type="number" step="any">
+                    </label>
+                    <input id="botonCalcular" type="button" value="Calcular">
+                </p>
+            </form>
+            <p id="resultado"></p>
+
+            <script type="text/javascript">
+                function iniciar() {
+                    var boton = document.getElementById("botonCalcular");
+                    boton.addEventListener("click", mostrarVolumen, false);
+                }
+
+                function mostrarVolumen() {
+                    var campoEntrada = document.getElementById("campoRadio");
+                    var radio = parseFloat(campoEntrada.value);
+                    var resultado = document.getElementById("resultado");
+                    
+                    if (!isNaN(radio) && radio >= 0) {
+                        resultado.innerHTML = "El volumen de la esfera es: " + volumenEsfera(radio).toFixed(4);
+                    } else {
+                        resultado.innerHTML = "Por favor, ingrese un radio válido.";
+                    }
+                }
+
+                function volumenEsfera(radio) {
+                    return (4.0 / 3.0) * Math.PI * Math.pow(radio, 3);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.12 - Uso de la instrucción continue</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 8.12: PruebaContinue.html</h1>
+            <p>Uso de la instrucción continue en una instrucción for.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                for ( var cuenta = 1; cuenta <= 10; ++cuenta )
+                {
+                    if ( cuenta == 5 )
+                        continue; // omite el resto del código del ciclo sólo si cuenta == 5
+
+                    document.writeln( cuenta + " " );
+                } // fin de for
+
+                document.writeln( "<p>Se usó continue para no imprimir el 5</p>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

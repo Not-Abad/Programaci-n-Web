@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.10 - Los Doce Días de Navidad</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.10: Canción "Los Doce Días de Navidad"</h1>
+            <p>Uso de ciclo for y switch anidado/en cascada para imprimir la letra acumulativa de la canción tradicional.</p>
+        </header>
+       
+        <main>
+            <script type="text/JavaScript">
+                for ( var dia = 1; dia <= 12; dia++ ) {
+                    var diaOrdinal = "";
+                    switch ( dia ) {
+                        case 1: diaOrdinal = "primer"; break;
+                        case 2: diaOrdinal = "segundo"; break;
+                        case 3: diaOrdinal = "tercer"; break;
+                        case 4: diaOrdinal = "cuarto"; break;
+                        case 5: diaOrdinal = "quinto"; break;
+                        case 6: diaOrdinal = "sexto"; break;
+                        case 7: diaOrdinal = "séptimo"; break;
+                        case 8: diaOrdinal = "octavo"; break;
+                        case 9: diaOrdinal = "noveno"; break;
+                        case 10: diaOrdinal = "décimo"; break;
+                        case 11: diaOrdinal = "undécimo"; break;
+                        case 12: diaOrdinal = "duodécimo"; break;
+                    }
+
+                    document.writeln( "<h3>En el " + diaOrdinal + " día de Navidad, mi amor me dio:</h3>" );
+                    document.writeln( "<ul>" );
+
+                    switch ( dia ) {
+                        case 12: document.writeln( "<li>12 tamborileros tamborileando</li>" );
+                        case 11: document.writeln( "<li>11 gaiteros tocando la gaita</li>" );
+                        case 10: document.writeln( "<li>10 señores saltando</li>" );
+                        case 9: document.writeln( "<li>9 damas bailando</li>" );
+                        case 8: document.writeln( "<li>8 sirvientas ordeñando</li>" );
+                        case 7: document.writeln( "<li>7 cisnes nadando</li>" );
+                        case 6: document.writeln( "<li>6 gansos empollando</li>" );
+                        case 5: document.writeln( "<li>5 anillos de oro</li>" );
+                        case 4: document.writeln( "<li>4 pájaros llamando</li>" );
+                        case 3: document.writeln( "<li>3 gallinas francesas</li>" );
+                        case 2: document.writeln( "<li>2 tórtolas</li>" );
+                        case 1: 
+                            if ( dia === 1 ) document.writeln( "<li>Un perdigón en un peral</li>" );
+                            else document.writeln( "<li>Y un perdigón en un peral</li>" );
+                            break;
+                    }
+
+                    document.writeln( "</ul>" );
+                }
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

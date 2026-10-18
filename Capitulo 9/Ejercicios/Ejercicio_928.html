@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.28 - Craps con Apuestas</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.28: Craps con Sistema de Apuestas</h1>
+            <p>Manejo de saldo de banco de $1000 y mensajes de interacción conversacional.</p>
+        </header>
+       
+        <main>
+            <div class="detalles">
+                <p>Saldo en Banco: <strong id="saldo">$1000</strong></p>
+            </div>
+            <br>
+            <form action="#">
+                <p>
+                    Apuesta ($): <input id="apuesta" type="number" min="1" value="100">
+                    <input id="btnApostar" type="button" value="Realizar Apuesta y Tirar">
+                </p>
+            </form>
+            <p id="conversacion" style="font-style:italic; color:#2b5797;"></p>
+            <p id="resultadoJuego"></p>
+
+            <script type="text/javascript">
+                var saldoBanco = 1000;
+
+                function obtenerConversacion() {
+                    var msgs = [
+                        "¿Así que se va a quedar en bancarrota?",
+                        "¡Vamos, arriésguese!",
+                        "¡Está teniendo éxito!. ¡Ahora es momento de cambiar sus fichas!",
+                        "La suerte favorece a los audaces..."
+                    ];
+                    return msgs[Math.floor(Math.random() * msgs.length)];
+                }
+
+                function jugarCraps() {
+                    var d1 = Math.floor(Math.random() * 6) + 1;
+                    var d2 = Math.floor(Math.random() * 6) + 1;
+                    return d1 + d2;
+                }
+
+                function procesarApuesta() {
+                    var apuesta = parseInt(document.getElementById("apuesta").value);
+                    if (isNaN(apuesta) || apuesta <= 0 || apuesta > saldoBanco) {
+                        alert("Apuesta no válida. Debe ser mayor a $0 y no superar su saldo.");
+                        return;
+                    }
+
+                    document.getElementById("conversacion").innerHTML = obtenerConversacion();
+
+                    var tiro = jugarCraps();
+                    if (tiro === 7 || tiro === 11) {
+                        saldoBanco += apuesta;
+                        document.getElementById("resultadoJuego").innerHTML = "Suma del tiro: " + tiro + ". <strong>¡Ganó $" + apuesta + "!</strong>";
+                    } else if (tiro === 2 || tiro === 3 || tiro === 12) {
+                        saldoBanco -= apuesta;
+                        document.getElementById("resultadoJuego").innerHTML = "Suma del tiro: " + tiro + ". <strong>Perdió $" + apuesta + ".</strong>";
+                    } else {
+                        document.getElementById("resultadoJuego").innerHTML = "Suma del tiro: " + tiro + " (Punto establecido). Tiro neutral para esta ronda simplificada.";
+                    }
+
+                    document.getElementById("saldo").innerHTML = "$" + saldoBanco;
+
+                    if (saldoBanco <= 0) {
+                        alert("¡Lo siento. Está en bancarrota!");
+                        document.getElementById("btnApostar").disabled = true;
+                    }
+                }
+
+                function iniciar() {
+                    document.getElementById("btnApostar").addEventListener("click", procesarApuesta, false);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

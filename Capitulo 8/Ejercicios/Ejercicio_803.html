@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.3 - Identificar y corregir errores</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.3: Encontrar y Corregir Errores</h1>
+            <p>Análisis de código de autoevaluación para identificar errores sintácticos y lógicos.</p>
+        </header>
+       
+        <main>
+            <ol type="a">
+                <li class="item">
+                    <div class="enunciado">a) <code>x = 1; while ( x &lt;= 10 ); ++x; &#125;</code></div>
+                    <span class="respuesta">Error: El punto y coma después del encabezado while provoca un ciclo infinito; además falta una llave izquierda.<br>Corrección: Reemplazar el punto y coma por una llave izquierda (&#123;), o eliminar tanto el punto y coma (;) como la llave derecha (&#125;).</span>
+                </li>
+
+                <li class="item">
+                    <div class="enunciado">b) <code>switch ( n ) &#123; case 1: document.writeln( "El número es 1" ); case 2: ... &#125;</code></div>
+                    <span class="respuesta">Error: Falta una instrucción break en las instrucciones del primer case.<br>Corrección: Agregue una instrucción break al final de las instrucciones para el primer case (salvo que intencionalmente se desee la caída en cascada al case 2).</span>
+                </li>
+
+                <li class="item">
+                    <div class="enunciado">c) <code>n = 1; while ( n &lt; 10 ) document.writeln( n++ );</code></div>
+                    <span class="respuesta">Error: Se está utilizando un operador relacional inadecuado (&lt;) en la condición de continuación del ciclo para imprimir hasta 10.<br>Corrección: Use &lt;= en vez de &lt;, o cambie el 10 a 11.</span>
+                </li>
+            </ol>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

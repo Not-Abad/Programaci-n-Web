@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.7 - Alternar entre formatos de lista</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 8.7: PruebaSwitch.html</h1>
+            <p>Uso de la instrucción de selección múltiple switch.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                var seleccion; // la selección del usuario
+                var etiquetaInicial; // etiqueta de elemento de lista inicial
+                var etiquetaFinal; // etiqueta de elemento de lista final
+                var entradaValida = true; // true si la entrada es válida; false si no
+                var tipoLista; // tipo de lista como cadena
+
+                seleccion = window.prompt( "Seleccione un estilo de lista:\n" +
+                    "1 (numerada), 2 (con letras), 3 (números romanos)", "1" );
+
+                switch ( seleccion )
+                {
+                    case "1":
+                        etiquetaInicial = "<ol>";
+                        etiquetaFinal = "</ol>";
+                        tipoLista = "<h2>Lista numerada</h2>";
+                        break;
+                    case "2":
+                        etiquetaInicial = "<ol style = 'list-style-type: upper-alpha'>";
+                        etiquetaFinal = "</ol>";
+                        tipoLista = "<h2>Lista con letras</h2>";
+                        break;
+                    case "3":
+                        etiquetaInicial = "<ol style = 'list-style-type: upper-roman'>";
+                        etiquetaFinal = "</ol>";
+                        tipoLista = "<h2>Lista con números romanos</h2>";
+                        break;
+                    default:
+                        entradaValida = false;
+                        break;
+                } // fin de switch
+
+                if ( entradaValida === true )
+                {
+                    document.writeln( tipoLista + etiquetaInicial );
+
+                    for ( var i = 1; i <= 3; ++i )
+                        document.writeln( "<li>Elemento de lista " + i + "</li>" );
+
+                    document.writeln( etiquetaFinal );
+                } // fin de if
+                else
+                    document.writeln( "<h2>Selección inválida: " + seleccion + "</h2>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

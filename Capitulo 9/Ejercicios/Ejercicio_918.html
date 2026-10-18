@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.18 - Menor de Tres Números</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.18: Encontrar el Menor de Tres Números</h1>
+            <p>Implementación de función con Math.min para flotantes.</p>
+        </header>
+       
+        <main>
+            <form action="#">
+                <p>
+                    <label>N1: <input id="n1" type="number" step="any"></label>
+                    <label>N2: <input id="n2" type="number" step="any"></label>
+                    <label>N3: <input id="n3" type="number" step="any"></label>
+                </p>
+                <p><input id="btnMin" type="button" value="Calcular Mínimo"></p>
+            </form>
+            <p id="resultado"></p>
+
+            <script type="text/javascript">
+                function minimo3(a, b, c) {
+                    return Math.min(a, Math.min(b, c));
+                }
+
+                function iniciar() {
+                    document.getElementById("btnMin").addEventListener("click", function() {
+                        var v1 = parseFloat(document.getElementById("n1").value);
+                        var v2 = parseFloat(document.getElementById("n2").value);
+                        var v3 = parseFloat(document.getElementById("n3").value);
+
+                        if (!isNaN(v1) && !isNaN(v2) && !isNaN(v3)) {
+                            document.getElementById("resultado").innerHTML = "El menor valor es: " + minimo3(v1, v2, v3);
+                        } else {
+                            document.getElementById("resultado").innerHTML = "Ingrese tres números válidos.";
+                        }
+                    }, false);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

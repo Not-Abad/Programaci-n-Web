@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 9.5 - Frecuencias al tirar los dados</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <style>
+        .dados-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .dados-grid img {
+            width: 65px;
+            height: 65px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .tabla-frecuencias {
+            width: 100%;
+            max-width: 380px;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #f0f4f8;
+        }
+        .tabla-frecuencias th, .tabla-frecuencias td {
+            border: 1px solid #2b5797;
+            padding: 8px;
+            text-align: center;
+        }
+        .tabla-frecuencias th {
+            background-color: #2b5797;
+            color: white;
+        }
+        .boton-tirar {
+            background-color: #2b5797;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        .boton-tirar:hover {
+            background-color: #1d3c6a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 9.6: TirarDados.html</h1>
+            <p>Simulación de lanzamiento de 12 dados y cálculo estadístico de frecuencias y porcentajes acumulados.</p>
+        </header>
+       
+        <main>
+            <div class="dados-grid">
+                <img id="dado1" src="Assets/blanco.png" alt="imagen de dado 1">
+                <img id="dado2" src="Assets/blanco.png" alt="imagen de dado 2">
+                <img id="dado3" src="Assets/blanco.png" alt="imagen de dado 3">
+                <img id="dado4" src="Assets/blanco.png" alt="imagen de dado 4">
+                <img id="dado5" src="Assets/blanco.png" alt="imagen de dado 5">
+                <img id="dado6" src="Assets/blanco.png" alt="imagen de dado 6">
+                <img id="dado7" src="Assets/blanco.png" alt="imagen de dado 7">
+                <img id="dado8" src="Assets/blanco.png" alt="imagen de dado 8">
+                <img id="dado9" src="Assets/blanco.png" alt="imagen de dado 9">
+                <img id="dado10" src="Assets/blanco.png" alt="imagen de dado 10">
+                <img id="dado11" src="Assets/blanco.png" alt="imagen de dado 11">
+                <img id="dado12" src="Assets/blanco.png" alt="imagen de dado 12">
+            </div>
+
+            <form action="#">
+                <input id="botonTirar" class="boton-tirar" type="button" value="Tirar dados">
+            </form>
+
+            <div id="divTablaFrecuencias"></div>
+
+            <script type="text/javascript">
+                // Variables globales para calcular frecuencias y total acumulado
+                var frecuencia1 = 0;
+                var frecuencia2 = 0;
+                var frecuencia3 = 0;
+                var frecuencia4 = 0;
+                var frecuencia5 = 0;
+                var frecuencia6 = 0;
+                var totalDados = 0;
+
+                // Registrar el manejador de eventos del botón
+                function iniciar() {
+                    var boton = document.getElementById("botonTirar");
+                    boton.addEventListener("click", tirarDados, false);
+                }
+
+                // Tirar los dados 12 veces por cada clic
+                function tirarDados() {
+                    var cara; // Guarda el valor de la cara obtenida en cada tiro
+
+                    for (var i = 1; i <= 12; ++i) {
+                        cara = Math.floor(1 + Math.random() * 6);
+                        sumarTiros(cara);
+                        establecerImagen(i, cara);
+                        ++totalDados;
+                    }
+
+                    actualizarTablaFrecuencias();
+                }
+
+                // Incrementar el contador de frecuencia adecuado
+                function sumarTiros(cara) {
+                    switch (cara) {
+                        case 1: ++frecuencia1; break;
+                        case 2: ++frecuencia2; break;
+                        case 3: ++frecuencia3; break;
+                        case 4: ++frecuencia4; break;
+                        case 5: ++frecuencia5; break;
+                        case 6: ++frecuencia6; break;
+                    }
+                }
+
+                // Cambiar el atributo src y alt de cada imagen de dado
+                function establecerImagen(numeroDado, cara) {
+                    var imgDado = document.getElementById("dado" + numeroDado);
+                    imgDado.setAttribute("src", "Assets/dado" + cara + ".png");
+                    imgDado.setAttribute("alt", "dado con " + cara + " punto(s)");
+                }
+
+                // Actualizar la tabla HTML de frecuencias y porcentajes
+                function actualizarTablaFrecuencias() {
+                    var divTabla = document.getElementById("divTablaFrecuencias");
+
+                    divTabla.innerHTML = "<table class='tabla-frecuencias'>" +
+                        "<caption>Frecuencias de tiro de los dados</caption>" +
+                        "<thead><tr><th>Cara</th><th>Frecuencia</th><th>Porcentaje</th></tr></thead>" +
+                        "<tbody>" +
+                        "<tr><td>1</td><td>" + frecuencia1 + "</td><td>" + formatoPorcentaje(frecuencia1 / totalDados) + "%</td></tr>" +
+                        "<tr><td>2</td><td>" + frecuencia2 + "</td><td>" + formatoPorcentaje(frecuencia2 / totalDados) + "%</td></tr>" +
+                        "<tr><td>3</td><td>" + frecuencia3 + "</td><td>" + formatoPorcentaje(frecuencia3 / totalDados) + "%</td></tr>" +
+                        "<tr><td>4</td><td>" + frecuencia4 + "</td><td>" + formatoPorcentaje(frecuencia4 / totalDados) + "%</td></tr>" +
+                        "<tr><td>5</td><td>" + frecuencia5 + "</td><td>" + formatoPorcentaje(frecuencia5 / totalDados) + "%</td></tr>" +
+                        "<tr><td>6</td><td>" + frecuencia6 + "</td><td>" + formatoPorcentaje(frecuencia6 / totalDados) + "%</td></tr>" +
+                        "</tbody></table>";
+                }
+
+                // Convertir la proporción a porcentaje formateado a 2 decimales
+                function formatoPorcentaje(valor) {
+                    valor *= 100;
+                    return valor.toFixed(2);
+                }
+
+                window.addEventListener("load", iniciar, false);
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

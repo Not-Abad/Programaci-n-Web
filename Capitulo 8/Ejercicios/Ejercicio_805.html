@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Ejercicio 8.5: ej08_05.html -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.5 - Programa misterio</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+    <style>
+        table.tabla-misterio {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        table.tabla-misterio td {
+            border: 1px solid #2b5797;
+            padding: 6px 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.5: Programa Misterio (Tabla de pares ordenados)</h1>
+            <p>Análisis de ejecución de ciclos for anidados para la generación de estructuras HTML5.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <div class="enunciado">Salida generada por el programa:</div>
+                <script type="text/JavaScript">
+                    document.writeln( "<table class='tabla-misterio'>" );
+
+                    for ( var i = 1; i <= 10; i++ )
+                    {
+                        document.writeln( "<tr>" );
+
+                        for ( var j = 1; j <= 5; j++ )
+                            document.writeln( "<td>(" + i + ", " + j + ")</td>" );
+
+                        document.writeln( "</tr>" );
+                    } // fin de for
+
+                    document.writeln( "</table>" );
+                </script>
+            </div>
+
+            <div class="detalles">
+                <p><strong>Explicación:</strong> El programa genera una tabla HTML con 10 filas (<code>&lt;tr&gt;</code>) y 5 columnas (<code>&lt;td&gt;</code>) por fila. Cada celda imprime sus coordenadas correspondientes en forma de par ordenado (<code>(i, j)</code>), abarcando desde <code>(1, 1)</code> hasta <code>(10, 5)</code>.</p>
+            </div>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

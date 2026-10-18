@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 9.1 - Función cuadrado definida por el usuario</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 9.2: CuadradoEnt.html</h1>
+            <p>Uso de una función personalizada para calcular y desplegar el cuadrado de los números del 1 al 10.</p>
+        </header>
+        
+        <main>
+            <h2>Obtener el cuadrado de los números del 1 al 10</h2>
+            <script type="text/javascript">
+                // Función personalizada para elevar un número al cuadrado
+                function cuadrado(y) {
+                    return y * y;
+                }
+
+                // Generación de resultados iterando del 1 al 10
+                for (var x = 1; x <= 10; ++x) {
+                    document.writeln("<p>El cuadrado de " + x + " es " + cuadrado(x) + "</p>");
+                }
+            </script>
+        </main>
+
+        <footer> 
+            <br><br> 
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

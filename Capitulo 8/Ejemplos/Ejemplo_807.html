@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.11 - Uso de la instrucción break</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Figura 8.11: PruebaBreak.html</h1>
+            <p>Uso de la instrucción break en una instrucción for.</p>
+        </header>
+        
+        <main>
+            <script type="text/JavaScript">
+                for ( var cuenta = 1; cuenta <= 10; ++cuenta )
+                {
+                    if ( cuenta == 5 )
+                        break;
+
+                    document.writeln( cuenta + " " );
+                } // fin de for
+
+                document.writeln(
+                    "<p>Se interrumpió el ciclo en cuenta = " + cuenta + "</p>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

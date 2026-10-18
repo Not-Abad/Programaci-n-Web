@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.15 - Números Pares (Centinela)</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.15: Evaluación de Números Pares</h1>
+            <p>Ciclo controlado por valor centinela mediante cuadros de diálogo prompt.</p>
+        </header>
+       
+        <main>
+            <button onclick="ejecutarCiclo()">Iniciar Entrada de Datos</button>
+            <div id="salida" style="margin-top:20px;"></div>
+
+            <script type="text/javascript">
+                function esPar(numero) {
+                    return numero % 2 === 0;
+                }
+
+                function ejecutarCiclo() {
+                    var salidaDiv = document.getElementById("salida");
+                    var contenido = "<h3>Resultados:</h3><ul>";
+                    var entrada;
+
+                    while (true) {
+                        entrada = prompt("Ingrese un número entero (o escriba 'fin' / cancel para terminar):");
+                        if (entrada === null || entrada.toLowerCase() === "fin") {
+                            break;
+                        }
+
+                        var num = parseInt(entrada);
+                        if (!isNaN(num)) {
+                            var resultadoText = esPar(num) ? "es PAR" : "es IMPAR";
+                            contenido += "<li>El número " + num + " " + resultadoText + ".</li>";
+                        } else {
+                            alert("Entrada no válida. Intente nuevamente.");
+                        }
+                    }
+
+                    contenido += "</ul>";
+                    salidaDiv.innerHTML = contenido;
+                }
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

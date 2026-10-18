@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.7 - Producto de enteros impares</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.7: Producto de Enteros Impares del 1 al 15</h1>
+            <p>Cálculo acumulativo del producto de los números impares dentro del rango de 1 a 15.</p>
+        </header>
+       
+        <main>
+            <script type="text/JavaScript">
+                var producto = 1;
+
+                for ( var i = 1; i <= 15; i += 2 ) {
+                    producto *= i;
+                }
+
+                document.writeln( "<div class='detalles'>" );
+                document.writeln( "<p>Operación: 1 &times; 3 &times; 5 &times; 7 &times; 9 &times; 11 &times; 13 &times; 15</p>" );
+                document.writeln( "<h2>El producto total es: " + producto + "</h2>" );
+                document.writeln( "</div>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

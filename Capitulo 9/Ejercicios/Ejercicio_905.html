@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.5 - Corrección de errores</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.5: Corrección de errores en funciones</h1>
+            <p>Identificación y solución de errores comunes en la declaración de funciones.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <p class="enunciado">a) Segmento con error:</p>
+                <pre>method g()
+{
+    document.writeln( "Dentro del m&amp;eacute;todo g" );
+}</pre>
+                <p><strong>Error:</strong> <code>method</code> no es la palabra clave que se utiliza para comenzar la definición de una función.</p>
+                <p><strong>Corrección:</strong> Cambiar <code>method</code> a <span class="respuesta">function</span>.</p>
+            </div>
+
+            <div class="item">
+                <p class="enunciado">b) Segmento con error:</p>
+                <pre>// Esta función debe devolver la suma de sus argumentos
+function suma( x, y )
+{
+    var resultado;
+    resultado = x + y;
+}</pre>
+                <p><strong>Error:</strong> Se supone que la función debe devolver un valor, pero no utiliza la instrucción de retorno.</p>
+                <p><strong>Corrección:</strong> Eliminar la variable <code>resultado</code> y colocar la instrucción <span class="respuesta">return x + y;</span> o agregar <span class="respuesta">return resultado;</span> al final del cuerpo de la función.</p>
+            </div>
+
+            <div class="item">
+                <p class="enunciado">c) Segmento con error:</p>
+                <pre>function f( a );
+{
+    document.writeln( a );
+}</pre>
+                <p><strong>Error:</strong> Existe un punto y coma sintácticamente incorrecto después del paréntesis derecho de la lista de parámetros.</p>
+                <p><strong>Corrección:</strong> Eliminar el punto y coma (<code>;</code>) después del paréntesis derecho de la lista de parámetros.</p>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

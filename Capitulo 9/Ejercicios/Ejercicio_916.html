@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.16 - Separación de Dízitos</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.16: Separación de Dízitos de un Entero</h1>
+            <p>Operaciones de cociente entero, residuo y formato con espacios.</p>
+        </header>
+       
+        <main>
+            <button onclick="procesarEntero()">Ingresar Entero (1 a 99999)</button>
+            <p id="resultado"></p>
+
+            <script type="text/javascript">
+                function cocienteEntero(a, b) {
+                    return Math.floor(a / b);
+                }
+
+                function residuoEntero(a, b) {
+                    return a % b;
+                }
+
+                function mostrarDigitos(numero) {
+                    var numStr = numero.toString();
+                    var digitos = [];
+                    for (var i = 0; i < numStr.length; i++) {
+                        digitos.push(numStr.charAt(i));
+                    }
+                    return digitos.join("&nbsp;&nbsp;");
+                }
+
+                function procesarEntero() {
+                    var entrada = prompt("Escriba un entero entre 1 y 99999:");
+                    if (entrada !== null) {
+                        var num = parseInt(entrada);
+                        if (!isNaN(num) && num >= 1 && num <= 99999) {
+                            document.getElementById("resultado").innerHTML = 
+                                "Resultado formateado:<br><span style='font-size:1.8rem; font-family:monospace;'>" + mostrarDigitos(num) + "</span>";
+                        } else {
+                            alert("Por favor ingrese un entero válido en el rango de 1 a 99999.");
+                        }
+                    }
+                }
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

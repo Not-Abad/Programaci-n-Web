@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.11 - Expresiones de rangos aleatorios</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 9.11: Asignación de enteros aleatorios en rangos</h1>
+            <p>Fórmulas y prueba interactiva de asignación aleatoria a la variable <code>n</code>.</p>
+        </header>
+       
+        <main>
+            <ol type="a">
+                <li>1 &le; n &le; 2: <span class="respuesta">n = Math.floor(1 + Math.random() * 2);</span></li>
+                <li>1 &le; n &le; 100: <span class="respuesta">n = Math.floor(1 + Math.random() * 100);</span></li>
+                <li>0 &le; n &le; 9: <span class="respuesta">n = Math.floor(Math.random() * 10);</span></li>
+                <li>1000 &le; n &le; 1112: <span class="respuesta">n = Math.floor(1000 + Math.random() * 113);</span></li>
+                <li>-1 &le; n &le; 1: <span class="respuesta">n = Math.floor(-1 + Math.random() * 3);</span></li>
+                <li>-3 &le; n &le; 11: <span class="respuesta">n = Math.floor(-3 + Math.random() * 15);</span></li>
+            </ol>
+
+            <hr>
+            <button onclick="generarEjemplos()">Generar valores de prueba</button>
+            <div id="demo" style="margin-top: 15px;"></div>
+
+            <script type="text/javascript">
+                function generarEjemplos() {
+                    var txt = "<p>a) " + Math.floor(1 + Math.random() * 2) + "</p>";
+                    txt += "<p>b) " + Math.floor(1 + Math.random() * 100) + "</p>";
+                    txt += "<p>c) " + Math.floor(Math.random() * 10) + "</p>";
+                    txt += "<p>d) " + Math.floor(1000 + Math.random() * 113) + "</p>";
+                    txt += "<p>e) " + Math.floor(-1 + Math.random() * 3) + "</p>";
+                    txt += "<p>f) " + Math.floor(-3 + Math.random() * 15) + "</p>";
+                    document.getElementById("demo").innerHTML = txt;
+                }
+            </script>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

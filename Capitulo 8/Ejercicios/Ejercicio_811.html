@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.11 - Ventas minoristas</title>
+    <link rel="stylesheet" href="../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 8.11: Ventas del Vendedor Minorista</h1>
+            <p>Cálculo del total de venta semanal para 5 productos con precios fijos utilizando una instrucción switch.</p>
+        </header>
+       
+        <main>
+            <script type="text/JavaScript">
+                var totalVentas = 0;
+                var numProducto = parseInt( window.prompt( "Escriba el número de producto (1-5) o -1 para terminar:", "1" ) );
+
+                while ( numProducto !== -1 ) {
+                    var cantidad = parseInt( window.prompt( "Escriba la cantidad vendida del producto " + numProducto + ":", "1" ) );
+                    var precio = 0;
+
+                    switch ( numProducto ) {
+                        case 1: precio = 2.98; break;
+                        case 2: precio = 4.50; break;
+                        case 3: precio = 9.98; break;
+                        case 4: precio = 4.49; break;
+                        case 5: precio = 6.87; break;
+                        default:
+                            window.alert( "Número de producto inválido." );
+                            precio = 0;
+                            cantidad = 0;
+                            break;
+                    }
+
+                    totalVentas += precio * cantidad;
+                    numProducto = parseInt( window.prompt( "Escriba el siguiente producto (1-5) o -1 para terminar:", "-1" ) );
+                }
+
+                document.writeln( "<div class='detalles'>" );
+                document.writeln( "<h2>Valor total de venta de todos los productos: $" + totalVentas.toFixed(2) + "</h2>" );
+                document.writeln( "</div>" );
+            </script>
+        </main>
+
+        <footer>   
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>
