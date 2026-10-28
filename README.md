@@ -15,18 +15,6 @@ ejercicios propuestos** desde el **Capítulo 2 hasta el Capítulo 9** del libro 
 
 ---
 
-##  Tabla de Contenidos
-
-- [Descripción General](#-descripción-general)
-- [Módulos y Contenido por Capítulos (Cap. 2 - 9)](#-módulos-y-contenido-por-capítulos-cap-2---9)
-- [Estándares y Buenas Prácticas](#-estándares-y-buenas-prácticas)
-- [Instalación y Configuración](#-instalación-y-configuración)
-- [Instrucciones de Uso](#-instrucciones-de-uso)
-- [Licencia y Créditos](#-licencia-y-créditos)
-- [Libro de Referencia](#-libro-de-referencia)
-
----
-
 ##  Descripción General
 
 El propósito de este repositorio es documentar el aprendizaje, servir como bitácora de desarrollo y ofrecer una referencia práctica para la asignatura de **Programación Web**. 
@@ -36,8 +24,8 @@ A lo largo de las distintas carpetas se organizan:
 2. **Ejercicios Propuestos Resueltos**: Solución a las actividades de autoevaluación, ejercicios de repaso y problemas prácticos
 al final de cada capítulo (Capítulos 2 al 9).
 
-El resultado aplicado del repositorio lo puedes visualizar en : 
-![Pagina Web](https://not-abad.github.io/Programaci-n-Web/index.html)
+<strong>El resultado aplicado del repositorio lo puedes visualizar en : </strong> <a href="https://not-abad.github.io/Programaci-n-Web/index.html">
+https://not-abad.github.io/Programaci-n-Web/index.html</a>
 
 ---
 
@@ -141,7 +129,7 @@ El resultado aplicado del repositorio lo puedes visualizar en :
 ##  Licencia y Créditos
 
   <ul>
-    <li><strong>Desarrollador / Autor del repositorio:</strong> <a href="https://github.com/Not-Abad">Abad</a></li>
+    <li><strong>Desarrollador / Autor del repositorio:</strong> <a href="https://github.com/Not-Abad">Not-Abad</a></li>
     <li><strong>Créditos del Material Educativo:</strong> Los enunciados, conceptos y esquemas de los capítulos 2 al 9 se basan en el libro <em>Internet & World Wide Web: Cómo Programar</em> (5.ª Edición) de <strong>Paul Deitel & Harvey Deitel</strong>, publicado por Pearson.</li>
     <li><strong>Licencia:</strong> Este repositorio se distribuye bajo la licencia <strong>MIT</strong>. Revisa el archivo <code>LICENSE</code> para más detalles.</li>
   </ul>
