@@ -1,10 +1,12 @@
 # Programación Web — Ejemplos y Ejercicios Resueltos 
 
+[![Live Demo](https://img.shields.io/badge/Demo_en_Vivo-GitHub_Pages-brightgreen?style=for-the-badge&logo=github)](https://not-abad.github.io/Programaci-n-Web/)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Book](https://img.shields.io/badge/Libro-Deitel_%26_Deitel_5ta_Ed-blueviolet?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Estado-Completo-brightgreen?style=for-the-badge)
+[![Licencia: MIT](https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
 
 Este repositorio contiene la implementación práctica de los **ejemplos de código** y la **resolución de los
 ejercicios propuestos** desde el **Capítulo 2 hasta el Capítulo 9** del libro de texto de referencia:
@@ -23,9 +25,6 @@ A lo largo de las distintas carpetas se organizan:
 1. **Ejemplos del Libro**: Recreación y prueba de los fragmentos de código presentados por los autores en cada capítulo.
 2. **Ejercicios Propuestos Resueltos**: Solución a las actividades de autoevaluación, ejercicios de repaso y problemas prácticos
 al final de cada capítulo (Capítulos 2 al 9).
-
-<strong>El resultado aplicado del repositorio lo puedes visualizar en : </strong> <a href="https://not-abad.github.io/Programaci-n-Web/index.html">
-https://not-abad.github.io/Programaci-n-Web/index.html</a>
 
 ---
 
@@ -128,10 +127,11 @@ https://not-abad.github.io/Programaci-n-Web/index.html</a>
 
 ##  Licencia y Créditos
 
+
   <ul>
     <li><strong>Desarrollador / Autor del repositorio:</strong> <a href="https://github.com/Not-Abad">Not-Abad</a></li>
     <li><strong>Créditos del Material Educativo:</strong> Los enunciados, conceptos y esquemas de los capítulos 2 al 9 se basan en el libro <em>Internet & World Wide Web: Cómo Programar</em> (5.ª Edición) de <strong>Paul Deitel & Harvey Deitel</strong>, publicado por Pearson.</li>
-    <li><strong>Licencia:</strong> Este repositorio se distribuye bajo la licencia <strong>MIT</strong>. Revisa el archivo <code>LICENSE</code> para más detalles.</li>
+    <li><strong>Licencia:</strong> Este repositorio se distribuye bajo la licencia  <a href="LICENSE">MIT</a>. Revisa el archivo <code>LICENSE</code> para más detalles.</li>
   </ul>
 
 ---
