@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10.10 - Comisiones de vendedores</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+    <script src="../Js/Ejercicio_1010.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 10.10: Comisiones de personal de ventas</h1>
+            <p>Cálculo de salarios semanales ($200 + 9% de ventas brutas) y conteo por rangos mediante un arreglo.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <form action="#">
+                    <label for="ventasInput">Ventas brutas de la semana ($): </label>
+                    <input id="ventasInput" type="number" min="0" step="any" placeholder="Ej. 5000">
+                    <input id="botonRegistrar" type="button" value="Registrar vendedor">
+                    <input id="botonReiniciar" type="button" class="secundario" value="Reiniciar">
+                </form>
+                <p id="ultimoRegistro" class="explicacion" style="margin-top: 10px;"></p>
+            </div>
+
+            <div class="item">
+                <div id="tablaRangos"></div>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

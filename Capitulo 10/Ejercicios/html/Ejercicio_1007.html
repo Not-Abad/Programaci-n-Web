@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10.7 - Verdadero o falso</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 10.7: Verdadero o falso</h1>
+            <p>Análisis de reglas de declaración, reserva de memoria e iteración de arreglos.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <div class="enunciado">a) Para hacer referencia a una ubicación o elemento específico en un arreglo, especificamos el nombre del arreglo y el valor del elemento.</div>
+                <div class="explicacion"><span class="vf falso">Falso</span>Se especifica el nombre del arreglo y el <strong>índice</strong> (posición) del elemento dentro de corchetes, no su valor.</div>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">b) La declaración de una variable reserva espacio para un arreglo.</div>
+                <div class="explicacion"><span class="vf falso">Falso</span>La declaración (<code class="inline">var a;</code>) solo crea el identificador; el espacio para el arreglo se reserva al asignarle una lista inicializadora <code class="inline">[]</code> o una instancia <code class="inline">new Array()</code>.</div>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">c) Para indicar que deben reservarse 100 ubicaciones para el arreglo entero <strong>p</strong>, el programador debe escribir la siguiente declaración: <code class="inline">p[ 100 ];</code></div>
+                <div class="explicacion"><span class="vf falso">Falso</span>La expresión <code class="inline">p[ 100 ]</code> intenta acceder al elemento en el índice 100. La declaración correcta es <code class="inline">var p = new Array( 100 );</code>.</div>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">d) Un programa de JavaScript que inicializa los elementos de un arreglo de 15 elementos en cero debe contener cuando menos una instrucción <code class="inline">for</code>.</div>
+                <div class="explicacion"><span class="vf falso">Falso</span>Puede inicializarse directamente mediante una lista inicializadora (<code class="inline">var a = [0, 0, ..., 0];</code>) o el método <code class="inline">fill(0)</code> sin necesidad de un ciclo <code class="inline">for</code>.</div>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">e) Un programa de JavaScript que calcula el total de los elementos de un arreglo bidimensional debe contener instrucciones <code class="inline">for</code> anidadas.</div>
+                <div class="explicacion"><span class="vf falso">Falso</span>Aunque las instrucciones <code class="inline">for</code> anidadas son la forma más común, también puede calcularse usando ciclos <code class="inline">while</code>, <code class="inline">do...while</code> o sumando cada elemento individualmente.</div>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

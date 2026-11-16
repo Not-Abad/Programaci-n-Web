@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11.9 - Latín cerdo</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+    <script src="../Js/Ejercicio_1109.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 11.9: Codificador a Latín cerdo</h1>
+            <p>Tokenización con <code class="inline">split</code> y conversión de cada palabra desplazando la letra inicial + <code class="inline">"ae"</code>.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <form action="#">
+                    <label for="fraseInput">Enunciado en español (sin signos de puntuación): </label><br>
+                    <input id="fraseInput" type="text" style="width: 70%; margin-top: 6px;" value="el perro salta sobre la computadora">
+                    <input id="btnTraducir" type="button" value="Codificar">
+                    <input id="btnLimpiar" type="button" class="secundario" value="Limpiar historial">
+                </form>
+                <textarea id="historialLatin" rows="10" readonly></textarea>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

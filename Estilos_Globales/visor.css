@@ -1,0 +1,187 @@
+.visor-layout {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 130px);
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Barra Lateral Expandida */
+.sidebar {
+    width: 280px;
+    background: #1e242b;
+    color: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.25s ease;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-right: 1px solid #334155;
+}
+
+/* Barra Lateral Colapsada (riel vertical como tu dibujo verde) */
+.sidebar.colapsada {
+    width: 52px;
+}
+
+.sidebar.colapsada #sidebar-titulo-cap,
+.sidebar.colapsada .sidebar-tabs,
+.sidebar.colapsada .lista-actividades {
+    display: none;
+}
+
+/* Cabecera de la barra (donde vive el botón debajo del menú flotante) */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #151a20;
+    border-bottom: 1px solid #334155;
+    min-height: 52px;
+    box-sizing: border-box;
+}
+
+.sidebar.colapsada .sidebar-header {
+    justify-content: center;
+    padding: 14px 0;
+}
+
+.sidebar-header h2 {
+    font-size: 1.05rem;
+    margin: 0;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.sidebar-header h2:hover {
+    color: #60a5fa;
+}
+
+.btn-colapsar {
+    background: transparent;
+    border: none;
+    color: #f1f5f9;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    line-height: 1;
+}
+
+.btn-colapsar:hover {
+    background: #2d3748;
+}
+
+/* Pestañas Ejemplos / Ejercicios */
+.sidebar-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #0f1318;
+    padding: 6px;
+    gap: 6px;
+}
+
+.tab-btn {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #94a3b8;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.tab-btn.activo {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* Lista de actividades */
+.lista-actividades {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.lista-actividades li button {
+    width: 100%;
+    text-align: left;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: #cbd5e1;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lista-actividades li button:hover {
+    background: #2d3748;
+    color: #fff;
+}
+
+.lista-actividades li button.seleccionado {
+    background: #1d4ed8;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Área Principal (se adapta solo al ancho restante sin margin-left) */
+.contenido-principal {
+    flex: 1;
+    min-width: 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    background: #f8fafc;
+}
+
+.panel-descripcion {
+    max-width: 760px;
+    margin: 60px auto;
+    padding: 36px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.badge-capitulo {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.desc-stats {
+    margin: 20px 0;
+    font-weight: 600;
+    color: #334155;
+}
+
+.panel-iframe {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#marco-practica {
+    width: 100%;
+    flex: 1;
+    border: none;
+    background: #fff;
+}
+
+.oculto {
+    display: none !important;
+}

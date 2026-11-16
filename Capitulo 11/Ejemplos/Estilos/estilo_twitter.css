@@ -1,0 +1,43 @@
+/* Fig. 11.18: estilo.css (Estilos específicos para Búsquedas Favoritas de Twitter) */
+#mensajeBienvenida {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2b5797;
+}
+
+input[type="text"] {
+    width: 250px;
+}
+
+/* estilos de elementos de lista */
+#busquedas ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+#busquedas span {
+    margin-left: 10px;
+    display: inline-block;
+    width: 100px;
+}
+
+#busquedas li {
+    list-style-type: none;
+    width: 270px;
+    margin-bottom: 0;
+    padding: 4px 0;
+}
+
+#busquedas li:first-child {
+    border-top: 1px solid grey;
+}
+
+#busquedas li:nth-child(even) {
+    background-color: lightyellow;
+    border-bottom: 1px solid grey;
+}
+
+#busquedas li:nth-child(odd) {
+    background-color: lightblue;
+    border-bottom: 1px solid grey;
+}

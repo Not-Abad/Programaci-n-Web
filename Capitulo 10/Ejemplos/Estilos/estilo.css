@@ -1,0 +1,55 @@
+/* Complemento para tablas y botones del Capítulo 10 (armonizado con Style.css) */
+table {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background-color: #fff;
+    font-size: 0.95rem;
+}
+
+caption {
+    font-weight: bold;
+    color: #2b5797;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid #d0dce8;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #2b5797;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9fbfd;
+}
+
+input[type="button"] {
+    background-color: #2b5797;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+input[type="button"]:hover {
+    background-color: #1e3f70;
+}
+
+img[id^="dado"] {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 4px;
+    vertical-align: middle;
+}

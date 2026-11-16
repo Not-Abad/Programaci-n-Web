@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10.12 - Eliminación de duplicados</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+    <script src="../Js/Ejercicio_1012.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 10.12: Eliminación de duplicados</h1>
+            <p>Lectura de 10 números entre 10 y 100 desplegando únicamente los valores no duplicados.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <form action="#">
+                    <label for="numeroInput">Número entero (10 a 100) [<span id="contadorTexto">0/10</span>]: </label>
+                    <input id="numeroInput" type="number" min="10" max="100">
+                    <input id="botonAgregar" type="button" value="Ingresar">
+                    <input id="botonReiniciar" type="button" class="secundario" value="Reiniciar">
+                </form>
+                <p id="mensajeEstado" class="explicacion" style="margin-top: 10px;"></p>
+            </div>
+
+            <div class="item">
+                <h2>Valores únicos recibidos:</h2>
+                <p id="listaUnicos">Aún no se han ingresado números.</p>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

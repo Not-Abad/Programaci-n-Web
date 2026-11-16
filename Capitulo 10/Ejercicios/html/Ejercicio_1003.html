@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10.3 - Instrucciones con el arreglo fracciones</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 10.3: Operaciones con el arreglo <code class="inline">fracciones</code></h1>
+            <p>Instrucciones de JavaScript para declarar, acceder y sumar elementos de un arreglo.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <div class="enunciado">a) Declarar un arreglo con 10 elementos e inicializar los elementos del arreglo en 0.</div>
+                <pre><code>var fracciones = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">b) Hacer referencia al elemento 3 del arreglo.</div>
+                <pre><code>fracciones[ 3 ]</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">c) Hacer referencia al elemento 4 del arreglo.</div>
+                <pre><code>fracciones[ 4 ]</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">d) Asignar el valor 1.667 al elemento 9 del arreglo.</div>
+                <pre><code>fracciones[ 9 ] = 1.667;</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">e) Asignar el valor 3.333 al elemento de menor numeración del arreglo.</div>
+                <pre><code>fracciones[ 0 ] = 3.333;</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">f) Sumar todos los elementos del arreglo mediante una instrucción <code class="inline">for...in</code>. Definir la variable <code class="inline">x</code> como variable de control para el ciclo.</div>
+                <pre><code>var total = 0;
+for ( var x in fracciones )
+{
+   total += fracciones[ x ];
+}</code></pre>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10.8 - Tareas con arreglos</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 10.8: Instrucciones para manipulación de arreglos</h1>
+            <p>Acceso, inicialización, acumulación, copia y búsqueda de extremos.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <div class="enunciado">a) Mostrar el valor del séptimo elemento del arreglo <code class="inline">f</code>.</div>
+                <pre><code>document.writeln( f[ 6 ] );</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">b) Inicializar cada uno de los cinco elementos del arreglo unidimensional <code class="inline">g</code> en 8.</div>
+                <pre><code>var g = [ 8, 8, 8, 8, 8 ];</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">c) Calcular el total de los elementos del arreglo <code class="inline">c</code>, que contiene 100 elementos numéricos.</div>
+                <pre><code>var total = 0;
+for ( var i = 0; i &lt; c.length; ++i )
+{
+   total += c[ i ];
+}</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">d) Copiar el arreglo <code class="inline">a</code> de 11 elementos en la primera porción del arreglo <code class="inline">b</code>, que contiene 34 elementos.</div>
+                <pre><code>for ( var i = 0; i &lt; a.length; ++i )
+{
+   b[ i ] = a[ i ];
+}</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">e) Determinar e imprimir el valor más pequeño y el más grande contenido en el arreglo <code class="inline">w</code> de 99 elementos de punto flotante.</div>
+                <pre><code>var menor = w[ 0 ];
+var mayor = w[ 0 ];
+
+for ( var i = 1; i &lt; w.length; ++i )
+{
+   if ( w[ i ] &lt; menor )
+      menor = w[ i ];
+   if ( w[ i ] &gt; mayor )
+      mayor = w[ i ];
+}
+
+document.writeln( "Menor: " + menor + " | Mayor: " + mayor );</code></pre>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

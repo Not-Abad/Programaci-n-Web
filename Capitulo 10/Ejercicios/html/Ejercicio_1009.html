@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10.9 - Arreglo bidimensional t (2x3)</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 10.9: Manipulación del arreglo bidimensional <code class="inline">t</code></h1>
+            <p>Operaciones sobre una matriz de dos filas por tres columnas.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <div class="enunciado">a) Escriba una instrucción para declarar y crear el arreglo <code class="inline">t</code>.</div>
+                <pre><code>var t = [ [ 0, 0, 0 ], [ 0, 0, 0 ] ];</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">b) ¿Cuántas filas tiene <code class="inline">t</code>? &nbsp; c) ¿Cuántas columnas tiene <code class="inline">t</code>? &nbsp; d) ¿Cuántos elementos tiene <code class="inline">t</code>?</div>
+                <p>Tiene <span class="respuesta">2</span> filas, <span class="respuesta">3</span> columnas y <span class="respuesta">6</span> elementos en total.</p>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">e) Nombres de todos los elementos en la fila 1 de <code class="inline">t</code>.</div>
+                <p><span class="respuesta">t[1][0]</span>, <span class="respuesta">t[1][1]</span> y <span class="respuesta">t[1][2]</span></p>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">f) Nombres de todos los elementos en la tercera columna de <code class="inline">t</code>.</div>
+                <p><span class="respuesta">t[0][2]</span> y <span class="respuesta">t[1][2]</span></p>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">g) Sola instrucción para establecer el elemento de <code class="inline">t</code> en la fila 1 y la columna 2 en cero.</div>
+                <pre><code>t[ 1 ][ 2 ] = 0;</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">h) Serie de instrucciones individuales para inicializar cada elemento de <code class="inline">t</code> en cero.</div>
+                <pre><code>t[ 0 ][ 0 ] = 0;
+t[ 0 ][ 1 ] = 0;
+t[ 0 ][ 2 ] = 0;
+t[ 1 ][ 0 ] = 0;
+t[ 1 ][ 1 ] = 0;
+t[ 1 ][ 2 ] = 0;</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">i) Instrucción <code class="inline">for</code> anidada para inicializar cada elemento de <code class="inline">t</code> en cero.</div>
+                <pre><code>for ( var fila = 0; fila &lt; t.length; ++fila )
+{
+   for ( var col = 0; col &lt; t[ fila ].length; ++col )
+   {
+      t[ fila ][ col ] = 0;
+   }
+}</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">j) Serie de instrucciones para determinar e imprimir el valor más pequeño en el arreglo <code class="inline">t</code>.</div>
+                <pre><code>var menor = t[ 0 ][ 0 ];
+for ( var fila = 0; fila &lt; t.length; ++fila )
+{
+   for ( var col = 0; col &lt; t[ fila ].length; ++col )
+   {
+      if ( t[ fila ][ col ] &lt; menor )
+         menor = t[ fila ][ col ];
+   }
+}
+document.writeln( "El valor más pequeño es: " + menor );</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">k) Instrucción sin repetición para mostrar los elementos de la primera fila de <code class="inline">t</code>.</div>
+                <pre><code>document.writeln( t[ 0 ][ 0 ] + " " + t[ 0 ][ 1 ] + " " + t[ 0 ][ 2 ] );</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">l) Serie de instrucciones para imprimir el arreglo <code class="inline">t</code> en formato tabular ordenado con índices de fila y columna.</div>
+                <pre><code>var salida = "&lt;table&gt;&lt;thead&gt;&lt;th&gt;Fila / Col&lt;/th&gt;&lt;th&gt;0&lt;/th&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;2&lt;/th&gt;&lt;/thead&gt;&lt;tbody&gt;";
+for ( var fila = 0; fila &lt; t.length; ++fila )
+{
+   salida += "&lt;tr&gt;&lt;th&gt;" + fila + "&lt;/th&gt;";
+   for ( var col = 0; col &lt; t[ fila ].length; ++col )
+   {
+      salida += "&lt;td&gt;" + t[ fila ][ col ] + "&lt;/td&gt;";
+   }
+   salida += "&lt;/tr&gt;";
+}
+salida += "&lt;/tbody&gt;&lt;/table&gt;";
+document.getElementById( "salida" ).innerHTML = salida;</code></pre>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>
