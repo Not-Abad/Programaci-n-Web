@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11.19 - Versión propia de indexOf</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+    <script src="../Js/Ejercicio_1119.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 11.19: Implementación propia de <code class="inline">String.indexOf</code></h1>
+            <p>Algoritmo de búsqueda de la primera coincidencia de una subcadena sin usar métodos nativos de búsqueda.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <form action="#">
+                    <div class="fila-campo">
+                        <label for="cadenaBase">Cadena principal: </label>
+                        <input id="cadenaBase" type="text" style="width: 65%;" value="estructuras de datos y algoritmos en javascript">
+                    </div>
+                    <div class="fila-campo">
+                        <label for="subcadenaBuscar">Subcadena: </label>
+                        <input id="subcadenaBuscar" type="text" value="datos">
+                        <label for="indiceInicio">Desde índice: </label>
+                        <input id="indiceInicio" type="number" min="0" value="0" style="width: 70px;">
+                        <input id="btnProbarIndexOf" type="button" value="Buscar con miIndexOf">
+                    </div>
+                </form>
+                <p id="salidaMiIndexOf" class="enunciado" style="margin-top: 12px;"></p>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Complemento para los ejemplos del Capítulo 11 (armonizado con Style.css) */
+input[type="text"],
+input[type="search"] {
+    padding: 7px 10px;
+    border: 1px solid #b8c9dc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    width: 260px;
+    max-width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus {
+    outline: none;
+    border-color: #2b5797;
+    box-shadow: 0 0 0 2px rgba(43, 87, 151, 0.15);
+}
+
+input[type="button"] {
+    background-color: #2b5797;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+input[type="button"]:hover {
+    background-color: #1e3f70;
+}
+
+.indent {
+    margin-left: 25px;
+    color: #2b5797;
+    font-weight: 500;
+}

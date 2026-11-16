@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 11.5 - B&uacute;squedas de Twitter</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" type="text/css" href="../Estilos/estilo.css">
+    <link rel="stylesheet" type="text/css" href="../Estilos/estilo_twitter.css">
+    <script src="../Js/BusquedasFavoritasTwitter.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejemplo 11.5 - B&uacute;squedas de Twitter</h1>
+            <p>Aplicación Web de búsquedas favoritas de Twitter.</p>
+        </header>
+        
+        <main>
+            <div class="item">
+                <h2>B&uacute;squedas favoritas de Twitter</h2>
+                <p id="mensajeBienvenida"></p>
+                <form action="#">
+                    <p><input id="consulta" type="text"
+                        placeholder="Introduzca la consulta de b&uacute;squeda de Twitter">
+                       <a href="https://dev.twitter.com/docs/using-search">
+                        Operadores de b&uacute;squeda de Twitter</a></p>
+                    <p style="margin-top: 10px;"><input id="etiqueta" type="text" placeholder="Etiquete su consulta">
+                       <input type="button" value="Guardar" id="botonGuardar">
+                       <input type="button" value="Borrar todas las b&uacute;squedas guardadas" id="botonBorrar"></p>
+                </form>
+            </div>
+
+            <div class="item">
+                <h2>B&uacute;squedas etiquetadas previamente</h2>
+                <div id="busquedas"></div>
+            </div>
+        </main>
+
+        <footer> 
+            <br><br> 
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

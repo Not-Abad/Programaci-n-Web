@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10.4 - Instrucciones con el arreglo tabla</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 10.4: Operaciones con el arreglo bidimensional <code class="inline">tabla</code></h1>
+            <p>Declaración, conteo de elementos e inicialización de una matriz de 3 por 3.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <div class="enunciado">a) Declarar y crear el arreglo con tres filas y tres columnas.</div>
+                <pre><code>var tabla = new Array( new Array( 3 ), new Array( 3 ), new Array( 3 ) );</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">b) Almacenar el número total de elementos en la variable <code class="inline">totalElementos</code>.</div>
+                <pre><code>var totalElementos = tabla.length * tabla[ 0 ].length;</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">c) Usar una instrucción <code class="inline">for...in</code> para inicializar cada elemento del arreglo con la suma de sus índices de fila y de columna. Suponga que las variables <code class="inline">x</code> y <code class="inline">y</code> se declaran como variables de control.</div>
+                <pre><code>for ( var x in tabla )
+{
+   for ( var y in tabla[ x ] )
+   {
+      tabla[ x ][ y ] = parseInt( x ) + parseInt( y );
+   }
+}</code></pre>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

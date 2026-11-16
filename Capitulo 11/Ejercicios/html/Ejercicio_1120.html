@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11.20 - Versión propia de lastIndexOf</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+    <script src="../Js/Ejercicio_1120.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 11.20: Implementación propia de <code class="inline">String.lastIndexOf</code></h1>
+            <p>Búsqueda inversa de la última ocurrencia de una subcadena sin emplear métodos nativos.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <form action="#">
+                    <div class="fila-campo">
+                        <label for="cadenaBase">Cadena principal: </label>
+                        <input id="cadenaBase" type="text" style="width: 65%;" value="abracadabra pata de cabra">
+                    </div>
+                    <div class="fila-campo">
+                        <label for="subcadenaBuscar">Subcadena: </label>
+                        <input id="subcadenaBuscar" type="text" value="abra">
+                        <label for="indiceInicio">Hasta índice: </label>
+                        <input id="indiceInicio" type="number" min="0" value="24" style="width: 70px;">
+                        <input id="btnProbarLastIndexOf" type="button" value="Buscar con miLastIndexOf">
+                    </div>
+                </form>
+                <p id="salidaMiLastIndexOf" class="enunciado" style="margin-top: 12px;"></p>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

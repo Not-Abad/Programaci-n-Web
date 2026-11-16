@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10.11 - Operaciones unidimensionales</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 10.11: Operaciones en arreglos unidimensionales</h1>
+            <p>Instrucciones para inicializar, incrementar e imprimir arreglos en JavaScript.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <div class="enunciado">a) Establecer los 10 elementos del arreglo <code class="inline">cuentas</code> en ceros.</div>
+                <pre><code>var cuentas = new Array( 10 );
+for ( var i = 0; i &lt; cuentas.length; ++i )
+{
+   cuentas[ i ] = 0;
+}</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">b) Sumar 1 a cada uno de los 15 elementos del arreglo <code class="inline">bono</code>.</div>
+                <pre><code>for ( var i = 0; i &lt; 15; ++i )
+{
+   bono[ i ] += 1;
+}</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">c) Mostrar los cinco valores del arreglo <code class="inline">mejoresPuntuaciones</code>, separado por espacios.</div>
+                <pre><code>document.writeln( mejoresPuntuaciones.join( " " ) );</code></pre>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

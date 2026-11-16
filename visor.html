@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de Prácticas - Deitel 5ta Edición</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Estilos_Globales/menu_flotante.css">
+    <link rel="stylesheet" href="Estilos_Globales/fontello.css">
+    <link rel="stylesheet" href="Estilos_Globales/visor.css">
+
+    <script src="Js/load-menu.js" defer></script>
+    <script src="Js/datos-capitulos.js" defer></script>
+    <script src="Js/visor.js" defer></script>
+</head>
+<body>
+    <div class="visor-layout">
+        <!-- Barra Lateral Izquierda (se vuelve riel vertical al colapsar) -->
+        <aside id="sidebar-practicas" class="sidebar">
+            <div class="sidebar-header">
+                <button id="btn-toggle-sidebar" class="btn-colapsar" title="Ocultar / Mostrar menú">☰</button>
+                <h2 id="sidebar-titulo-cap" title="Volver a la descripción del capítulo">Capítulo</h2>
+            </div>
+
+            <div class="sidebar-tabs">
+                <button id="tab-ejemplos" class="tab-btn activo" data-tipo="ejemplos">Ejemplos</button>
+                <button id="tab-ejercicios" class="tab-btn" data-tipo="ejercicios">Ejercicios</button>
+            </div>
+
+            <ul id="lista-actividades" class="lista-actividades"></ul>
+        </aside>
+
+        <!-- Área Principal Derecha -->
+        <main class="contenido-principal">
+            <section id="vista-iframe" class="panel-iframe">
+                <iframe id="marco-practica" src="" title="Visor de práctica"></iframe>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

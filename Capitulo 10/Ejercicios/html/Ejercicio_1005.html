@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10.5 - Depuración de segmentos de código</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 10.5: Encontrar y corregir errores</h1>
+            <p>Identificación de errores lógicos y de sintaxis en el manejo de índices de arreglos.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <div class="enunciado">a) Desbordamiento de índice en ciclo <code class="inline">for</code></div>
+                <p class="explicacion"><span class="vf falso">Error</span>Se hace referencia al elemento de un arreglo fuera de los límites del arreglo (<code class="inline">b[ 10 ]</code>), ya que los índices válidos van de <code class="inline">0</code> a <code class="inline">9</code>. <strong>Corrección:</strong> cambie el operador <code class="inline">&lt;=</code> a <code class="inline">&lt;</code>.</p>
+                <pre><code>var b = new Array( 10 );
+var longitud = b.length;
+
+for ( var i = 0; i &lt; longitud; ++i )
+{
+   b[ i ] = 1;
+}</code></pre>
+            </div>
+
+            <div class="item">
+                <div class="enunciado">b) Indexado incorrecto de arreglo bidimensional</div>
+                <p class="explicacion"><span class="vf falso">Error</span>El indexado de arreglos multidimensionales se realiza de manera incorrecta usando una coma dentro de un solo par de corchetes. <strong>Corrección:</strong> utilice corchetes separados para cada dimensión (<code class="inline">a[ 1 ][ 1 ] = 5;</code>).</p>
+                <pre><code>var a = [ [ 1, 2 ], [ 3, 4 ] ];
+a[ 1 ][ 1 ] = 5;</code></pre>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10.15 - Gráficos de tortuga</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+    <script src="../Js/Ejercicio_1015.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 10.15: Gráficos de tortuga (Logo)</h1>
+            <p>Simulación de trazos sobre un arreglo bidimensional <code class="inline">piso</code> de 20 por 20.</p>
+        </header>
+       
+        <main>
+            <div class="detalles" style="max-width: 100%; margin-bottom: 20px;">
+                <strong>Comandos (Figura 10.23):</strong>
+                <code class="inline">1</code> Pluma arriba |
+                <code class="inline">2</code> Pluma abajo |
+                <code class="inline">3</code> Girar derecha |
+                <code class="inline">4</code> Girar izquierda |
+                <code class="inline">5,n</code> Avanzar <em>n</em> espacios |
+                <code class="inline">6</code> Imprimir arreglo 20x20 |
+                <code class="inline">9</code> Fin de datos
+            </div>
+
+            <div class="item">
+                <label for="comandosInput"><strong>Secuencia de comandos (separados por coma o salto de línea):</strong></label>
+                <textarea id="comandosInput" rows="4">2, 5,12, 3, 5,12, 3, 5,12, 3, 5,12, 1, 6, 9</textarea>
+                <div style="margin-top: 10px;">
+                    <input id="botonEjecutar" type="button" value="Ejecutar comandos" style="margin-left: 0;">
+                    <input id="botonCuadrado" type="button" class="secundario" value="Cargar ejemplo cuadrado (12x12)">
+                </div>
+            </div>
+
+            <div class="item" style="text-align: center;">
+                <h2>Salida del arreglo <code class="inline">piso</code> (20 x 20)</h2>
+                <div id="salidaTortuga"></div>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

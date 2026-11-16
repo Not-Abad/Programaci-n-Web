@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11.10 - Tokenización de número telefónico</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+    <script src="../Js/Ejercicio_1110.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 11.10: Separación de número telefónico</h1>
+            <p>Extracción del código de área y los siete dígitos utilizando <code class="inline">String.split</code>.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <form action="#">
+                    <div class="fila-campo">
+                        <label for="telefonoInput">Número telefónico <code class="inline">(555)555-5555</code>: </label>
+                        <input id="telefonoInput" type="text" value="(228)812-3456">
+                        <input id="btnExtraer" type="button" value="Extraer tokens">
+                    </div>
+                    <div class="fila-campo">
+                        <label for="codigoArea">Código de área: </label>
+                        <input id="codigoArea" type="text" readonly>
+                    </div>
+                    <div class="fila-campo">
+                        <label for="numeroSiete">Número telefónico (7 dígitos): </label>
+                        <input id="numeroSiete" type="text" readonly>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>

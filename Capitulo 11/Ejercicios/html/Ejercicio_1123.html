@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11.23 - Análisis de textos</title>
+    <link rel="stylesheet" href="../../../Estilos_Globales/Style.css">
+    <link rel="stylesheet" href="../Estilos/estilo_ejercicios.css">
+    <script src="../Js/Ejercicio_1123.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicio 11.23: Análisis estilométrico de textos</h1>
+            <p>Conteo de frecuencia de letras, longitud de palabras y ocurrencias de palabras distintas.</p>
+        </header>
+       
+        <main>
+            <div class="item">
+                <label for="textoAnalisis"><strong>Texto a analizar:</strong></label>
+                <textarea id="textoAnalisis" rows="4">Ser o no ser: ese es el dilema:
+¿Qué es más noble para el espíritu?</textarea>
+                <input id="btnAnalizarTexto" type="button" value="Analizar texto">
+            </div>
+
+            <div class="item">
+                <h2>a) Ocurrencias de cada letra del alfabeto</h2>
+                <div id="tablaLetras"></div>
+            </div>
+
+            <div class="item">
+                <h2>b) Frecuencia por longitud de palabra</h2>
+                <div id="tablaLongitudes"></div>
+            </div>
+
+            <div class="item">
+                <h2>c) Ocurrencias de cada palabra distinta</h2>
+                <div id="tablaPalabrasOrden"></div>
+                <div id="tablaPalabrasAlfabetico" style="margin-top: 20px;"></div>
+            </div>
+        </main>
+
+        <footer>  
+            <br><br>  
+            <ul><p><a href="index.html">Regresar</a></p></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <p>Hecho por Jesús Abad Romero</p>
+        </footer>
+    </div>
+</body>
+</html>
